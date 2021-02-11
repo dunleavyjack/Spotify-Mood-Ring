@@ -31,14 +31,6 @@ export const spotifyGetRequest = async (url, params) => {
     return result.data;
 };
 
-// Returns the very important array of song data
-export const getUsersSavedTracks = async () => {
-    const params = JSON.parse(localStorage.getItem('params'));
-    const songData = await spotifyGetRequest("https://api.spotify.com/v1/me/tracks", params)
-    console.log(songData.items)
-    return songData.items
-}
-
 // Returns the song analysis
 export const getSongAnalysis = async (id) => {
     const songAnalysis = await spotifyGetRequest(`https://api.spotify.com/v1/audio-features/${id}`)
@@ -47,7 +39,6 @@ export const getSongAnalysis = async (id) => {
 
 export const getRecentlyPlayedTracks = async () => {
     const recentlyPlayed = await spotifyGetRequest(`https://api.spotify.com/v1/me/player/recently-played`)
-    console.log(recentlyPlayed.items)
     return recentlyPlayed.items
 }
 
@@ -61,6 +52,5 @@ export const getSongAnalysisArray = async (arr) => {
         data.imageURL = arr[i].track.album.images[1].url
         resultArr.push(data)
     };
-    console.log(resultArr)
     return resultArr
 }
