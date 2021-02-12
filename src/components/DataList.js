@@ -1,7 +1,10 @@
 import React from 'react'
 import DataDisplay from './DataDisplay'
+import Loading from './Loading'
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const DataList = ({ songsData }) => {
+    console.log("songs data below")
     console.log(songsData)
     const displaySongs = songsData.map(song => {
         return <DataDisplay 
@@ -9,13 +12,15 @@ const DataList = ({ songsData }) => {
             album={song.album} 
             artist={song.artist} 
             imageURL={song.imageURL}   
+            playedAt={song.playedAt}
             acousticness={song.acousticness}
             danceability={song.danceability} 
             duration_ms={song.duration_ms} 
             energy={song.energy}
             id={song.id}
             instrumentalness={song.instrumentalness}
-            key={song.key}
+            key={song.id}
+            songKey={song.key}
             liveness={song.liveness}
             loudness={song.loudness}
             mode={song.mode} 
@@ -28,6 +33,16 @@ const DataList = ({ songsData }) => {
             valence={song.valence}
         />
     });
+    
+    if(songsData.length === 0){
+        return (
+            <div>
+                <CircularProgress color="secondary" />
+                <Loading />
+            </div>
+        )
+    }
+
     return (
         <div>
             {displaySongs}

@@ -18,7 +18,7 @@ const Home = (props) => {
     };
 
     return (
-        <div className="login">
+        <div>
             <Header />
             <button onClick={handleLogin}> Login with Spotify </button>
         </div>

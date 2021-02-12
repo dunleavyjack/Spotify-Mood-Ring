@@ -5,13 +5,14 @@ const DataDisplay = ({
     album,
     artist,
     imageURL,
+    playedAt,
     acousticness,
     danceability, 
     duration_ms,
     energy,
     id,
     instrumentalness,
-    key,
+    songKey,
     liveness,
     loudness,
     mode,
@@ -29,13 +30,14 @@ const DataDisplay = ({
             <h2>{name}</h2>
             <h3>{artist}</h3>
             <h4>{album}</h4>
+            <p>Played at: {playedAt}</p>
             <p>Accousticness:  {acousticness}</p>
             <p>Danceability: {danceability}</p>
             <p>Duration (in ms): {duration_ms}</p>
             <p>Energy: {energy}</p>
             <p>Id: {id}</p>
             <p>Instrumentalness: {instrumentalness}</p>
-            <p>Key: {key}</p>
+            <p>Key: {songKey}</p>
             <p>Liveness: {liveness}</p>
             <p>Loudness: {loudness}</p>
             <p>Mode: {mode}</p>

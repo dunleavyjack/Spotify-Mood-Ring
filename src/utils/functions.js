@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export const getParamValues = (url) => {
-    console.log(`hi + ${url}`)
     return url
         .slice(1)
         .split('&')
@@ -50,6 +49,7 @@ export const getSongAnalysisArray = async (arr) => {
         data.album = arr[i].track.album.name
         data.artist = arr[i].track.artists[0].name
         data.imageURL = arr[i].track.album.images[1].url
+        data.playedAt = arr[i].played_at
         resultArr.push(data)
     };
     return resultArr
