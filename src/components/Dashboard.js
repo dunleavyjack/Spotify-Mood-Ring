@@ -1,8 +1,8 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import { getRecentlyPlayedTracks, getSongAnalysisArray } from '../utils/functions';
 import DataList from './DataList'
-import { useState, useEffect } from 'react';
 import Header from './Header'
+import AnalysisPage from './AnalysisPage'
 
 const Dashboard = () =>  {    
     const [playedSongsData, setPlayedSongsData] = useState([])
@@ -19,6 +19,7 @@ const Dashboard = () =>  {
     return(
         <div>
             <Header />
+            <AnalysisPage songs={playedSongsData} />
             <DataList songsData={playedSongsData} />
         </div>
     )

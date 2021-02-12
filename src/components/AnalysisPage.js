@@ -1,10 +1,21 @@
-import React from 'react'
+import { React, useState, useEffect } from 'react'
+import AnalysisDisplay from './AnalysisDisplay'
 
+const AnalysisPage = ({ songs }) => {
+    const [analyizedSongName, setAnalyizedSongName] = useState("")
 
-const AnalysisPage = () => {
+    useEffect(() => {
+        songs.forEach((song, i) => {
+            setTimeout(() => {
+                console.log(song.name)
+                setAnalyizedSongName(song.name);
+            }, i * 400);
+        });
+    }, [])
+
     return (
         <div>
-            Analysis Page
+            <AnalysisDisplay songName={analyizedSongName}/>
         </div>
     )
 };
