@@ -2,10 +2,9 @@ import React from 'react'
 import DataDisplay from './DataDisplay'
 import Loading from './Loading'
 import CircularProgress from '@material-ui/core/CircularProgress';
+import AnalysisPage from './AnalysisPage';
 
 const DataList = ({ songsData }) => {
-    console.log("songs data below")
-    console.log(songsData)
     const displaySongs = songsData.map(song => {
         return <DataDisplay 
             name={song.name}
@@ -45,7 +44,8 @@ const DataList = ({ songsData }) => {
 
     return (
         <div>
-            {displaySongs}
+            <AnalysisPage songs={songsData}/>
+            {/* {displaySongs} */}
         </div>
     )
 };
