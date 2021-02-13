@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AppRouter from './router/AppRouter';
-import { ThemeProvider } from '@material-ui/core'
-import theme from './theme'
+import './stylesheet.css'
 
 ReactDOM.render(
-    <ThemeProvider theme={theme}>
+    <div>
         <AppRouter />
-    </ThemeProvider>,
+    </div>,
     document.getElementById('root')
 );

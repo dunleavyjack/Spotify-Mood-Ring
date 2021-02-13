@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './Header';
 
-
 const Home = (props) => {
     const {
         REACT_APP_SPOTIFY_CLIENT_ID,
@@ -20,7 +19,9 @@ const Home = (props) => {
     return (
         <div>
             <Header />
-            <button onClick={handleLogin}> Login with Spotify </button>
+            <div className="center">
+                <button onClick={handleLogin}> Login with Spotify </button>
+            </div>
         </div>
     )
 }

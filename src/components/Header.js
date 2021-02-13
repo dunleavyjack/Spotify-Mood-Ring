@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Button from '@material-ui/core/Button';
 
 const Header = () => {
     return (
-        <div>
-            <Button color="inherit" component={Link} to="/">mood ring</Button>
-        </div> 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div className="container-fluid">
+                <Link to="/">mood ring</Link>
+            </div>
+        </nav>
     )
 };
 

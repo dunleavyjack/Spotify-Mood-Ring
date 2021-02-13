@@ -1,10 +1,8 @@
 import { React, useState, useEffect } from 'react';
 import { getRecentlyPlayedTracks, getSongAnalysisArray } from '../utils/functions';
-import DataList from './DataList'
 import Header from './Header'
 import AnalysisPage from './AnalysisPage'
 import Loading from './Loading'
-import CircularProgress from '@material-ui/core/CircularProgress';
 
 const Dashboard = () => {
     const [playedSongsData, setPlayedSongsData] = useState([])
@@ -18,11 +16,11 @@ const Dashboard = () => {
         searchRecentlyPlayedSongs();
     }, [])
 
+
     if(playedSongsData.length === 0){
         return (
             <div>
                 <Header />
-                <CircularProgress color="secondary" />
                 <Loading />
             </div>
         )

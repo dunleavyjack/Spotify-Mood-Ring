@@ -1,0 +1,10 @@
+body {
+    background-color: #FCEA9A;
+    font-family: 'Poppins', sans-serif;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
