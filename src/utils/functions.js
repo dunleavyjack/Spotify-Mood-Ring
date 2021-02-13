@@ -50,6 +50,7 @@ export const getSongAnalysisArray = async (arr) => {
         data.artist = arr[i].track.artists[0].name
         data.imageURL = arr[i].track.album.images[1].url
         data.playedAt = arr[i].played_at
+        data.countIndex = i + 1
         resultArr.push(data)
     };
     return resultArr

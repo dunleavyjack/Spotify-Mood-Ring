@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from './Header';
+import Navbar from './Navbar';
 
 const NotFound = () => {
     return (
         <React.Fragment>
-            <Header />
-            Page not found. Go back home <Link to="/dashboard">Home Page</Link>
+            <Navbar />
+            Page not found. Go back home <Link to="/yourmood">Home Page</Link>
         </React.Fragment>
     )
 }

@@ -3,8 +3,43 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.navbar{
+    background-color: #000000 !important; 
+}
+
+.brand-text{
+    font-weight: 700;
+    text-decoration: none;
+    color: #E5E5E5 !important;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    background-color: black;
+    color: white !important;
+}
+
+.title {
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 120px;
+
+    color: #EE7070;
+    text-shadow: -5px 5px 0px #000000;
+}
+
+.pinkish{
+    color: #EE7070;
+}
+
+.bold{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
 }

@@ -23,19 +23,20 @@ const AnalysisDisplay = ({ song: {
     type,
     uri,
     valence,
+    countIndex
 } }) => {
     
     
     
     
     return(
-        <div>
-            <h2>Analyzing</h2>
+        <div className="container">
+            <h2>Analyzing {countIndex}/20</h2>
             <img src={imageURL} />
-            <h2>{name}</h2>
+            <h2 className="bold">{name}</h2>
             <h3>{artist}</h3>
             <h4>{album}</h4>
-            <h4>You listened at: {playedAt}</h4>
+            <h4 className="pinkish">You listened at: {playedAt}</h4>
         </div>
     )
 }

@@ -1,12 +1,13 @@
 import { React, useState, useEffect } from 'react';
 import { getRecentlyPlayedTracks, getSongAnalysisArray } from '../utils/functions';
-import Header from './Header'
+import Navbar from './Navbar'
 import AnalysisPage from './AnalysisPage'
 import Loading from './Loading'
 
-const Dashboard = () => {
+const YourMood = () => {
     const [playedSongsData, setPlayedSongsData] = useState([])
 
+    // Get users recently played songs
     useEffect(() => {
         const searchRecentlyPlayedSongs = async () => {
             const usersRecentlyPlayed = await getRecentlyPlayedTracks()
@@ -16,35 +17,24 @@ const Dashboard = () => {
         searchRecentlyPlayedSongs();
     }, [])
 
-
+    // Display loading screen while waiting for songs
     if(playedSongsData.length === 0){
         return (
             <div>
-                <Header />
+                <Navbar />
                 <Loading />
             </div>
         )
     }
 
+    // Send songs to analysis page
     return (
         <div>
-            <Header />
+            <Navbar />
             <AnalysisPage songs={playedSongsData}/>
             {/* {displaySongs} */}
         </div>
     )
 };
 
-
-
-
-
-    // return (
-    //     <div>
-    //         <Header />
-    //         <DataList songsData={playedSongsData} />
-    //     </div>
-    // )
-// };
-
-export default Dashboard;
+export default YourMood;
