@@ -18,7 +18,7 @@ const Home = (props) => {
     return (
         <div>
             <Navbar />
-            <div>
+            <div className="container">
                 <h1 className="title">mood ring</h1>
                 <button onClick={handleLogin}> Login with Spotify </button>
             </div>

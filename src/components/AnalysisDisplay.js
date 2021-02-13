@@ -30,13 +30,15 @@ const AnalysisDisplay = ({ song: {
     
     
     return(
-        <div className="container">
-            <h2>Analyzing {countIndex}/20</h2>
-            <img src={imageURL} />
-            <h2 className="bold">{name}</h2>
-            <h3>{artist}</h3>
-            <h4>{album}</h4>
-            <h4 className="pinkish">You listened at: {playedAt}</h4>
+        <div className="container h-100 text-center">
+            <div className="row h-100 justify-content-center align-items-center">
+                <h2>Analyzing {countIndex}/20</h2>
+                <img className="album-cover" src={imageURL} />
+                <h2 className="bold">{name}</h2>
+                <h3>{artist}</h3>
+                <h4>{album}</h4>
+                <h4 className="pinkish">You listened at: {playedAt}</h4>
+            </div>
         </div>
     )
 }

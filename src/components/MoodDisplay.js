@@ -7,10 +7,12 @@ const MoodDisplay = ({ songs, profile: {
 } }) => {
     console.log(songs)
     return (
-        <div className="container">
-            <h1>Hi, {display_name}</h1>
-            <div class="circular--portrait">
+        <div className="container d-flex justify-content-center">
+            <div className="circular--portrait">
                 <img src={images[0].url}/>
+            </div>
+            <div>
+                <h1>Hi, {display_name}</h1>
             </div>
         </div>
     )

@@ -11,7 +11,7 @@ const AnalysisPage = ({ songs, profile }) => {
         songs.forEach((song, i) => {
             setTimeout(() => {
                 setAnalyizedSong(song);
-            }, i * 200);
+            }, i * 300);
         });
         setTimeout(() => {
             setFinishedShuffeling(true)
