@@ -1,8 +1,7 @@
 import { React, useState, useEffect } from 'react'
 import AnalysisDisplay from './AnalysisDisplay'
 import Loading from './Loading'
-import DummyPage from './DummyPage'
-import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
+import MoodDisplay from './MoodDisplay'
 
 const AnalysisPage = ({ songs }) => {
     const [analyizedSong, setAnalyizedSong] = useState("")
@@ -11,7 +10,6 @@ const AnalysisPage = ({ songs }) => {
     useEffect(() => {
         songs.forEach((song, i) => {
             setTimeout(() => {
-                console.log(song)
                 setAnalyizedSong(song);
             }, i * 200);
         });
@@ -37,7 +35,7 @@ const AnalysisPage = ({ songs }) => {
     // Shuffle through songs being 'analyized'
     return (
         <div>
-            <DummyPage songs={songs}/>
+            <MoodDisplay songs={songs}/>
         </div>
     )
 };

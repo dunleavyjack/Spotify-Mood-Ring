@@ -8,7 +8,7 @@ const Home = (props) => {
         REACT_APP_SPOTIFY_REDIRECT_URL
     } = process.env;
 
-    const scopes = 'user-library-read user-read-recently-played';
+    const scopes = 'user-read-private user-read-recently-played';
     const encodedScopes = encodeURIComponent(scopes)
 
     const handleLogin = () => {
