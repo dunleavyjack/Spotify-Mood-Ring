@@ -36,6 +36,11 @@ export const getSongAnalysis = async (id) => {
     return songAnalysis
 }
 
+export const getUserProfile = async () => {
+    const userProfile = await spotifyGetRequest("https://api.spotify.com/v1/me/")
+    return userProfile
+}
+
 export const getRecentlyPlayedTracks = async () => {
     const recentlyPlayed = await spotifyGetRequest(`https://api.spotify.com/v1/me/player/recently-played`)
     return recentlyPlayed.items

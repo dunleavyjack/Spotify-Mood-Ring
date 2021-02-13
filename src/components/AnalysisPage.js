@@ -3,7 +3,7 @@ import AnalysisDisplay from './AnalysisDisplay'
 import Loading from './Loading'
 import MoodDisplay from './MoodDisplay'
 
-const AnalysisPage = ({ songs }) => {
+const AnalysisPage = ({ songs, profile }) => {
     const [analyizedSong, setAnalyizedSong] = useState("")
     const [finishedShuffeling, setFinishedShuffeling] = useState(false)
 
@@ -29,13 +29,13 @@ const AnalysisPage = ({ songs }) => {
 
     // Return YourMood page when shuffeling is complete
     if(finishedShuffeling === false && songs.length > 0){
-        return <AnalysisDisplay song={analyizedSong}/>
+        return <AnalysisDisplay song={analyizedSong} />
     }
 
     // Shuffle through songs being 'analyized'
     return (
         <div>
-            <MoodDisplay songs={songs}/>
+            <MoodDisplay songs={songs} profile={profile}/>
         </div>
     )
 };

@@ -1,11 +1,12 @@
 import { React, useState, useEffect } from 'react';
-import { getRecentlyPlayedTracks, getSongAnalysisArray } from '../utils/functions';
+import { getRecentlyPlayedTracks, getSongAnalysisArray, getUserProfile } from '../utils/functions';
 import Navbar from './Navbar'
 import AnalysisPage from './AnalysisPage'
 import Loading from './Loading'
 
 const YourMood = () => {
     const [playedSongsData, setPlayedSongsData] = useState([])
+    const [userProfile, setUserProfile] = useState({})
 
     // Get users recently played songs
     useEffect(() => {
@@ -13,6 +14,8 @@ const YourMood = () => {
             const usersRecentlyPlayed = await getRecentlyPlayedTracks()
             const theSongData = await getSongAnalysisArray(usersRecentlyPlayed)
             setPlayedSongsData(theSongData)
+            const currentUserProfile = await getUserProfile()
+            setUserProfile(currentUserProfile)
         }
         searchRecentlyPlayedSongs();
     }, [])
@@ -31,8 +34,7 @@ const YourMood = () => {
     return (
         <div>
             <Navbar />
-            <AnalysisPage songs={playedSongsData}/>
-            {/* {displaySongs} */}
+            <AnalysisPage songs={playedSongsData} profile={userProfile}/>
         </div>
     )
 };

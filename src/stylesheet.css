@@ -43,3 +43,20 @@ footer {
     font-style: normal;
     font-weight: bold;
 }
+
+
+/* Make profile picture circular */
+.circular--portrait {
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+.circular--portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+/* End Make Profile Picture Circular */
