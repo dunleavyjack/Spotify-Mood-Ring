@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from '../components/Home';
-import RedirectPage from '../components/RedirectPage';
-import YourMood from '../components/YourMood';
-import NotFound from '../components/NotFound';
+import Home from '../components/Home'
+import YourMood from '../components/YourMood'
+import About from '../components/About'
+import NotFound from '../components/NotFound'
+import RedirectPage from '../components/RedirectPage'
 
 class AppRouter extends React.Component {
     render() {
@@ -14,6 +15,7 @@ class AppRouter extends React.Component {
                         <Route path="/" component={Home} exact={true} />
                         <Route path="/redirect" component={RedirectPage}/>
                         <Route path="/yourmood" component={YourMood}/>
+                        <Route path="/about" component={About} />
                         <Route component={NotFound} />
                     </Switch>
                 </div>
