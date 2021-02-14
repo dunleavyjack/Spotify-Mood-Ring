@@ -27,6 +27,7 @@ const YourMood = () => {
             <div>
                 <Navbar />
                 <Loading />
+                <Footer />
             </div>
         )
     }

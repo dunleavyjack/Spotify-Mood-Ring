@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
+import Footer from './Footer'
 
 const Home = (props) => {
     const {
@@ -22,6 +23,7 @@ const Home = (props) => {
                 <h1 className="title">mood ring</h1>
                 <button onClick={handleLogin}> Login with Spotify </button>
             </div>
+            <Footer />
         </div>
     )
 }
