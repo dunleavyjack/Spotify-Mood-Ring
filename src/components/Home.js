@@ -21,7 +21,10 @@ const Home = (props) => {
             <Navbar />
             <div className="container">
                 <h1 className="title">mood ring</h1>
-                <button onClick={handleLogin}> Login with Spotify </button>
+                <h2 className="bold">How are you?</h2>
+                <h3>A mood guesser based on your </h3>
+                <h3>recently played music.</h3>
+                <button className="btn-green" onClick={handleLogin}> Connect with Spotify </button>
             </div>
             <Footer />
         </div>
