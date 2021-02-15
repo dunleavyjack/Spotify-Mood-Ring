@@ -1,10 +1,11 @@
-body {
-    background-color: #FCEA9A;
+* {
+    background-color: black;
     font-family: 'Poppins', sans-serif;
 }
 
 .navbar{
     background-color: #000000 !important; 
+    height: 7.5vh;
 }
 
 .brand-text{
@@ -14,12 +15,12 @@ body {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    height: 3rem;
     background-color: black;
     color: white !important;
+    height: 6.5vh !important;
 }
 
 .title {
@@ -43,6 +44,9 @@ footer {
     font-weight: bold;
 }
 
+.content-body{
+    height: 87vh;
+}
 
 /* Make profile picture circular */
 .circular--portrait {
@@ -72,7 +76,7 @@ footer {
 }
 
 .white{
-    color: white;
+    color: #E5E5E5;
 }
 
 /* spotify green hover #1db954 // #1ed760; */
@@ -104,4 +108,16 @@ footer {
 
 .btn-green:hover{
     background-color: #1ed760;
+}
+
+.tan {
+    background-color: #FCEA9A !important;
+}
+
+.tan > * {
+    background-color: #FCEA9A !important;
+}
+
+.tan > * > * {
+    background-color: #FCEA9A !important;
 }

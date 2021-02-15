@@ -17,12 +17,12 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
         const speechiness = getAverage(songs.map(song => song.speechiness))
         const tempo = getAverage(songs.map(song => song.tempo))
         const valence = getAverage(songs.map(song => song.valence))
-        
+
         const averagesObject = {
             danceability,
-            acousticness, 
+            acousticness,
             energy,
-            instrumentalness ,
+            instrumentalness,
             key,
             liveness,
             loudness,
@@ -37,24 +37,26 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
     }, [])
 
     return (
-        <div className="container h-100 text-center">
-            <div className="row h-100 justify-content-center align-items-center">
-                <div className="circular--portrait">
-                    <img src={images[0].url}/>
-                </div>
-                <div>
-                    <h1>Hi, {display_name}</h1>
-                    <h2>Average danceability: {averages.danceability}</h2>
-                    <h2>Average acousticness: {averages.acousticness}</h2>
-                    <h2>Average energy: {averages.energy}</h2>
-                    <h2>Average instrumentalness: {averages.instrumentalness}</h2>
-                    <h2>Average key: {averages.key}</h2>
-                    <h2>Average liveness: {averages.liveness}</h2>
-                    <h2>Average loudness: {averages.loudness}</h2>
-                    <h2>Average mode: {averages.mode}</h2>
-                    <h2>Average speechiness: {averages.speechiness}</h2>
-                    <h2>Average tempo: {averages.tempo}</h2>
-                    <h2>Average valence: {averages.valence}</h2>
+        <div className="tan">
+            <div className="container h-100 text-center">
+                <div className="row h-100 justify-content-center align-items-center">
+                    <div className="circular--portrait">
+                        <img src={images[0].url} />
+                    </div>
+                    <div className="tan">
+                        <h1>Hi, {display_name}</h1>
+                        <h2>Average danceability: {averages.danceability}</h2>
+                        <h2>Average acousticness: {averages.acousticness}</h2>
+                        <h2>Average energy: {averages.energy}</h2>
+                        <h2>Average instrumentalness: {averages.instrumentalness}</h2>
+                        <h2>Average key: {averages.key}</h2>
+                        <h2>Average liveness: {averages.liveness}</h2>
+                        <h2>Average loudness: {averages.loudness}</h2>
+                        <h2>Average mode: {averages.mode}</h2>
+                        <h2>Average speechiness: {averages.speechiness}</h2>
+                        <h2>Average tempo: {averages.tempo}</h2>
+                        <h2>Average valence: {averages.valence}</h2>
+                    </div>
                 </div>
             </div>
         </div>
