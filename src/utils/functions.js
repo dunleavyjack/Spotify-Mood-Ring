@@ -65,9 +65,14 @@ export const getSongAnalysisArray = async (arr) => {
     return resultArr
 }
 
-// const fixDate = (date) => {
-//     // 2016-12-13T20:44:04.589Z
-//     const dateFixed = date.
-    
-//     return `You listened on ${dateFixed} at ${timeFixed}`
-// }
+// 
+export const fixDate = (date) => {
+    if (typeof date === 'string') {
+        const year = date.slice(0, 4)
+        const month = date.slice(5, 7)
+        const day = date.slice(8, 10)
+        const time = date.slice(11, 19)
+        const text = `${month}/${day}/${year} at ${time}`
+        return text
+    }
+}

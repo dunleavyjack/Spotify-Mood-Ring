@@ -1,4 +1,5 @@
 import React from 'react'
+import { fixDate } from '../utils/functions'
 
 const AnalysisDisplay = ({ song: {
     name,
@@ -7,7 +8,7 @@ const AnalysisDisplay = ({ song: {
     imageURL,
     playedAt,
     acousticness,
-    danceability, 
+    danceability,
     duration_ms,
     energy,
     id,
@@ -25,11 +26,9 @@ const AnalysisDisplay = ({ song: {
     valence,
     countIndex
 } }) => {
-    
-    
-    
-    
-    return(
+
+
+    return (
         <div className="container h-100 text-center">
             <div className="row h-100 justify-content-center align-items-center">
                 <h2>Analyzing {countIndex}/20</h2>
@@ -37,7 +36,7 @@ const AnalysisDisplay = ({ song: {
                 <h2 className="bold">{name}</h2>
                 <h3>{artist}</h3>
                 <h4>{album}</h4>
-                <h4 className="pinkish">You listened at: {playedAt}</h4>
+                <h4 className="pinkish">You listened on {fixDate(playedAt)}</h4>
             </div>
         </div>
     )
