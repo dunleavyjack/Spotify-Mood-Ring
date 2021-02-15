@@ -47,6 +47,9 @@ export const getRecentlyPlayedTracks = async () => {
 }
 
 export const getSongAnalysisArray = async (arr) => {
+    console.log('this is the array')
+    console.log(arr)
+    
     let resultArr = []
     for (let i = 0; i < arr.length; i++){
         
@@ -65,7 +68,7 @@ export const getSongAnalysisArray = async (arr) => {
     return resultArr
 }
 
-// 
+// Change date string into something readable/understandable
 export const fixDate = (date) => {
     if (typeof date === 'string') {
         const year = date.slice(0, 4)

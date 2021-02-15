@@ -33,7 +33,6 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
         };
         console.log(averagesObject)
         setAverages(averagesObject)
-        console.log(averages)
     }, [])
 
     return (
