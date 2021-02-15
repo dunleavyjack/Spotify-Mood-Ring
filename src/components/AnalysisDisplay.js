@@ -29,8 +29,8 @@ const AnalysisDisplay = ({ song: {
 
 
     return (
-        <div className="container h-100 text-center">
-            <div className="row h-100 justify-content-center align-items-center">
+        <div class="d-flex mb-3 justify-content-center align-items-center vh-100 text-center">
+            <div>
                 <h2>Analyzing {countIndex}/20</h2>
                 <img className="album-cover" src={imageURL} />
                 <h2 className="bold">{name}</h2>
