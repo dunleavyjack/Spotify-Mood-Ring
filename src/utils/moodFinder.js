@@ -12,3 +12,7 @@ export const getAverage = arr => {
     let sum = arr.reduce(reducer)
     return sum / arr.length;
 }
+
+export const calculateMood = () => {
+    
+}

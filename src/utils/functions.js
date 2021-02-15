@@ -32,7 +32,8 @@ export const spotifyGetRequest = async (url, params) => {
 
 // Returns the song analysis
 export const getSongAnalysis = async (id) => {
-    const songAnalysis = await spotifyGetRequest(`https://api.spotify.com/v1/audio-features/${id}`)
+    const songAnalysis = await spotifyGetRequest(`https://api.spotify.com/v1/audio-features/?ids=${id}`)
+    // const songAnalysis = await spotifyGetRequest(`https://api.spotify.com/v1/audio-features/${id}`)
     return songAnalysis
 }
 
@@ -46,26 +47,25 @@ export const getRecentlyPlayedTracks = async () => {
     return recentlyPlayed.items
 }
 
-export const getSongAnalysisArray = async (arr) => {
-    console.log('this is the array')
-    console.log(arr)
+export const getSongAnalysisArray = async (arr) => {    
+    // Create Array of only song IDs
+    const ids = arr.map(song => song.track.id)
+    const stringIds = ids.toString()
+
+    // Spotify GET request for audio data
+    const data = await getSongAnalysis(stringIds)
+    const audioData = data.audio_features
     
-    let resultArr = []
-    for (let i = 0; i < arr.length; i++){
-        
-        // Getting Data for each track
-        const data = await getSongAnalysis(arr[i].track.id)
-        
-        // Adding additional properties for later use 
-        data.name = arr[i].track.name
-        data.album = arr[i].track.album.name
-        data.artist = arr[i].track.artists[0].name
-        data.imageURL = arr[i].track.album.images[1].url
-        data.playedAt = arr[i].played_at
-        data.countIndex = i + 1
-        resultArr.push(data)
-    };
-    return resultArr
+    // Add song properties (name/album/etc) from initial song array
+    for (let i = 0; i < audioData.length; i++){
+        audioData[i].name = arr[i].track.name
+        audioData[i].album = arr[i].track.album.name
+        audioData[i].artist = arr[i].track.artists[0].name
+        audioData[i].imageURL = arr[i].track.album.images[1].url
+        audioData[i].playedAt = arr[i].played_at
+        audioData[i].countIndex = i + 1
+    }
+    return audioData
 }
 
 // Change date string into something readable/understandable
