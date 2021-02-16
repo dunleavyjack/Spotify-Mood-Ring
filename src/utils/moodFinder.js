@@ -53,8 +53,9 @@ export const calculateMood = ({
 
     console.log(firstMood)
     console.log(secondMood)
+    // const theMood = detectMood(firstMood)
+    // console.log(theMood)
 
-    
     console.log(valenceDifference)
     if (valenceDifference.aboveAvg === true){
         return "Happy"
@@ -62,8 +63,6 @@ export const calculateMood = ({
         return "Kinda Blue :'("
     }
 }
-
-
 
 
 // Get Average
@@ -90,3 +89,22 @@ const percentDifference = (value, avgValue, maxValue) => {
         }
     }
 }
+
+// Ascribe Mood
+// const detectMood = (song) => {
+//     switch (song){
+//         case (song.name === "valence" && song.aboveAvg === "true"):
+//             song.mood = "highValence"
+//         case (song.name === "valence" && song.aboveAvg === "false"):
+//             song.mood = "lowValence"
+//         case (song.name === "energy" && song.aboveAvg === "true"):
+//             song.mood = "highEnergy"
+//         case (song.name === "energy" && song.aboveAvg === "false"):
+//             song.mood = "lowEnergy"
+//         case (song.name === "danceability" && song.aboveAvg === "true"):
+//             song.mood = "highDanceability"
+//         case (song.name === "danceability" && song.aboveAvg === "false"):
+//             song.mood = "lowDanceability"
+//     return song
+//     }
+// }
