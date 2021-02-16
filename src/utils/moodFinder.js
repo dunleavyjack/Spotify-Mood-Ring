@@ -100,11 +100,11 @@ const getDanceabilityDifference = danceabilityScore => {
 
 const evaluateMood = topMoods => {
     if (topMoods.includes("danceable") && topMoods.includes("energetic")) {
-        return "dance/energy"
+        return "dance/energy" // Expressive
     } else if (topMoods.includes("danceable") && topMoods.includes("not energetic")) {
-        return "dance/no-energy"
+        return "dance/no-energy" // 
     } else if (topMoods.includes("danceable") && topMoods.includes("happy")){
-        return "dance/happy"
+        return "dance/happy" // Electric
     } else if (topMoods.includes("danceable") && topMoods.includes("not happy")){
         return "dance/not-happy"
     } else if (topMoods.includes("not danceable") && topMoods.includes("energetic")) {
@@ -118,9 +118,7 @@ const evaluateMood = topMoods => {
     } else if (topMoods.includes("energetic") && topMoods.includes("happy")){
         return "energy/happy"
     } else if (topMoods.includes("energetic") && topMoods.includes("not happy")){
-        return "energy/not-happy"
-    } else if (topMoods.includes("energetic") && topMoods.includes("not happy")){
-        return "energy/not-happy"
+        return "energy/not-happy" // Angry
     } else if (topMoods.includes("not energetic") && topMoods.includes("not happy")){
         return "no-energy/not-happy"
     }
