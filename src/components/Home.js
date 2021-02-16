@@ -19,7 +19,7 @@ const Home = (props) => {
     return (
         <div>
             <Navbar />
-                <div class="d-flex tan justify-content-center align-items-center content-body">
+                <div className="d-flex tan justify-content-center align-items-center content-body">
                     <div>
                         <h1 className="title">mood ring</h1>
                         <h2 className="bold">How are you?</h2>

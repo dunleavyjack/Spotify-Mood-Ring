@@ -18,6 +18,13 @@ const maxSpeechiness = 1
 const maxTempo = 1
 const maxValence = 1
 
+// Get Average
+export const getAverage = arr => {
+    let reducer = (total, currentValue) => total + currentValue;
+    let sum = arr.reduce(reducer)
+    return sum / arr.length;
+}
+
 // Mood Guesser
 export const calculateMood = ({
     danceability,
@@ -30,81 +37,109 @@ export const calculateMood = ({
     valence
 }) => {
     // Percent difference Object. Ex: {aboveAvg: true/false, value: x}
-    const valenceDifference = percentDifference(valence, avgValence, maxValence)
-    const energyDifference = percentDifference(energy, avgEnergy, maxEnergy)
-    const danceabilityDifference = percentDifference(danceability, avgDanceability, maxDanceability)
-    
+    const valenceDifference = getValenceDifference(valence)
+    const energyDifference = getEnergyDifference(energy)
+    const danceabilityDifference = getDanceabilityDifference(danceability)
+
     // Add name property to later identify the object
     valenceDifference.name = "valence"
     energyDifference.name = "energy"
     danceabilityDifference.name = "danceability"
-    
-    // Sort differences 
+
+    // Sort differences to find the highest
     const differenceArray = [
         valenceDifference,
         energyDifference,
         danceabilityDifference,
     ].sort((a, b) => parseFloat(b.difference) - parseFloat(a.difference));
-    console.log(differenceArray)
-    
+
     // Get two moods with highest percent difference
     const firstMood = differenceArray[0]
     const secondMood = differenceArray[1]
+    const topMoods = [firstMood.mood, secondMood.mood]
 
-    console.log(firstMood)
-    console.log(secondMood)
-    // const theMood = detectMood(firstMood)
-    // console.log(theMood)
-
-    console.log(valenceDifference)
-    if (valenceDifference.aboveAvg === true){
-        return "Happy"
-    } else {
-        return "Kinda Blue :'("
-    }
+    const result = evaluateMood(topMoods)
+    return result
 }
 
+const getValenceDifference = valenceScore => {
+    const result = percentDifference(valenceScore, avgValence, maxValence)
+    result.name = "valence"
+    if (result.aboveAvg === true) {
+        result.mood = "happy"
+    }
+    else {
+        result.mood = "not happy"
+    }
+    return result
+}
 
-// Get Average
-export const getAverage = arr => {
-    let reducer = (total, currentValue) => total + currentValue;
-    let sum = arr.reduce(reducer)
-    return sum / arr.length;
+const getEnergyDifference = energyScore => {
+    const result = percentDifference(energyScore, avgEnergy, maxEnergy)
+    result.name = "energy"
+    if (result.aboveAvg === true) {
+        result.mood = "energetic"
+    }
+    else {
+        result.mood = "not energetic"
+    }
+    return result
+}
+
+const getDanceabilityDifference = danceabilityScore => {
+    const result = percentDifference(danceabilityScore, avgDanceability, maxDanceability)
+    result.name = "danceability"
+    if (result.aboveAvg === true) {
+        result.mood = "danceable"
+    }
+    else {
+        result.mood = "not danceable"
+    }
+    return result
+}
+
+const evaluateMood = topMoods => {
+    if (topMoods.includes("danceable") && topMoods.includes("energetic")) {
+        return "dance/energy"
+    } else if (topMoods.includes("danceable") && topMoods.includes("not energetic")) {
+        return "dance/no-energy"
+    } else if (topMoods.includes("danceable") && topMoods.includes("happy")){
+        return "dance/happy"
+    } else if (topMoods.includes("danceable") && topMoods.includes("not happy")){
+        return "dance/not-happy"
+    } else if (topMoods.includes("not danceable") && topMoods.includes("energetic")) {
+        return "no-dance/energy"
+    } else if (topMoods.includes("not danceable") && topMoods.includes("not energetic")) {
+        return "no-dance/no-energy"
+    } else if (topMoods.includes("not danceable") && topMoods.includes("happy")){
+        return "no-dance/happy"
+    } else if (topMoods.includes("not danceable") && topMoods.includes("not happy")){
+        return "no-dance/not-happy"
+    } else if (topMoods.includes("energetic") && topMoods.includes("happy")){
+        return "energy/happy"
+    } else if (topMoods.includes("energetic") && topMoods.includes("not happy")){
+        return "energy/not-happy"
+    } else if (topMoods.includes("energetic") && topMoods.includes("not happy")){
+        return "energy/not-happy"
+    } else if (topMoods.includes("not energetic") && topMoods.includes("not happy")){
+        return "no-energy/not-happy"
+    }
 }
 
 // Percent Difference
 const percentDifference = (value, avgValue, maxValue) => {
     if (value > avgValue) {
-        const postiveDiff = (value - avgValue) / (maxValue - avgValue) * 100
+        const difference = (value - avgValue) / (maxValue - avgValue) * 100
         return {
+            difference,
             aboveAvg: true,
-            difference: postiveDiff
         }
     }
     if (value < avgValue) {
-        const negativeDiff = (avgValue - value) / (maxValue - avgValue) * 100
+        const difference = (avgValue - value) / (maxValue - avgValue) * 100
         return {
-            aboveAvg: false,
-            difference: negativeDiff
+            difference,
+            aboveAvg: false
         }
     }
 }
-
-// Ascribe Mood
-// const detectMood = (song) => {
-//     switch (song){
-//         case (song.name === "valence" && song.aboveAvg === "true"):
-//             song.mood = "highValence"
-//         case (song.name === "valence" && song.aboveAvg === "false"):
-//             song.mood = "lowValence"
-//         case (song.name === "energy" && song.aboveAvg === "true"):
-//             song.mood = "highEnergy"
-//         case (song.name === "energy" && song.aboveAvg === "false"):
-//             song.mood = "lowEnergy"
-//         case (song.name === "danceability" && song.aboveAvg === "true"):
-//             song.mood = "highDanceability"
-//         case (song.name === "danceability" && song.aboveAvg === "false"):
-//             song.mood = "lowDanceability"
-//     return song
-//     }
-// }

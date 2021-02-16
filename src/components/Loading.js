@@ -3,7 +3,7 @@ import '../stylesheet.css'
 
 const Loading = () => {
     return (
-        <div class="tan d-flex justify-content-center align-items-center text-center content-body">
+        <div className="tan d-flex justify-content-center align-items-center text-center content-body">
             <div>
                 <div className="spinner-border pinkish" role="status">
                     <span className="visually-hidden">Loading...</span>

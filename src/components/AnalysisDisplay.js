@@ -29,7 +29,7 @@ const AnalysisDisplay = ({ song: {
 
 
     return (
-        <div class="tan d-flex mb-3 justify-content-center align-items-center text-center content-body">
+        <div className="tan d-flex mb-3 justify-content-center align-items-center text-center content-body">
             <div>
                 <h2>Analyzing {countIndex}/20</h2>
                 <div>
