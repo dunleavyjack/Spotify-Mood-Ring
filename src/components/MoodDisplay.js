@@ -42,8 +42,20 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
         <div>
             <div class="tan d-flex justify-content-center align-items-center text-center content-body">
                 <div>
-                    <div className="circular--portrait mx-auto">
-                        <img src={images[0].url} />
+                    <div className="tan container">
+                        <div className="row">
+                            <div className="col-2">
+                                <p>hi</p>
+                            </div>
+                            <div className="col-8">
+                                <div className="circular--portrait mx-auto">
+                                    <img src={images[0].url} />
+                                </div>
+                            </div>
+                            <div className="col-2">
+                                <p>hi</p>
+                            </div>
+                        </div>
                     </div>
                     <h1 className="title-small">{mood}</h1>
                 </div>
