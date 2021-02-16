@@ -29,14 +29,42 @@ export const calculateMood = ({
     tempo,
     valence
 }) => {
-    console.log(valence)
-    console.log(avgTempo)
-    if (valence > avgValence) {
+    // Percent difference Object. Ex: {aboveAvg: true/false, value: x}
+    const valenceDifference = percentDifference(valence, avgValence, maxValence)
+    const energyDifference = percentDifference(energy, avgEnergy, maxEnergy)
+    const danceabilityDifference = percentDifference(danceability, avgDanceability, maxDanceability)
+    
+    // Add name property to later identify the object
+    valenceDifference.name = "valence"
+    energyDifference.name = "energy"
+    danceabilityDifference.name = "danceability"
+    
+    // Sort differences 
+    const differenceArray = [
+        valenceDifference,
+        energyDifference,
+        danceabilityDifference,
+    ].sort((a, b) => parseFloat(b.difference) - parseFloat(a.difference));
+    console.log(differenceArray)
+    
+    // Get two moods with highest percent difference
+    const firstMood = differenceArray[0]
+    const secondMood = differenceArray[1]
+
+    console.log(firstMood)
+    console.log(secondMood)
+
+    
+    console.log(valenceDifference)
+    if (valenceDifference.aboveAvg === true){
         return "Happy"
     } else {
-        return "Kinda Blue"
+        return "Kinda Blue :'("
     }
 }
+
+
+
 
 // Get Average
 export const getAverage = arr => {
