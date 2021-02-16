@@ -4,9 +4,19 @@ const avgAcousticness = 0.5
 const avgEnergy = 0.5
 const avgInstrumentalness = 0.5
 const avgLoudness = -30
-const avgSpeechiness = 1
-const avgTempo = 1
+const avgSpeechiness = 0.5
+const avgTempo = 0.5
 const avgValence = 0.5
+
+// Max Mood Levels
+const maxDanceability = 1
+const maxAcousticness = 1
+const maxEnergy = 1
+const maxInstrumentalness = 1
+const maxLoudness = -60
+const maxSpeechiness = 1
+const maxTempo = 1
+const maxValence = 1
 
 // Mood Guesser
 export const calculateMood = ({
@@ -21,7 +31,7 @@ export const calculateMood = ({
 }) => {
     console.log(valence)
     console.log(avgTempo)
-    if (valence > avgValence){
+    if (valence > avgValence) {
         return "Happy"
     } else {
         return "Kinda Blue"
@@ -33,4 +43,22 @@ export const getAverage = arr => {
     let reducer = (total, currentValue) => total + currentValue;
     let sum = arr.reduce(reducer)
     return sum / arr.length;
+}
+
+// Percent Difference
+const percentDifference = (value, avgValue, maxValue) => {
+    if (value > avgValue) {
+        const postiveDiff = (value - avgValue) / (maxValue - avgValue) * 100
+        return {
+            aboveAvg: true,
+            difference: postiveDiff
+        }
+    }
+    if (value < avgValue) {
+        const negativeDiff = (avgValue - value) / (maxValue - avgValue) * 100
+        return {
+            aboveAvg: false,
+            difference: negativeDiff
+        }
+    }
 }
