@@ -45,7 +45,8 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
                     <div className="tan container">
                         <div className="row">
                             <div className="col-2">
-                                <p>hi</p>
+                                <p className="tan floating-two">&#128549;</p>
+                                <p className="tan floating">&#128549;</p>
                             </div>
                             <div className="col-8">
                                 <div className="circular--portrait mx-auto">
@@ -53,7 +54,8 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
                                 </div>
                             </div>
                             <div className="col-2">
-                                <p>hi</p>
+                                <p className="tan floating-two">&#128549;</p>
+                                <p className="tan floating">&#128549;</p>
                             </div>
                         </div>
                     </div>

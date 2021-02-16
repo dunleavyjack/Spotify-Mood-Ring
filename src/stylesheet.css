@@ -153,6 +153,17 @@ footer {
     animation-timing-function: ease-in-out; 
     margin-left: 30px; 
     margin-top: 5px; 
+    font-size: 10vh;
+} 
+
+.floating-two {   
+    animation-name: floating; 
+    animation-duration: 4s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out; 
+    margin-left: 30px; 
+    margin-top: 5px; 
+    font-size: 10vh;
 } 
   
 @keyframes floating { 
