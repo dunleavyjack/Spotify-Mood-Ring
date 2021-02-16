@@ -32,7 +32,9 @@ const AnalysisDisplay = ({ song: {
         <div class="tan d-flex mb-3 justify-content-center align-items-center text-center content-body">
             <div>
                 <h2>Analyzing {countIndex}/20</h2>
-                <img className="album-cover" src={imageURL} />
+                <div>
+                    <img className="album-cover" src={imageURL} />
+                </div>
                 <h2 className="bold">{name}</h2>
                 <h3>{artist}</h3>
                 <h4>{album}</h4>

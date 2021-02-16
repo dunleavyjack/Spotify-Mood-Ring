@@ -34,6 +34,17 @@ footer {
     text-shadow: -5px 5px 0px #000000;
 }
 
+.title-small {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 120px;
+
+    color: #EE7070;
+    text-shadow: -5px 5px 0px #000000;
+}
+
 .pinkish{
     color: #EE7070;
 }
@@ -51,8 +62,8 @@ footer {
 /* Make profile picture circular */
 .circular--portrait {
     position: relative;
-    width: 20vw;
-    height: 20vw;
+    width: 30vh;
+    height: 30vh;
     overflow: hidden;
     border-radius: 50%;
   }
@@ -60,7 +71,8 @@ footer {
 .circular--portrait img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; 
+    object-position: center;
   }
 /* End Make Profile Picture Circular */
 
@@ -121,6 +133,18 @@ footer {
 .tan > * > * {
     background-color: #FCEA9A !important;
 }
+
+.center-container{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
 
 .floating {   
     animation-name: floating; 

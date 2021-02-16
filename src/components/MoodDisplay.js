@@ -39,17 +39,13 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
     }, [])
 
     return (
-        <div className="tan">
-            <div class="tan d-flex mb-3 justify-content-center align-items-center text-center content-body">
+        <div>
+            <div class="tan d-flex justify-content-center align-items-center text-center content-body">
                 <div>
-                    <h1 className="floating">&#128549;</h1>
-                    <div className="circular--portrait">
+                    <div className="circular--portrait mx-auto">
                         <img src={images[0].url} />
                     </div>
-                    <div className="tan">
-                        {/* <h1 className="bold mt-3">Hi, {display_name}</h1> */}
-                        <h1 className="title">{mood}</h1>
-                    </div>
+                    <h1 className="title-small">{mood}</h1>
                 </div>
             </div>
         </div>
