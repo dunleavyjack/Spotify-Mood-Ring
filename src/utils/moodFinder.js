@@ -63,11 +63,8 @@ export const calculateMood = ({
     console.log("combined moods below")
     const combinedTopMoods = [firstMood, secondMood]
     console.log(combinedTopMoods)
-
     const topMoodsOnly = [firstMood.mood, secondMood.mood]
-    const result = evaluateMood(combinedTopMoods.map(song => song.mood))
-    console.log('result below')
-    console.log(result)
+    const result = evaluateMood(topMoodsOnly)
 
     const resultArray = {
         name: result,
@@ -82,10 +79,10 @@ const getValenceDifference = valenceScore => {
     const result = percentDifference(valenceScore, avgValence, maxValence)
     result.name = "valence"
     if (result.aboveAvg === true) {
-        result.mood = "lower valence"
+        result.mood = "higher-valence"
     }
     else {
-        result.mood = "higher valence"
+        result.mood = "lower-valence"
     }
     return result
 }
@@ -94,10 +91,10 @@ const getEnergyDifference = energyScore => {
     const result = percentDifference(energyScore, avgEnergy, maxEnergy)
     result.name = "energy"
     if (result.aboveAvg === true) {
-        result.mood = "higher energy"
+        result.mood = "higher-energy"
     }
     else {
-        result.mood = "lower energy"
+        result.mood = "lower-energy"
     }
     return result
 }
@@ -106,37 +103,41 @@ const getDanceabilityDifference = danceabilityScore => {
     const result = percentDifference(danceabilityScore, avgDanceability, maxDanceability)
     result.name = "danceability"
     if (result.aboveAvg === true) {
-        result.mood = "higher danceablity"
+        result.mood = "higher-danceability"
     }
     else {
-        result.mood = "lower danceablilty"
+        result.mood = "lower-danceability"
     }
     return result
 }
 
-export const evaluateMood = topMoods => {
-    if (topMoods.includes("higher danceablility") && topMoods.includes("higher energy")) {
+const evaluateMood = moodNames => {
+    console.log("function is getting")
+    console.log(moodNames)
+    if (moodNames.includes("higher-danceablility") && moodNames.includes("higher-energy")) {
         return "dance/energy" // Expressive
-    } else if (topMoods.includes("higher danceablility") && topMoods.includes("lower energy")) {
+    } else if (moodNames.includes("higher-danceablility") && moodNames.includes("lower-energy")) {
         return "dance/no-energy" // 
-    } else if (topMoods.includes("higher danceablility") && topMoods.includes("higher valence")){
+    } else if (moodNames.includes("higher-danceablility") && moodNames.includes("higher-valence")){
         return "dance/happy" // Electric
-    } else if (topMoods.includes("higher danceability") && topMoods.includes("lower valence")){
+    } else if (moodNames.includes("higher-danceability") && moodNames.includes("lower-valence")){
         return "dance/not-happy"
-    } else if (topMoods.includes("lower danceablility") && topMoods.includes("higher energy")) {
+    } else if (moodNames.includes("lower-danceablility") && moodNames.includes("higher-energy")) {
         return "no-dance/energy"
-    } else if (topMoods.includes("lower danceablility") && topMoods.includes("less energy")) {
+    } else if (moodNames.includes("lower-danceablility") && moodNames.includes("less-energy")) {
         return "no-dance/no-energy"
-    } else if (topMoods.includes("lower danceablility") && topMoods.includes("higher valence")){
+    } else if (moodNames.includes("lower-danceablility") && moodNames.includes("higher-valence")){
         return "no-dance/happy"
-    } else if (topMoods.includes("lower danceablility") && topMoods.includes("higher valence")){
+    } else if (moodNames.includes("lower-danceablility") && moodNames.includes("higher-valence")){
         return "no-dance/not-happy"
-    } else if (topMoods.includes("higher energy") && topMoods.includes("higher valence")){
+    } else if (moodNames.includes("higher-energy") && moodNames.includes("higher-valence")){
         return "energy/happy"
-    } else if (topMoods.includes("higher energy") && topMoods.includes("lower valence")){
+    } else if (moodNames.includes("higher-energy") && moodNames.includes("lower-valence")){
         return "energy/not-happy" // Angry
-    } else if (topMoods.includes("lower energy") && topMoods.includes("lower valence")){
+    } else if (moodNames.includes("lower-energy") && moodNames.includes("lower-valence")){
         return "no-energy/not-happy"
+    } else if (moodNames.includes("lower-danceability") && moodNames.includes("lower-valence")){
+        return "no-dance/not-happy"
     }
 }
 

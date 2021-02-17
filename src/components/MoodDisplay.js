@@ -1,10 +1,11 @@
 import React from 'react'
 import MoodResultDisplay from './MoodResultDisplay'
 import { useState, useEffect } from 'react';
-import { getAverage, calculateMood, evaluateMood } from '../utils/moodFinder'
+import { getAverage, calculateMood } from '../utils/moodFinder'
 
 const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
-    const [mood, setMood] = useState( () => {
+    const [moodName, setMoodName] = useState("")
+    const [mood, setMood] = useState(() => {
         const danceability = getAverage(songs.map(song => song.danceability))
         const acousticness = getAverage(songs.map(song => song.acousticness))
         const energy = getAverage(songs.map(song => song.energy))
@@ -30,12 +31,12 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
             tempo,
             valence
         };
-        console.log(averagesObject)
         const yourMood = calculateMood(averagesObject)
+        console.log(yourMood)
         return yourMood
-        // console.log("your mood below")
-        // console.log(mood)
+
     })
+
     return (
         <div>
             <div className="tan d-flex justify-content-center align-items-center text-center content-body">
