@@ -56,12 +56,19 @@ export const calculateMood = ({
     // Get two moods with highest percent difference
     const firstMood = differenceArray[0]
     const secondMood = differenceArray[1]
-    const topMoods = [firstMood.mood, secondMood.mood]
-    return topMoods
-}
+    console.log("combined moods below")
+    const combinedTopMoods = [firstMood, secondMood]
+    console.log(combinedTopMoods)
 
-export const evaluateTopMoods = topMoods => {
-    const result = evaluateMood(topMoods)
+
+    const topMoodsOnly = [firstMood.mood, secondMood.mood]
+    const result = evaluateMood(combinedTopMoods.map(song => song.mood))
+    console.log('result below')
+    console.log(result)
+
+    const resultArray = [...topMoodsOnly, result]
+    console.log(resultArray)
+
     return result
 }
 

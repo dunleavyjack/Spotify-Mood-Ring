@@ -33,7 +33,9 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
             tempo,
             valence
         };
+        console.log(averagesObject)
         const topMoods = calculateMood(averagesObject)
+        console.log('top moods below')
         console.log(topMoods)
         setTopMoods(topMoods)
         const yourMood = evaluateMood(topMoods)
@@ -47,7 +49,7 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
                     <div className="circular--portrait mx-auto">
                         <img src={images[0].url} />
                     </div>
-                    <MoodResultDisplay mood={mood} topMoods={topMoods}/>
+                    {/* <MoodResultDisplay mood={mood} topMoods={topMoods}/> */}
                 </div>
             </div>
         </div>
