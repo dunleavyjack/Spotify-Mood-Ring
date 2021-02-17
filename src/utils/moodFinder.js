@@ -57,7 +57,10 @@ export const calculateMood = ({
     const firstMood = differenceArray[0]
     const secondMood = differenceArray[1]
     const topMoods = [firstMood.mood, secondMood.mood]
+    return topMoods
+}
 
+export const evaluateTopMoods = topMoods => {
     const result = evaluateMood(topMoods)
     return result
 }
@@ -98,7 +101,7 @@ const getDanceabilityDifference = danceabilityScore => {
     return result
 }
 
-const evaluateMood = topMoods => {
+export const evaluateMood = topMoods => {
     if (topMoods.includes("danceable") && topMoods.includes("energetic")) {
         return "dance/energy" // Expressive
     } else if (topMoods.includes("danceable") && topMoods.includes("not energetic")) {

@@ -1,10 +1,11 @@
 import React from 'react'
+import MoodResultDisplay from './MoodResultDisplay'
 import { useState, useEffect } from 'react';
-import { getAverage, calculateMood } from '../utils/moodFinder'
+import { getAverage, calculateMood, evaluateMood } from '../utils/moodFinder'
 
 const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
-    const [averages, setAverages] = useState({})
     const [mood, setMood] = useState("")
+    const [topMoods, setTopMoods] = useState([])
 
     useEffect(() => {
         const danceability = getAverage(songs.map(song => song.danceability))
@@ -32,9 +33,10 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
             tempo,
             valence
         };
-        console.log(averagesObject)
-        setAverages(averagesObject)
-        const yourMood = calculateMood(averagesObject)
+        const topMoods = calculateMood(averagesObject)
+        console.log(topMoods)
+        setTopMoods(topMoods)
+        const yourMood = evaluateMood(topMoods)
         setMood(yourMood)
     }, [])
 
@@ -45,8 +47,7 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
                     <div className="circular--portrait mx-auto">
                         <img src={images[0].url} />
                     </div>
-                    <h1 className="title-small">{mood}</h1>
-                    <p className="tan floating">&#128549;</p>
+                    <MoodResultDisplay mood={mood} topMoods={topMoods}/>
                 </div>
             </div>
         </div>
