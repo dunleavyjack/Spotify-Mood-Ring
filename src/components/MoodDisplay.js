@@ -4,10 +4,7 @@ import { useState, useEffect } from 'react';
 import { getAverage, calculateMood, evaluateMood } from '../utils/moodFinder'
 
 const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
-    const [mood, setMood] = useState("")
-    const [topMoods, setTopMoods] = useState([])
-
-    useEffect(() => {
+    const [mood, setMood] = useState( () => {
         const danceability = getAverage(songs.map(song => song.danceability))
         const acousticness = getAverage(songs.map(song => song.acousticness))
         const energy = getAverage(songs.map(song => song.energy))
@@ -34,14 +31,11 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
             valence
         };
         console.log(averagesObject)
-        const topMoods = calculateMood(averagesObject)
-        console.log('top moods below')
-        console.log(topMoods)
-        setTopMoods(topMoods)
-        const yourMood = evaluateMood(topMoods)
-        setMood(yourMood)
-    }, [])
-
+        const yourMood = calculateMood(averagesObject)
+        return yourMood
+        // console.log("your mood below")
+        // console.log(mood)
+    })
     return (
         <div>
             <div className="tan d-flex justify-content-center align-items-center text-center content-body">
@@ -49,7 +43,7 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
                     <div className="circular--portrait mx-auto">
                         <img src={images[0].url} />
                     </div>
-                    {/* <MoodResultDisplay mood={mood} topMoods={topMoods}/> */}
+                    <MoodResultDisplay mood={mood} />
                 </div>
             </div>
         </div>

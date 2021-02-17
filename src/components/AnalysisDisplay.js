@@ -7,23 +7,6 @@ const AnalysisDisplay = ({ song: {
     artist,
     imageURL,
     playedAt,
-    acousticness,
-    danceability,
-    duration_ms,
-    energy,
-    id,
-    instrumentalness,
-    songKey,
-    liveness,
-    loudness,
-    mode,
-    speechiness,
-    tempo,
-    time_signature,
-    track_href,
-    type,
-    uri,
-    valence,
     countIndex
 } }) => {
 
