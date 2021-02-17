@@ -114,30 +114,30 @@ const getDanceabilityDifference = danceabilityScore => {
 const evaluateMood = moodNames => {
     console.log("function is getting")
     console.log(moodNames)
-    if (moodNames.includes("higher-danceablility") && moodNames.includes("higher-energy")) {
-        return "dance/energy" // Expressive
+    if (moodNames.includes("higher-danceability") && moodNames.includes("higher-energy")) {
+        return "expressive" // Expressive
     } else if (moodNames.includes("higher-danceablility") && moodNames.includes("lower-energy")) {
-        return "dance/no-energy" // 
+        return "confused" // confused/unhinged/disoriented
     } else if (moodNames.includes("higher-danceablility") && moodNames.includes("higher-valence")){
-        return "dance/happy" // Electric
+        return "electric" // Electric
     } else if (moodNames.includes("higher-danceability") && moodNames.includes("lower-valence")){
-        return "dance/not-happy"
+        return "a little blue" // a little blue
     } else if (moodNames.includes("lower-danceablility") && moodNames.includes("higher-energy")) {
-        return "no-dance/energy"
+        return "disoriented" // confused/unhinged/disoriented
     } else if (moodNames.includes("lower-danceablility") && moodNames.includes("less-energy")) {
-        return "no-dance/no-energy"
+        return "a bit lethargic" // lethargic
     } else if (moodNames.includes("lower-danceablility") && moodNames.includes("higher-valence")){
-        return "no-dance/happy"
+        return "carefree" // carefree
     } else if (moodNames.includes("lower-danceablility") && moodNames.includes("higher-valence")){
-        return "no-dance/not-happy"
+        return "melancholic" // melancholic
     } else if (moodNames.includes("higher-energy") && moodNames.includes("higher-valence")){
-        return "energy/happy"
+        return "expressive" // Expressive
     } else if (moodNames.includes("higher-energy") && moodNames.includes("lower-valence")){
-        return "energy/not-happy" // Angry
+        return "antagonistic" // Angry/antagonistic
     } else if (moodNames.includes("lower-energy") && moodNames.includes("lower-valence")){
-        return "no-energy/not-happy"
+        return "gloomy" // gloomy
     } else if (moodNames.includes("lower-danceability") && moodNames.includes("lower-valence")){
-        return "no-dance/not-happy"
+        return "melancholic" // melancholic
     }
 }
 

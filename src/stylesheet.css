@@ -150,6 +150,10 @@ footer {
     left: 16px;
   }
 
+.custom-link{
+    text-decoration: none;
+}
+
 .floating {   
     animation-name: floating; 
     animation-duration: 3s; 
