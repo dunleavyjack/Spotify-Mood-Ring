@@ -14,7 +14,7 @@ const AnalysisDisplay = ({ song: {
     return (
         <div className="tan d-flex mb-3 justify-content-center align-items-center text-center content-body">
             <div>
-                <h2>Analyzing {countIndex}/20</h2>
+                <h2>Analyzing <span className="tan pinkish review-number">{countIndex}/20</span></h2>
                 <div>
                     <img className="album-cover" src={imageURL} />
                 </div>
