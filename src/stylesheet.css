@@ -77,14 +77,18 @@ footer {
 /* End Make Profile Picture Circular */
 
 .album-cover {
-    position: relative;
-    width: 70%;
-    height: 70%;
+    position: cover;
+    width: 40vh;
+    height: 40vh;
 }
 
 .no-decoration{
     text-decoration: none;
     color: #EE7070;
+}
+
+.about-header{
+    font-size: 40px;
 }
 
 .white{
