@@ -74,7 +74,7 @@ export const fixDate = (date) => {
         const year = date.slice(0, 4)
         const month = date.slice(5, 7)
         const day = date.slice(8, 10)
-        const time = date.slice(11, 19)
+        const time = date.slice(11, 16)
         const text = `${month}/${day}/${year} at ${time}`
         return text
     }
