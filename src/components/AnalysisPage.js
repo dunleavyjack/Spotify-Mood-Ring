@@ -22,7 +22,7 @@ const AnalysisPage = ({ songs, profile }) => {
     if(finishedShuffeling === false && songs.length === 0){
         return (
             <div>
-                <Loading />
+                <Loading text={"Connecting just takes a sec"}/>
             </div>
         )
     }

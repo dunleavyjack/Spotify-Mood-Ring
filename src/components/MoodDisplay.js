@@ -1,9 +1,11 @@
 import React from 'react'
 import MoodResultDisplay from './MoodResultDisplay'
+import Loading from './Loading'
 import { useState, useEffect } from 'react';
 import { getAverage, calculateMood } from '../utils/moodFinder'
 
 const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
+    const [finishedShuffeling, setFinishedShuffeling] = useState(false)
     const [moodName, setMoodName] = useState("")
     const [mood, setMood] = useState(() => {
         const danceability = getAverage(songs.map(song => song.danceability))
@@ -34,8 +36,21 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
         const yourMood = calculateMood(averagesObject)
         console.log(yourMood)
         return yourMood
+    });
 
+    useEffect(() => {
+        setTimeout(() => {
+            setFinishedShuffeling(true)
+        }, 1200)
     })
+
+    if(finishedShuffeling === false){
+        return (
+            <div>
+                <Loading text={"Analyzing you mood"}/>
+            </div>
+        )
+    }
 
     return (
         <div>
