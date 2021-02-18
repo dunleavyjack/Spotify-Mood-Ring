@@ -8,13 +8,13 @@ const About = () => {
             <Navbar />
                 <div className="tan d-flex justify-content-center align-items-center content-body text-center content-body">
                     <div className="container flex-fill tan">
-                        <h1 className="bold about-header">About</h1>
+                        <h1 className="bold about-header">About &#x2139;&#xFE0F;</h1>
                         <h3>Your mood is determined by examining several key analytics (mood, tempo, acousticness, etc) from each of your recently played tracks.</h3>
                         
-                        <h1 className="bold about-header mt-3">Privacy</h1>
+                        <h1 className="bold about-header mt-3">Privacy &#128274;</h1>
                         <h3>Your account data cannot be viewed, shared, or saved by anyone. You can view the complete Spotify privacy policy <a className="custom-link" href="https://www.spotify.com/us/legal/privacy-policy/">here</a>.</h3>
                         
-                        <h1 className="bold about-header mt-3">Development</h1>
+                        <h1 className="bold about-header mt-3">Development &#x1F468;&#x200D;&#x1F4BB;</h1>
                         <h3>{`This project was built using `}
                             <a className="custom-link" href="https://reactjs.org/">React</a>
                             {', '}
