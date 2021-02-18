@@ -11,9 +11,6 @@ const About = () => {
                         <h1 className="bold about-header">About &#x2139;&#xFE0F;</h1>
                         <h3>Your mood is determined by examining several key analytics (mood, tempo, acousticness, etc) from each of your recently played tracks.</h3>
                         
-                        <h1 className="bold about-header mt-3">Privacy &#128274;</h1>
-                        <h3>Your account data cannot be viewed, shared, or saved by anyone. You can view the complete Spotify privacy policy <a className="custom-link" href="https://www.spotify.com/us/legal/privacy-policy/">here</a>.</h3>
-                        
                         <h1 className="bold about-header mt-3">Development &#x1F468;&#x200D;&#x1F4BB;</h1>
                         <h3>{`This project was built using `}
                             <a className="custom-link" href="https://reactjs.org/">React</a>
@@ -25,6 +22,10 @@ const About = () => {
                             <a className="custom-link" href="https://developer.spotify.com/documentation/web-api/">Spotify Web API </a>
                             and is currently hosted with <a className="custom-link" href="https://vercel.com/">Vercel</a>. It built by me, <a className="custom-link"href="https://github.com/dunleavyjack">Jack</a>, in Feb 2021.
                         </h3>
+
+                        <h1 className="bold about-header mt-3">Privacy &#128274;</h1>
+                        <h3>Your account data cannot be viewed, shared, or saved by anyone. You can view the complete Spotify privacy policy <a className="custom-link" href="https://www.spotify.com/us/legal/privacy-policy/">here</a>.</h3>
+                        
                     </div>
                 </div>
             <Footer />
