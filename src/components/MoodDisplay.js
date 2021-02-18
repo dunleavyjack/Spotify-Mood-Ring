@@ -41,7 +41,7 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
     useEffect(() => {
         setTimeout(() => {
             setFinishedShuffeling(true)
-        }, 1200)
+        }, 1600)
     })
 
     if(finishedShuffeling === false){
