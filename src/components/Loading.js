@@ -1,5 +1,4 @@
 import React from 'react'
-import '../stylesheet.css'
 
 const Loading = () => {
     return (
@@ -8,8 +7,8 @@ const Loading = () => {
                 <div className="spinner-border pinkish" role="status">
                     <span className="visually-hidden">Loading...</span>
                 </div>
-                <h2 classname="bold">Hey, Spotify<span className="pinkish tan">...</span></h2>
-                <h3>Connecting just takes a sec.</h3>
+                {/* <h2 classname="bold">Hey, Spotify<span className="pinkish tan">...</span></h2> */}
+                <h2 className="bold mt-3">Connecting just takes a sec <span className="pinkish tan">...</span></h2>
             </div>
         </div>
     )
