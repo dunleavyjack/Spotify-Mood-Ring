@@ -26,7 +26,7 @@ const YourMood = () => {
         return (
             <div>
                 <Navbar />
-                <Loading text={"Connecting just takes a sec"}/>
+                <Loading text={"Connecting with Spotify"}/>
                 <Footer />
             </div>
         )

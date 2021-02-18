@@ -6,7 +6,6 @@ import { getAverage, calculateMood } from '../utils/moodFinder'
 
 const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
     const [finishedShuffeling, setFinishedShuffeling] = useState(false)
-    const [moodName, setMoodName] = useState("")
     const [mood, setMood] = useState(() => {
         const danceability = getAverage(songs.map(song => song.danceability))
         const acousticness = getAverage(songs.map(song => song.acousticness))
@@ -38,12 +37,14 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
         return yourMood
     });
 
+    // Initiate loading page with 2-ish second delay
     useEffect(() => {
         setTimeout(() => {
             setFinishedShuffeling(true)
-        }, 1600)
+        }, 2400)
     })
 
+    // Direct user to loading page
     if(finishedShuffeling === false){
         return (
             <div>
@@ -52,6 +53,7 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
         )
     }
 
+    // After loading page 'delay', display result page
     return (
         <div>
             <div className="tan d-flex justify-content-center align-items-center text-center content-body">
