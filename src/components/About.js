@@ -22,8 +22,8 @@ const About = () => {
                             {', '}
                             <a className="custom-link" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">OAuth2 Authorization</a>
                             {', and the '}
-                            <a className="custom-link" href="https://developer.spotify.com/documentation/web-api/">Spotify Web API</a>
-                            {`. `} This project is currently hosted using Vercel.
+                            <a className="custom-link" href="https://developer.spotify.com/documentation/web-api/">Spotify Web API </a>
+                            and is currently hosted with <a className="custom-link" href="https://vercel.com/">Vercel</a>.
                         </h3>
                     </div>
                 </div>
