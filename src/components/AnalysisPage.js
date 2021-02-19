@@ -11,11 +11,11 @@ const AnalysisPage = ({ songs, profile }) => {
         songs.forEach((song, i) => {
             setTimeout(() => {
                 setAnalyizedSong(song);
-            }, i * 300);
+            }, i * 150);
         });
         setTimeout(() => {
             setFinishedShuffeling(true)
-        }, 6000)
+        }, 3000)
     }, [])
 
     // Return loading screen while waiting for async/await

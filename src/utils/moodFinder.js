@@ -18,10 +18,6 @@ const maxSpeechiness = 1
 const maxTempo = 1
 const maxValence = 1
 
-
-
-
-
 // Get Average
 export const getAverage = arr => {
     let reducer = (total, currentValue) => total + currentValue;
