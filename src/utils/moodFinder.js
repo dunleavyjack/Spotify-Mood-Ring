@@ -25,17 +25,22 @@ export const getAverage = arr => {
     return sum / arr.length;
 }
 
+
+
 // Mood Guesser
-export const calculateMood = ({
-    danceability,
-    acousticness,
-    energy,
-    instrumentalness,
-    loudness,
-    speechiness,
-    tempo,
-    valence
-}) => {
+export const calculateMood = songs => {
+    const danceability = getAverage(songs.map(song => song.danceability))
+    const acousticness = getAverage(songs.map(song => song.acousticness))
+    const energy = getAverage(songs.map(song => song.energy))
+    const instrumentalness = getAverage(songs.map(song => song.instrumentalness))
+    const key = getAverage(songs.map(song => song.key))
+    const liveness = getAverage(songs.map(song => song.liveness))
+    const loudness = getAverage(songs.map(song => song.loudness))
+    const mode = getAverage(songs.map(song => song.mode))
+    const speechiness = getAverage(songs.map(song => song.speechiness))
+    const tempo = getAverage(songs.map(song => song.tempo))
+    const valence = getAverage(songs.map(song => song.valence))
+    
     // Percent difference Object. Ex: {aboveAvg: true/false, value: x}
     const valenceDifference = getValenceDifference(valence)
     const energyDifference = getEnergyDifference(energy)
@@ -67,7 +72,6 @@ export const calculateMood = ({
         firstMood,
         secondMood,
     }
-
     return resultArray
 }
 
@@ -129,7 +133,7 @@ const evaluateMood = moodNames => {
     } else if (moodNames.includes("higher-energy") && moodNames.includes("higher-valence")) {
         return "expressive" // Expressive
     } else if (moodNames.includes("higher-energy") && moodNames.includes("lower-valence")) {
-        return "antagonistic" // Angry/antagonistic
+        return "moody" // Angry/antagonistic
     } else if (moodNames.includes("lower-energy") && moodNames.includes("lower-valence")) {
         return "gloomy" // gloomy
     } else if (moodNames.includes("lower-danceability") && moodNames.includes("lower-valence")) {
