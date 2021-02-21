@@ -25,8 +25,6 @@ export const getAverage = arr => {
     return sum / arr.length;
 }
 
-
-
 // Mood Guesser
 export const calculateMood = songs => {
     const danceability = getAverage(songs.map(song => song.danceability))

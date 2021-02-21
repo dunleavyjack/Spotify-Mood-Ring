@@ -3,7 +3,6 @@ import { getRecentlyPlayedTracks, getSongAnalysisArray, getUserProfile } from '.
 import Navbar from './Navbar'
 import AnalysisPage from './AnalysisPage'
 import Loading from './Loading'
-import Footer from './Footer'
 
 const YourMood = () => {
     const [playedSongsData, setPlayedSongsData] = useState([])
