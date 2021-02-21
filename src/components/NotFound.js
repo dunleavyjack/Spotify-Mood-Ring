@@ -11,7 +11,6 @@ const NotFound = () => {
                     <h2 className="bold mt-3">Hmm... looks like something went wrong. <span className="pinkish tan">:(</span></h2>
                 </div>
             </div>
-            <Footer />
         </React.Fragment>
     )
 }

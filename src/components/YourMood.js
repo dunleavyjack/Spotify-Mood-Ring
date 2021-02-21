@@ -22,12 +22,11 @@ const YourMood = () => {
     }, [])
 
     // Display loading screen while waiting for songs
-    if(playedSongsData.length === 0){
+    if (playedSongsData.length === 0) {
         return (
             <div>
                 <Navbar />
-                <Loading text={"Connecting with Spotify"}/>
-                <Footer />
+                <Loading text={"Connecting with Spotify"} />
             </div>
         )
     }
@@ -36,8 +35,7 @@ const YourMood = () => {
     return (
         <div>
             <Navbar />
-            <AnalysisPage songs={playedSongsData} profile={userProfile}/>
-            <Footer />
+            <AnalysisPage songs={playedSongsData} profile={userProfile} />
         </div>
     )
 };

@@ -19,18 +19,17 @@ const Home = (props) => {
     return (
         <div>
             <Navbar />
-                <div className="d-flex tan justify-content-center align-items-center content-body">
-                    <div>
-                        <h1 className="title">mood ring</h1>
-                        <h2 className="bold">How are you?</h2>
-                        <h3>A mood guesser based on your </h3>
-                        <h3>recently played music.</h3>
-                        <div className="text-center mt-4">
-                            <button className="btn-green" onClick={handleLogin}> Connect with Spotify </button>
-                        </div>
+            <div className="d-flex tan justify-content-center align-items-center content-body">
+                <div>
+                    <h1 className="title">mood ring</h1>
+                    <h2 className="bold">How are you?</h2>
+                    <h3>A mood guesser based on your </h3>
+                    <h3>recently played music.</h3>
+                    <div className="text-center mt-4">
+                        <button className="btn-green" onClick={handleLogin}> Connect with Spotify </button>
                     </div>
                 </div>
-            <Footer />
+            </div>
         </div>
     );
 };
