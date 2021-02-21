@@ -1,17 +1,17 @@
 * {
-    background-color: black;
+    background-color: #FCEA9A;
     font-family: 'Poppins', sans-serif;
 }
 
 .navbar{
-    background-color: #000000 !important; 
+    background-color: #FCEA9A !important; 
     height: 7.5vh;
 }
 
 .brand-text{
     font-weight: 700;
     text-decoration: none;
-    color: #E5E5E5 !important;
+    color: #000000 !important;
 }
 
 footer {
@@ -159,7 +159,7 @@ footer {
 }
 
 .btn-grey:hover{
-    background-color: whitesmoke !important;
+    background-color: #EE7070 !important;
 }
 
 
