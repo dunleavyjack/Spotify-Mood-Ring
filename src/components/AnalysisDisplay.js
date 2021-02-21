@@ -21,7 +21,7 @@ const AnalysisDisplay = ({ song: {
                 <h2 className="bold">{name}</h2>
                 <h3>{artist}</h3>
                 <h4>{album}</h4>
-                <h4 className="pinkish">You listened on {fixDate(playedAt)}</h4>
+                <h4 className="pinkish">{fixDate(playedAt)}</h4>
             </div>
         </div>
     )
