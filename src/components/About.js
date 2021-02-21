@@ -8,7 +8,7 @@ const About = () => {
             <Navbar />
             <div className="tan d-flex justify-content-center align-items-center content-body text-center content-body">
                 <div className="container flex-fill tan">
-                    <h1 className="bold about-header">About</h1>
+                    <h1 className="bold about-header mt-5">About</h1>
                     <h5>
                         This project was built with
                         <a className="custom-link" href="https://reactjs.org/"> React</a>,
@@ -17,35 +17,15 @@ const About = () => {
                         designed in 
                         <a className="custom-link" href="https://www.figma.com/design/"> Figma</a>.
                         Currently, it is hosted with
-                        <a className="custom-link" href="https://vercel.com/"> Vercel </a> and the repo is available on
-                        <a className="custom-link" href="https://github.com/dunleavyjack/Spotify-Mood-Ring"> GitHub</a> for anyone who wants to take a look.
+                        <a className="custom-link" href="https://vercel.com/"> Vercel </a> and the repo is available
+                        <a className="custom-link" href="https://github.com/dunleavyjack/Spotify-Mood-Ring"> here</a> on GitHub for anyone who wants to take a look.
                     </h5>
                     
                     <h1 className="bold about-header mt-5">The Mood Detector</h1>
-                    <h5>Your mood is determined based on different analytics (tempo, energy, acousticness, etc.) within each song. An average is found from your recent music and that is compared with the levels of an 'average listener'. That data is matched with one of over thirty moods and that's what you see. Moods are strange and ineffable, but hopefully it connected with you :)</h5>
+                    <h5>Your mood is determined based on different analytics (tempo, energy, acousticness, etc.) from each song. An average is found from your recent music which is compared with the levels of an 'average listener'. That data is matched with one of over thirty moods and that's what you see. Moods are strange and ineffable, but hopefully it connected with you :)</h5>
                     
                     <h1 className="bold about-header mt-5">Privacy</h1>
-                    <h5>For obvious reasons, your account data cannot be viewed, shared, or saved by anyone. You can view the complete Spotify privacy policy <a className="custom-link" href="https://www.spotify.com/us/legal/privacy-policy/">here</a>, which also covers approved third-party projects like this one. </h5>
-                    
-                    
-                    {/* <h3>Your mood is determined by examining key analytics (mood, tempo, acousticness) from your music and creating an average 'feeling'.</h3>
-
-                    <h1 className="bold about-header mt-3">Privacy</h1>
-                    <h3>Your account data cannot be viewed, shared, or saved by anyone. You can view the complete Spotify privacy policy <a className="custom-link" href="https://www.spotify.com/us/legal/privacy-policy/">here</a>.</h3>
-
-                    <h1 className="bold about-header mt-3">Development</h1>
-                    <h3>This project was built using
-                            <a className="custom-link" href="https://reactjs.org/"> React</a>
-                        {', '}
-                        <a className="custom-link" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap 5</a>
-                        {', '}
-                        <a className="custom-link" href="https://developer.spotify.com/documentation/general/guides/authorization-guide/">Spotify OAuth2 Authorization</a>
-                        {', '}
-                        <a className="custom-link" href="https://developer.spotify.com/documentation/web-api/">the Spotify Web API </a>
-                            . It was designed with
-                            <a className="custom-link" href="https://www.figma.com/design/"> Figma </a>
-                            and is currently hosted with <a className="custom-link" href="https://vercel.com/">Vercel</a>. All work by me, <a className="custom-link" href="https://github.com/dunleavyjack">Jack</a>, in Feb 2021.
-                        </h3> */}
+                    <h5 className="mb-5">For obvious reasons, your account data cannot be viewed, shared, or saved by anyone. You can view the complete Spotify privacy policy <a className="custom-link" href="https://www.spotify.com/us/legal/privacy-policy/">here</a>, which also covers approved third-party projects like this one. </h5>
                 </div>
             </div>
         </div>
