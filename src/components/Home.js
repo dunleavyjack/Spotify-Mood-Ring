@@ -23,8 +23,7 @@ const Home = (props) => {
                 <div>
                     <h1 className="title">mood ring</h1>
                     <h2 className="bold">How are you?</h2>
-                    <h3>A mood detector based on your </h3>
-                    <h3>recently played music.</h3>
+                    <h3>A mood detector based on your recently played music.</h3>
                     <div className="text-center mt-4">
                         <button className="btn-green" onClick={handleLogin}> Connect with Spotify </button>
                     </div>
