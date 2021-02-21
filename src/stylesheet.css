@@ -56,7 +56,7 @@ footer {
 }
 
 .content-body{
-    min-height: 92.5vh;
+    min-height: 100vh;
 }
 
 /* Make profile picture circular */
