@@ -9,7 +9,7 @@ const About = () => {
                 <div className="tan d-flex justify-content-center align-items-center content-body text-center content-body">
                     <div className="container flex-fill tan">
                         <h1 className="bold about-header">Overview &#127925;</h1>
-                        <h3>Your mood is determined by examining key analytics (mood, tempo, acousticness, etc) from your music and creating an average 'feeling'.</h3>
+                        <h3>Your mood is determined by examining key analytics (mood, tempo, acousticness) from your music and creating an average 'feeling'.</h3>
 
                         <h1 className="bold about-header mt-3">Privacy &#128274;</h1>
                         <h3>Your account data cannot be viewed, shared, or saved by anyone. You can view the complete Spotify privacy policy <a className="custom-link" href="https://www.spotify.com/us/legal/privacy-policy/">here</a>.</h3>
