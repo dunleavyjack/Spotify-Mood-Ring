@@ -122,13 +122,13 @@ const evaluateMood = moodNames => {
         return "electric" // Electric
     } else if (moodNames.includes("higher-danceability") && moodNames.includes("lower-valence")) {
         return "a little blue" // a little blue
-    } else if (moodNames.includes("lower-danceablility") && moodNames.includes("higher-energy")) {
+    } else if (moodNames.includes("lower-danceability") && moodNames.includes("higher-energy")) {
         return "disoriented" // confused/unhinged/disoriented
-    } else if (moodNames.includes("lower-danceablility") && moodNames.includes("less-energy")) {
+    } else if (moodNames.includes("lower-danceability") && moodNames.includes("less-energy")) {
         return "a bit lethargic" // lethargic
-    } else if (moodNames.includes("lower-danceablility") && moodNames.includes("higher-valence")) {
+    } else if (moodNames.includes("lower-danceability") && moodNames.includes("higher-valence")) {
         return "carefree" // carefree
-    } else if (moodNames.includes("lower-danceablility") && moodNames.includes("higher-valence")) {
+    } else if (moodNames.includes("lower-danceability") && moodNames.includes("higher-valence")) {
         return "melancholic" // melancholic
     } else if (moodNames.includes("higher-energy") && moodNames.includes("higher-valence")) {
         return "expressive" // Expressive
