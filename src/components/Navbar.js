@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <div className="container">
                 <Link className="navbar-brand nav-title brand-text" to="/"><span className="pinkish">mood ring</span> {'{'} beta {'}'} </Link>
                 <div className="navbar-nav ml-auto">

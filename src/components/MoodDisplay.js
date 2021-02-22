@@ -3,6 +3,7 @@ import MoodResultDisplay from './MoodResultDisplay'
 import Loading from './Loading'
 import { useState, useEffect } from 'react';
 import { calculateMood } from '../utils/moodFinder'
+import AdditionalDisplay from './AdditionalDisplay';
 
 const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
     const [finishedShuffeling, setFinishedShuffeling] = useState(false)
@@ -40,6 +41,7 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
                     <div className="mt-4">
                         <button className="btn-grey">See More</button>
                     </div>
+                    <AdditionalDisplay />
                 </div>
             </div>
         </div>

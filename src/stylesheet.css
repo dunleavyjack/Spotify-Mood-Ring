@@ -8,6 +8,10 @@
     height: 7.5vh;
 }
 
+.black-body{
+    background-color: black !important;
+}
+
 .brand-text{
     font-weight: 700;
     text-decoration: none;
@@ -211,8 +215,4 @@ footer {
     0% { transform: translate(0,  0px); } 
     50%  { transform: translate(0, 15px); } 
     100%   { transform: translate(0, -0px); }     
-}
-
-.info-text{
-
 }
