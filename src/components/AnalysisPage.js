@@ -15,7 +15,7 @@ const AnalysisPage = ({ songs, profile }) => {
         });
         setTimeout(() => {
             setFinishedShuffeling(true)
-        }, 3000)
+        }, 3150)
     }, [])
 
     // Return loading screen while waiting for async/await
