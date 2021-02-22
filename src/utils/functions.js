@@ -69,7 +69,7 @@ export const getSongAnalysisArray = async (arr) => {
 }
 
 // Change date string into something readable/understandable
-export const fixDate = (date) => {
+export const fixDate = date => {
     if (typeof date === 'string') {
         const year = date.slice(0, 4)
         const month = date.slice(5, 7)
@@ -77,5 +77,14 @@ export const fixDate = (date) => {
         const time = date.slice(11, 16)
         const text = `${month}/${day}/${year} at ${time}`
         return text
+    }
+}
+
+// Add ellipese to long song/album names
+export const formatStr = str => {
+    if (typeof str === 'string' && str.length > 20){
+        return str.substr(0, 19) + "..."
+    } else {
+    		return str
     }
 }

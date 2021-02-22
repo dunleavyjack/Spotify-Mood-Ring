@@ -1,5 +1,5 @@
 import React from 'react'
-import { fixDate } from '../utils/functions'
+import { fixDate, formatStr } from '../utils/functions'
 
 const AnalysisDisplay = ({ song: {
     name,
@@ -18,9 +18,9 @@ const AnalysisDisplay = ({ song: {
                 <div>
                     <img className="album-cover" src={imageURL} />
                 </div>
-                <h2 className="bold">{name}</h2>
-                <h3>{artist}</h3>
-                <h4>{album}</h4>
+                <h2 className="bold">{formatStr(name)}</h2>
+                <h3>{formatStr(artist)}</h3>
+                <h4>{formatStr(album)}</h4>
                 <h4 className="pinkish">{fixDate(playedAt)}</h4>
             </div>
         </div>

@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from './Navbar'
-import Footer from './Footer'
 
 const About = () => {
     return (
@@ -9,6 +8,7 @@ const About = () => {
             <div className="tan d-flex justify-content-center align-items-center content-body text-center content-body">
                 <div className="container flex-fill tan">
                     <h1 className="bold about-header mt-5">About</h1>
+                    
                     <h5>
                         This project was built with
                         <a className="custom-link" href="https://reactjs.org/"> React</a>,
