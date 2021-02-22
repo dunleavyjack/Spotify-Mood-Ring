@@ -10,6 +10,7 @@
 
 .black-body{
     background-color: black !important;
+    height: 600px;
 }
 
 .brand-text{
@@ -79,6 +80,13 @@ footer {
     object-position: center;
   }
 /* End Make Profile Picture Circular */
+
+.container-fluid {
+    padding-right:0;
+    padding-left:0;
+    margin-right:auto;
+    margin-left:auto
+ }
 
 .album-cover {
     position: cover;

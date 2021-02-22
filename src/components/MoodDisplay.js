@@ -31,7 +31,7 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
 
     // After loading page 'delay', display result page
     return (
-        <div>
+        <React.Fragment>
             <div className="tan d-flex justify-content-center align-items-center text-center content-body">
                 <div>
                     <div className="circular--portrait mx-auto mt-5">
@@ -41,10 +41,12 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
                     <div className="mt-4">
                         <button className="btn-grey">See More</button>
                     </div>
-                    <AdditionalDisplay />
                 </div>
             </div>
-        </div>
+            <div className="container-fluid">
+                <AdditionalDisplay />
+            </div>
+        </React.Fragment>
     );
 };
 

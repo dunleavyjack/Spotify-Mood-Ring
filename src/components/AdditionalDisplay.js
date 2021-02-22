@@ -2,7 +2,10 @@ import React from 'react'
 
 const AdditionalDisplay = () => {
     return (
-        <div className="black-body"></div>
+        <div>
+            <div className="black-body pinkish">Hi</div>
+        </div>
+
     )
 }
 
