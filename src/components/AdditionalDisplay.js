@@ -7,7 +7,7 @@ const AdditionalDisplay = () => {
                 <div className="whiteish">
                     <div className="black-body">
                         <div className="container-fluid black-body">
-                            <h1 className="bold mt-5 mb-5 tan-font">Your Full Breakdown</h1>
+                            <h2 className="bold mt-5 mb-5 tan-font">Your Full Breakdown</h2>
                             
                             <div className="black-body row">
                                 <h4 className="col mt-auto bold">Higher Danceability</h4>
