@@ -10,7 +10,10 @@
 
 .black-body{
     background-color: black !important;
-    height: 600px;
+}
+
+.black-body > *{
+    background-color: black !important;
 }
 
 .brand-text{
@@ -19,14 +22,6 @@
     color: #000000 !important;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-    color: white !important;
-    height: 6.5vh !important;
-}
 
 .title {
     font-family: Poppins;
@@ -140,6 +135,9 @@ footer {
 
 .btn-green:hover{
     background-color: #1ed760;
+}
+.whiteish{
+    color: whitesmoke;
 }
 
 .btn-grey {
