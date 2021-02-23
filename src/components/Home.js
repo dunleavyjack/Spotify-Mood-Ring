@@ -26,6 +26,10 @@ const Home = (props) => {
                     <div className="text-center mt-4">
                         <button className="btn-green" onClick={handleLogin}> Connect with Spotify </button>
                     </div>
+                    <p className="mt-3">Don't have an account?</p>
+                    <div className="text-center">
+                        <button className="btn-grey"> View A Demo </button>
+                    </div>
                 </div>
             </div>
         </div>

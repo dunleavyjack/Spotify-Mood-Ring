@@ -111,6 +111,7 @@
 .btn-green {
     background-color: #1db954;
     font-size: 14px;
+    width: 310px;
     color: white;
     line-height: 1;
     border-radius: 500px;
@@ -145,7 +146,9 @@
     font-size: 14px;
     /* color: white; */
     line-height: 1;
+    width: 310px;
     border-radius: 500px;
+    width: 310px;
     border-color: black;
     border-width: 5px;
     border: black;
@@ -155,7 +158,7 @@
     transition-duration: .3s;
     letter-spacing: 2px;
     min-width: 160px;
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
     white-space: normal;
     display: inline-block;
     margin-bottom: 0;
@@ -173,9 +176,10 @@
 }
 
 .btn-new-green {
-    background-color: #FCEA9A !important;
+    background-color: #1db954 !important;
     font-size: 14px;
     /* color: white; */
+    width: 310px;
     line-height: 1;
     border-radius: 500px;
     border-color: black;
