@@ -255,17 +255,63 @@
     animation-duration: 3s; 
     animation-iteration-count: infinite; 
     animation-timing-function: ease-in-out; 
-    font-size: 7vh;
+    font-size: 5rem;
 } 
-
-.tan-font{
-    color: #FCEA9A;
-}
-  
-
 
 @keyframes floating { 
     0% { transform: translate(0,  0px); } 
     50%  { transform: translate(0, 15px); } 
     100%   { transform: translate(0, -0px); }     
 }
+
+.floating-two {   
+    animation-name: floating; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out; 
+    font-size: 5rem;
+} 
+
+@keyframes floating-two { 
+    0% { transform: translate(0,  4px); } 
+    50%  { transform: translate(0, 15px); } 
+    100%   { transform: translate(0, -0px); }     
+}
+
+.floating-three {   
+    animation-name: floating; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out; 
+    font-size: 5rem;
+} 
+
+@keyframes floating-three { 
+    0% { transform: translate(0,  2px); } 
+    50%  { transform: translate(0, 15px); } 
+    100%   { transform: translate(0, -0px); }     
+}
+
+.floating-four {   
+    animation-name: floating; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out; 
+    font-size: 5rem;
+} 
+
+@keyframes floating-four { 
+    0% { transform: translate(0,  5px); } 
+    50%  { transform: translate(0, 15px); } 
+    100%   { transform: translate(0, -0px); }     
+}
+
+
+.tan-font{
+    color: #FCEA9A;
+}
+  
+.row{
+    max-width: fit-content;
+}
+
