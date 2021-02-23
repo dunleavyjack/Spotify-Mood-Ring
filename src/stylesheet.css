@@ -45,6 +45,16 @@
     text-shadow: -5px 5px 0px #000000;
 }
 
+.title-small {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5rem;
+
+    color: #EE7070;
+    text-shadow: -5px 5px 0px #000000;
+}
+
 .pinkish{
     color: #EE7070;
 }
@@ -146,7 +156,6 @@
     font-size: 14px;
     /* color: white; */
     line-height: 1;
-    width: 310px;
     border-radius: 500px;
     width: 310px;
     border-color: black;
