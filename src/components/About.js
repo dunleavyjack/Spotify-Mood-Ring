@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 
+
 const About = () => {
     return (
         <div>
@@ -26,6 +27,10 @@ const About = () => {
 
                     <h1 className="bold about-header mt-5 black-body whiteish">mood detecting</h1>
                     <h5 className="black-body whiteish mb-5">Your mood is determined based on different analytics (tempo, energy, acousticness, etc.) from each song. An average is found from your recent music which is compared with the levels of an 'average listener'. That data is matched with one of over thirty moods and that's what you see. <br /><br /> Moods are, of course, strange and ineffable. But hopefully it connected with you :)</h5>
+
+                    <h1 className="bold about-header mt-5 black-body whiteish">contact</h1>
+                    <h5 className="black-body whiteish">dunleavyjack@gmail.com</h5>
+                    <h5 className="black-body whiteish mb-5">Seoul :)</h5>
                 </div>
             </div>
         </div>
