@@ -5,7 +5,7 @@ const avgEnergy = 0.5
 const avgInstrumentalness = 0.5
 const avgLoudness = -30
 const avgSpeechiness = 0.5
-const avgTempo = 0.5
+// const avgTempo = 100
 const avgValence = 0.5
 
 // Max Mood Levels
@@ -15,7 +15,7 @@ const maxEnergy = 1
 const maxInstrumentalness = 1
 const maxLoudness = -60
 const maxSpeechiness = 1
-const maxTempo = 1
+// const maxTempo = 2022
 const maxValence = 1
 
 // Get Average
@@ -74,6 +74,7 @@ export const calculateMood = songs => {
         conjuction,
         firstMood,
         secondMood,
+        tempo: tempo.toFixed(2)
     }
     console.log("RESULT ARRAY BELOW")
     console.log(resultArray)
@@ -193,6 +194,7 @@ const getAcousticnessDifference = acousticnessScore => {
     }
     return result
 }
+
 
 // Percent Difference
 const percentDifference = (value, avgValue, maxValue) => {

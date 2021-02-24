@@ -40,7 +40,7 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
                     <MoodResultDisplay mood={mood} />
                 </div>
             </div>
-            <AdditionalDisplay />
+            <AdditionalDisplay mood={mood}/>
         </React.Fragment>
     );
 };

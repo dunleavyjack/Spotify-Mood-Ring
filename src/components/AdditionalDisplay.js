@@ -1,18 +1,17 @@
 import React from 'react'
+import AddDisplayWhite from './AddDisplayWhite'
+import AddDisplayPink from './AddDisplayPink'
 
-const AdditionalDisplay = () => {
+const AdditionalDisplay = ({mood}) => {
     return (
         <div className="whiteish d-flex justify-content-center align-items-center text-center black-body">
             <div className="black-body">
-                <h2 className="bold mt-5 mb-5 tan-font">Your Full Breakdown</h2>
-                <h4 className="bold floating whiteish">4.54%</h4>
-                <h4 className="bold whiteish mt-3 mb-5">Higher Danceability</h4>
-                <h4 className="bold floating pinkish">54.54%</h4>
-                <h4 className="bold pinkish mt-3 mb-5">Lower Acousticness</h4>
-                <h4 className="bold floating whiteish">4.54%</h4>
-                <h4 className="bold whiteish mt-3 mb-5">Higher Danceability</h4>
-                <h4 className="bold floating pinkish">74.54%</h4>
-                <h4 className="bold pinkish mt-3 mb-5">More Volume</h4>
+                <h2 className="bold mt-5 tan-font">Your Full Breakdown</h2>
+                <h4 className="mb-5 tan-font">(Compared to average)</h4>
+                <AddDisplayWhite label={'Lower Happiness'} percent={'64.5%'} />
+                <AddDisplayPink label={'Higher Danceability'} percent ={'54.76%'} />
+                <AddDisplayWhite label={'Lower Acousticness'} percent={'74.54%'} />
+                <AddDisplayPink label={'Average Tempo'} percent ={mood.tempo} />
             </div>
         </div>
     )
