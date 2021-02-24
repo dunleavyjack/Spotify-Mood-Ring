@@ -31,13 +31,14 @@ export const calculateMood = songs => {
     const acousticness = getAverage(songs.map(song => song.acousticness))
     const energy = getAverage(songs.map(song => song.energy))
     const instrumentalness = getAverage(songs.map(song => song.instrumentalness))
-    const key = getAverage(songs.map(song => song.key))
-    const liveness = getAverage(songs.map(song => song.liveness))
-    const loudness = getAverage(songs.map(song => song.loudness))
-    const mode = getAverage(songs.map(song => song.mode))
-    const speechiness = getAverage(songs.map(song => song.speechiness))
     const tempo = getAverage(songs.map(song => song.tempo))
     const valence = getAverage(songs.map(song => song.valence))
+    // const key = getAverage(songs.map(song => song.key))
+    // const liveness = getAverage(songs.map(song => song.liveness))
+    // const loudness = getAverage(songs.map(song => song.loudness))
+    // const mode = getAverage(songs.map(song => song.mode))
+    // const speechiness = getAverage(songs.map(song => song.speechiness))
+
 
     // Percent difference Object. Ex: {aboveAvg: true/false, value: x}
     const valenceDifference = getValenceDifference(valence)
@@ -63,18 +64,21 @@ export const calculateMood = songs => {
     // Get two moods with highest percent difference
     const firstMood = differenceArray[0]
     const secondMood = differenceArray[1]
-    // console.log("combined moods below")
-    // const combinedTopMoods = [firstMood, secondMood]
-    // console.log(combinedTopMoods[0].mood[0])
+    const thirdMood = differenceArray[2]
+    const fourthMood = differenceArray[3]
     const topMoodsOnly = [firstMood.mood, secondMood.mood]
     const result = evaluateMood(topMoodsOnly)
     const conjuction = getConjuction(topMoodsOnly)
+    console.log("THIRD MOOD BELOW")
+    console.log(thirdMood)
 
     const resultArray = {
         name: result,
         conjuction,
         firstMood,
         secondMood,
+        thirdMood,
+        fourthMood,
         instrumentalnessDifference,
         tempo: tempo.toFixed(2)
     }

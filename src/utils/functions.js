@@ -82,9 +82,14 @@ export const fixDate = date => {
 
 // Add ellipese to long song/album names
 export const formatStr = str => {
-    if (typeof str === 'string' && str.length > 20){
-        return str.substr(0, 19) + "..."
+    if (typeof str === 'string' && str.length > 18){
+        return str.substr(0, 18) + "..."
     } else {
     		return str
     }
 }
+
+export const fixCapitalization = str => {
+    const splitStr = str.split('-')
+    return splitStr[0].charAt(0).toUpperCase() + splitStr[0].slice(1) + " " + splitStr[1].charAt(0).toUpperCase() + splitStr[1].slice(1)
+} 

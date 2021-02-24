@@ -306,6 +306,9 @@
     100%   { transform: translate(0, -0px); }     
 }
 
+.fixed-container{
+    max-width: 30em;
+}
 
 .tan-font{
     color: #FCEA9A;
