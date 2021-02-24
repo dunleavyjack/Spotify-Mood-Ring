@@ -11,8 +11,9 @@ const AdditionalDisplay = ({mood}) => {
                 <AddDisplayWhite label={fixCapitalization(mood.firstMood.mood)} percent={mood.firstMood.difference.toFixed(2) + '%'} />
                 <AddDisplayPink label={fixCapitalization(mood.secondMood.mood)} percent ={mood.secondMood.difference.toFixed(2) + '%'} />
                 <AddDisplayWhite label={fixCapitalization(mood.thirdMood.mood)} percent={mood.thirdMood.difference.toFixed(2) + '%'} />
-                <AddDisplayPink label={fixCapitalization(mood.fourthMood.mood)} percent ={mood.fourthMood.difference.toFixed(2) + '%'} />
-                <AddDisplayWhite label={"Your Average Tempo"} percent={mood.tempo} />
+                <AddDisplayPink label={"Average Tempo"} percent={mood.tempo} />
+                {/* <AddDisplayWhite label={"Loudness"} percent={mood.loudnessDifference} /> */}
+                <AddDisplayPink label={"Average Key"} percent={mood.key} />
             </div>
         </div>
     )

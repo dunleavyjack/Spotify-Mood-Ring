@@ -5,7 +5,6 @@ const avgEnergy = 0.5
 const avgInstrumentalness = 0.5
 const avgLoudness = -30
 const avgSpeechiness = 0.5
-// const avgTempo = 100
 const avgValence = 0.5
 
 // Max Mood Levels
@@ -13,9 +12,8 @@ const maxDanceability = 1
 const maxAcousticness = 1
 const maxEnergy = 1
 const maxInstrumentalness = 1
-const maxLoudness = -60
+const maxLoudness = -70
 const maxSpeechiness = 1
-// const maxTempo = 2022
 const maxValence = 1
 
 // Get Average
@@ -30,12 +28,12 @@ export const calculateMood = songs => {
     const danceability = getAverage(songs.map(song => song.danceability))
     const acousticness = getAverage(songs.map(song => song.acousticness))
     const energy = getAverage(songs.map(song => song.energy))
-    const instrumentalness = getAverage(songs.map(song => song.instrumentalness))
+    // const instrumentalness = getAverage(songs.map(song => song.instrumentalness))
     const tempo = getAverage(songs.map(song => song.tempo))
     const valence = getAverage(songs.map(song => song.valence))
-    // const key = getAverage(songs.map(song => song.key))
+    const key = getAverage(songs.map(song => song.key))
     // const liveness = getAverage(songs.map(song => song.liveness))
-    // const loudness = getAverage(songs.map(song => song.loudness))
+    const loudness = getAverage(songs.map(song => song.loudness))
     // const mode = getAverage(songs.map(song => song.mode))
     // const speechiness = getAverage(songs.map(song => song.speechiness))
 
@@ -45,32 +43,34 @@ export const calculateMood = songs => {
     const energyDifference = getEnergyDifference(energy)
     const danceabilityDifference = getDanceabilityDifference(danceability)
     const acousticnessDifference = getAcousticnessDifference(acousticness)
-    const instrumentalnessDifference = getInstrumentalnessDifference(instrumentalness)
+    const loudnessDifference = getLoudnessDifference(loudness)
+    // const instrumentalnessDifference = getInstrumentalnessDifference(instrumentalness)
 
     // Add name property to later identify the object
     valenceDifference.name = "valence"
     energyDifference.name = "energy"
     danceabilityDifference.name = "danceability"
     acousticnessDifference.name = "acousticness"
+    // instrumentalnessDifference.name = "instrumentalness"
 
     // Sort differences to find the highest
     const differenceArray = [
         valenceDifference,
         energyDifference,
         danceabilityDifference,
-        acousticnessDifference
+        // acousticnessDifference,
+        // instrumentalnessDifference
     ].sort((a, b) => parseFloat(b.difference) - parseFloat(a.difference));
 
     // Get two moods with highest percent difference
     const firstMood = differenceArray[0]
     const secondMood = differenceArray[1]
     const thirdMood = differenceArray[2]
-    const fourthMood = differenceArray[3]
+    // const fourthMood = differenceArray[3]
+    // const fifthMood = differenceArray[4]
     const topMoodsOnly = [firstMood.mood, secondMood.mood]
     const result = evaluateMood(topMoodsOnly)
     const conjuction = getConjuction(topMoodsOnly)
-    console.log("THIRD MOOD BELOW")
-    console.log(thirdMood)
 
     const resultArray = {
         name: result,
@@ -78,9 +78,10 @@ export const calculateMood = songs => {
         firstMood,
         secondMood,
         thirdMood,
-        fourthMood,
-        instrumentalnessDifference,
-        tempo: tempo.toFixed(2)
+        acousticnessDifference,
+        loudnessDifference,
+        key: Math.round(key),
+        tempo: tempo.toFixed(2),
     }
     console.log("RESULT ARRAY BELOW")
     console.log(resultArray)
@@ -201,14 +202,14 @@ const getAcousticnessDifference = acousticnessScore => {
     return result
 }
 
-const getInstrumentalnessDifference = instrumentalnessScore => {
-    const result = percentDifference(instrumentalnessScore, avgInstrumentalness, maxInstrumentalness)
-    result.name = "acousticness"
+const getLoudnessDifference = loudnessScore => {
+    const result = percentDifference(loudnessScore, avgLoudness, maxLoudness)
+    result.name = "loudness"
     if (result.aboveAvg === true) {
-        result.mood = "higher-instrumentalness"
+        result.mood = "higher-volume"
     }
     else {
-        result.mood = "lower-instrumentalness"
+        result.mood = "lower-volume"
     }
     return result
 }
