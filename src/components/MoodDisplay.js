@@ -4,6 +4,7 @@ import Loading from './Loading'
 import { useState, useEffect } from 'react';
 import { calculateMood } from '../utils/moodFinder'
 import AdditionalDisplay from './AdditionalDisplay';
+import Footer from './Footer'
 
 const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
     const [finishedShuffeling, setFinishedShuffeling] = useState(false)
@@ -41,6 +42,7 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
                 </div>
             </div>
             <AdditionalDisplay mood={mood}/>
+            <Footer />
         </React.Fragment>
     );
 };

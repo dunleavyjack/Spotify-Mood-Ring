@@ -44,6 +44,7 @@ export const calculateMood = songs => {
     const energyDifference = getEnergyDifference(energy)
     const danceabilityDifference = getDanceabilityDifference(danceability)
     const acousticnessDifference = getAcousticnessDifference(acousticness)
+    const instrumentalnessDifference = getInstrumentalnessDifference(instrumentalness)
 
     // Add name property to later identify the object
     valenceDifference.name = "valence"
@@ -74,6 +75,7 @@ export const calculateMood = songs => {
         conjuction,
         firstMood,
         secondMood,
+        instrumentalnessDifference,
         tempo: tempo.toFixed(2)
     }
     console.log("RESULT ARRAY BELOW")
@@ -195,6 +197,18 @@ const getAcousticnessDifference = acousticnessScore => {
     return result
 }
 
+const getInstrumentalnessDifference = instrumentalnessScore => {
+    const result = percentDifference(instrumentalnessScore, avgInstrumentalness, maxInstrumentalness)
+    result.name = "acousticness"
+    if (result.aboveAvg === true) {
+        result.mood = "higher-instrumentalness"
+    }
+    else {
+        result.mood = "lower-instrumentalness"
+    }
+    return result
+}
+
 
 // Percent Difference
 const percentDifference = (value, avgValue, maxValue) => {
@@ -214,8 +228,7 @@ const percentDifference = (value, avgValue, maxValue) => {
     }
 }
 
-// Get the conjuction
-
+// Get the proper conjuction ('and'/'but') for the display page
 const getConjuction = (moodArr) => {
     if((moodArr[0].includes("less") || moodArr[0].includes("lower")) && (moodArr[1].includes("more") || moodArr[1].includes("higher"))){
         return "but"

@@ -8,7 +8,7 @@ const AdditionalDisplay = ({mood}) => {
             <div className="black-body">
                 <h2 className="bold mt-5 tan-font">Your Full Breakdown</h2>
                 <h4 className="mb-5 tan-font">(Compared to average)</h4>
-                <AddDisplayWhite label={'Lower Happiness'} percent={'64.5%'} />
+                <AddDisplayWhite label={'Less Happiness'} percent={'64.5%'} />
                 <AddDisplayPink label={'Higher Danceability'} percent ={'54.76%'} />
                 <AddDisplayWhite label={'Lower Acousticness'} percent={'74.54%'} />
                 <AddDisplayPink label={'Average Tempo'} percent ={mood.tempo} />
