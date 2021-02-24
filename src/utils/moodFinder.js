@@ -44,30 +44,27 @@ export const calculateMood = songs => {
     const danceabilityDifference = getDanceabilityDifference(danceability)
     const acousticnessDifference = getAcousticnessDifference(acousticness)
     const loudnessDifference = getLoudnessDifference(loudness)
-    // const instrumentalnessDifference = getInstrumentalnessDifference(instrumentalness)
+    const notatedKey = getNotatedKey(key)
 
     // Add name property to later identify the object
     valenceDifference.name = "valence"
     energyDifference.name = "energy"
     danceabilityDifference.name = "danceability"
     acousticnessDifference.name = "acousticness"
-    // instrumentalnessDifference.name = "instrumentalness"
 
     // Sort differences to find the highest
     const differenceArray = [
         valenceDifference,
         energyDifference,
         danceabilityDifference,
-        // acousticnessDifference,
-        // instrumentalnessDifference
+        acousticnessDifference
     ].sort((a, b) => parseFloat(b.difference) - parseFloat(a.difference));
 
     // Get two moods with highest percent difference
     const firstMood = differenceArray[0]
     const secondMood = differenceArray[1]
     const thirdMood = differenceArray[2]
-    // const fourthMood = differenceArray[3]
-    // const fifthMood = differenceArray[4]
+    const fourthMood = differenceArray[3]
     const topMoodsOnly = [firstMood.mood, secondMood.mood]
     const result = evaluateMood(topMoodsOnly)
     const conjuction = getConjuction(topMoodsOnly)
@@ -78,9 +75,10 @@ export const calculateMood = songs => {
         firstMood,
         secondMood,
         thirdMood,
+        fourthMood,
         acousticnessDifference,
-        loudnessDifference,
-        key: Math.round(key),
+        // loudnessDifference,
+        key: notatedKey,
         tempo: tempo.toFixed(2),
     }
     console.log("RESULT ARRAY BELOW")
@@ -151,6 +149,35 @@ const evaluateMood = moodNames => {
         return "sentimental"
     } else if (moodNames.includes("lower-danceability") && moodNames.includes("lower-energy")) {
         return "sentimental"
+    }
+}
+
+const getNotatedKey = num => {
+    switch (Math.round(num)){
+        case 0:
+            return 'C'
+        case 1:
+            return 'C#/Db'
+        case 2:
+            return 'D'
+        case 3:
+            return 'D#/Eb'
+        case 4:
+            return 'E'
+        case 5:
+            return 'F'
+        case 6:
+            return 'F#/Gb'
+        case 7:
+            return 'G'
+        case 8:
+            return 'G#/Ab'
+        case 9:
+            return 'A'
+        case 10: 
+            return 'A#/Bb'
+        case 11:
+            return 'B'
     }
 }
 
