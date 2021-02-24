@@ -8,7 +8,7 @@ const Loading = ({ text }) => {
                     <span className="visually-hidden">Loading...</span>
                 </div>
                 {/* <h2 classname="bold">Hey, Spotify<span className="pinkish tan">...</span></h2> */}
-                <h2 className="bold mt-3 tan about-header">{text}.</h2>
+                <h2 className="bold mt-3 tan about-header">{text}</h2>
             </div>
         </div>
     )

@@ -310,6 +310,11 @@
     max-width: 30em;
 }
 
+.fixed-container-small{
+    max-width: 20em;
+}
+
+
 .tan-font{
     color: #FCEA9A;
 }

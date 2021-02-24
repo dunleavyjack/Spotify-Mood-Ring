@@ -18,7 +18,7 @@ const AnalysisDisplay = ({ song: {
                 <div>
                     <img className="album-cover" src={imageURL} />
                 </div>
-                <h2 className="bold">{formatStr(name)}</h2>
+                <h2 className="bold mt-3">{formatStr(name)}</h2>
                 <h3>{formatStr(artist)}</h3>
                 <h4>{formatStr(album)}</h4>
                 <h4 className="pinkish">{fixDate(playedAt)}</h4>
