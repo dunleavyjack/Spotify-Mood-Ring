@@ -57,14 +57,12 @@ export const calculateMood = songs => {
         valenceDifference,
         energyDifference,
         danceabilityDifference,
-        acousticnessDifference
     ].sort((a, b) => parseFloat(b.difference) - parseFloat(a.difference));
 
     // Get two moods with highest percent difference
     const firstMood = differenceArray[0]
     const secondMood = differenceArray[1]
     const thirdMood = differenceArray[2]
-    const fourthMood = differenceArray[3]
     const topMoodsOnly = [firstMood.mood, secondMood.mood]
     const result = evaluateMood(topMoodsOnly)
     const conjuction = getConjuction(topMoodsOnly)
@@ -75,7 +73,6 @@ export const calculateMood = songs => {
         firstMood,
         secondMood,
         thirdMood,
-        fourthMood,
         acousticnessDifference,
         // loudnessDifference,
         key: notatedKey,
