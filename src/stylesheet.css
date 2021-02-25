@@ -314,7 +314,6 @@
     max-width: 20em;
 }
 
-
 .tan-font{
     color: #FCEA9A;
 }
@@ -323,3 +322,10 @@
     max-width: fit-content;
 }
 
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 70px;
+    color: white;
+    background-color: transparent;
+  }

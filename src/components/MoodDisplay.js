@@ -35,8 +35,9 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
         <React.Fragment>
             <div className="tan d-flex justify-content-center align-items-center text-center">
                 <div className="mt-3">
-                    <div className="circular--portrait mx-auto mt-5">
+                    <div className="circular--portrait mx-auto mt-5 p-0 container">
                         <img src={images[0].url} />
+                        {/* <div className="bottom-right">&#128522;</div> */}
                     </div>
                     <MoodResultDisplay mood={mood} />
                 </div>
