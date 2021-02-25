@@ -25,7 +25,7 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
     if(finishedShuffeling === false){
         return (
             <div>
-                <Loading text={"Analyzing you mood"}/>
+                <Loading text={"Detecting your mood"}/>
             </div>
         )
     }

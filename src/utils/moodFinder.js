@@ -109,7 +109,7 @@ const evaluateMood = moodNames => {
     } else if (moodNames.includes("more-happiness") && moodNames.includes("higher-danceability")) {
         return "expressive"
     } else if (moodNames.includes("more-happiness") && moodNames.includes("higher-energy")) {
-        return "radiant"
+        return "expressive"
     } else if (moodNames.includes("higher-danceability") && moodNames.includes("higher-energy")) {
         return "lighthearted"
 
