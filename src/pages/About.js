@@ -1,6 +1,5 @@
 import React from 'react'
-import Navbar from './Navbar'
-
+import Navbar from '../components/Navbar'
 
 const About = () => {
     return (
@@ -13,8 +12,8 @@ const About = () => {
                     <h5 className="black-body whiteish">
                         This project was built with
                         <a className="custom-link" href="https://reactjs.org/"> React</a>,
-                        <a className="custom-link" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"> Bootstrap 5</a>, the 
-                        <a className="custom-link" href="https://developer.spotify.com/documentation/web-api/"> Spotify Web API </a>,
+                        <a className="custom-link" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"> Bootstrap 5</a>, 
+                        <a className="custom-link" href="https://developer.spotify.com/documentation/web-api/"> the Spotify Web API </a>,
                         <a className="custom-link" href="https://developer.spotify.com/documentation/general/guides/authorization-guide/"> Spotify OAuth2 </a>, and designed in
                         <a className="custom-link" href="https://www.figma.com/design/"> Figma</a>.
                         It's also hosted with
@@ -30,8 +29,7 @@ const About = () => {
 
                     <h1 className="bold about-header mt-5 black-body whiteish">contact</h1>
                     <h5 className="black-body whiteish">Jack &#9729;&#65039;</h5>
-                    <h5 className="black-body whiteish">My <a className="custom-link" href="https://github.com/dunleavyjack">Github</a>, <a className="custom-link" href="https://medium.com/@jack___joseph">Medium</a>, and <a className="custom-link" href="https://dev.to/jack____joseph"> Dev.to</a>.</h5>
-                    {/* <br/> */}
+                    <h5 className="black-body whiteish"><a className="custom-link" href="https://github.com/dunleavyjack">Github</a> | <a className="custom-link" href="https://medium.com/@jack___joseph">Medium</a> | <a className="custom-link" href="https://dev.to/jack____joseph"> dev.to </a></h5>
                     <h5 className="black-body whiteish">dunleavyjack@gmail.com</h5>
                     <h5 className="black-body whiteish mb-5">Seoul 2021 :)</h5>
                 </div>

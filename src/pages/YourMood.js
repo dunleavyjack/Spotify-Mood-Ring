@@ -1,8 +1,8 @@
 import { React, useState, useEffect } from 'react';
 import { getRecentlyPlayedTracks, getSongAnalysisArray, getUserProfile } from '../utils/functions';
-import Navbar from './Navbar'
-import AnalysisPage from './AnalysisPage'
-import Loading from './Loading'
+import Navbar from '../components/Navbar'
+import AnalysisPage from '../components/AnalysisPage'
+import Loading from '../components/Loading'
 
 const YourMood = () => {
     const [playedSongsData, setPlayedSongsData] = useState([])
@@ -30,7 +30,7 @@ const YourMood = () => {
         )
     }
 
-    // Send songs to analysis page
+    // Send songs and user profile to analysis page
     return (
         <div>
             <Navbar />

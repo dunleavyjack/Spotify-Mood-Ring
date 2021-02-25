@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from './Navbar';
+import Navbar from '../components/Navbar';
 
-const Home = (props) => {
+const Home = () => {
     const {
         REACT_APP_SPOTIFY_CLIENT_ID,
         REACT_APP_SPOTIFY_AUTHORIZE_URL,

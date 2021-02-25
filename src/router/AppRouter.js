@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from '../components/Home'
-import YourMood from '../components/YourMood'
-import About from '../components/About'
-import NotFound from '../components/NotFound'
-import RedirectPage from '../components/RedirectPage'
+import Home from '../pages/Home'
+import YourMood from '../pages/YourMood'
+import About from '../pages/About'
+import NotFound from '../pages/NotFound'
+import SpotifyRedirect from '../pages/SpotifyRedirect'
 
 class AppRouter extends React.Component {
     render() {
@@ -13,7 +13,7 @@ class AppRouter extends React.Component {
                 <div className="main">
                     <Switch>
                         <Route path="/" component={Home} exact={true} />
-                        <Route path="/redirect" component={RedirectPage}/>
+                        <Route path="/redirect" component={SpotifyRedirect}/>
                         <Route path="/yourmood" component={YourMood}/>
                         <Route path="/about" component={About} />
                         <Route component={NotFound} />
