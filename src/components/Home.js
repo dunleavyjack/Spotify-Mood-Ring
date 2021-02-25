@@ -20,7 +20,7 @@ const Home = (props) => {
             <Navbar />
             <div className="d-flex tan justify-content-center align-items-center text-center content-body">
                 <div>
-                    <h1 className="title-medium">mood ring</h1>
+                    <h1 className="title-medium mt-5">mood ring</h1>
                     <h2 className="bold">How are you?</h2>
                     <h3 className="px-3">A mood detector based on your recently played music.</h3>
                     <div className="text-center mt-4">
