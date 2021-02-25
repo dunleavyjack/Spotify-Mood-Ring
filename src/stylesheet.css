@@ -295,36 +295,9 @@
     100%   { transform: translate(0, -0px); }     
 }
 
-.floating-three {   
-    animation-name: floating; 
-    animation-duration: 2s; 
-    animation-iteration-count: infinite; 
-    animation-timing-function: ease-in-out; 
-    font-size: 5rem;
-} 
-
-@keyframes floating-three { 
-    0% { transform: translate(0,  2px); } 
-    50%  { transform: translate(0, 15px); } 
-    100%   { transform: translate(0, -0px); }     
-}
-
-.floating-four {   
-    animation-name: floating; 
-    animation-duration: 1s; 
-    animation-iteration-count: infinite; 
-    animation-timing-function: ease-in-out; 
-    font-size: 5rem;
-} 
-
-@keyframes floating-four { 
-    0% { transform: translate(0,  5px); } 
-    50%  { transform: translate(0, 15px); } 
-    100%   { transform: translate(0, -0px); }     
-}
-
 .fixed-container{
     max-width: 30em;
+    line-height: 35px;
 }
 
 .fixed-container-small{
@@ -338,11 +311,3 @@
 .row{
     max-width: fit-content;
 }
-
-.bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 70px;
-    color: white;
-    background-color: transparent;
-  }

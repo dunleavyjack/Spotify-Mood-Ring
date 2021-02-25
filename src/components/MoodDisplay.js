@@ -2,7 +2,7 @@ import React from 'react'
 import MoodResultDisplay from './MoodResultDisplay'
 import Loading from './Loading'
 import { useState, useEffect } from 'react';
-import { calculateMood } from '../utils/moodFinder'
+import { calculateMood } from '../utils/moodDetector'
 import AdditionalDisplay from './AdditionalDisplay';
 import Footer from './Footer'
 
