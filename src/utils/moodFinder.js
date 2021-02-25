@@ -88,64 +88,38 @@ const evaluateMood = moodNames => {
     console.log("function is getting")
     console.log(moodNames)
     // Matching: Higher + Lower (Valence)
-    if (moodNames.includes("more-happiness") && moodNames.includes("lower-acousticness")) {
-        return "a little blue"
-    } else if (moodNames.includes("more-happiness") && moodNames.includes("lower-danceability")) {
-        return "a little blue"
+    if (moodNames.includes("more-happiness") && moodNames.includes("lower-danceability")) {
+        return "peaceful"
     } else if (moodNames.includes("more-happiness") && moodNames.includes("lower-energy")) {
-        return "a little blue"
+        return "reflective"
 
         // Matching: Higher + Lower (Danceability)
     } else if (moodNames.includes("higher-danceability") && moodNames.includes("less-happiness")) {
-        return "a little blue"
-    } else if (moodNames.includes("higher-danceability") && moodNames.includes("lower-acousticness")) {
-        return "a little blue"
+        return "melancholic"
     } else if (moodNames.includes("higher-danceability") && moodNames.includes("lower-energy")) {
-        return "a little blue"
+        return "a bit tense"
 
         // Matching: Higher + Lower (Energy)
     } else if (moodNames.includes("higher-energy") && moodNames.includes("less-happiness")) {
-        return "moody"
+        return "a bit gloomy"
     } else if (moodNames.includes("higher-energy") && moodNames.includes("lower-danceability")) {
-        return "moody"
-    } else if (moodNames.includes("higher-energy") && moodNames.includes("lower-acousticness")) {
-        return "moody"
-
-        // Matching: Higher + Lower (Acousticness)
-    } else if (moodNames.includes("higher-acousticness") && moodNames.includes("less-happiness")) {
-        return "sentimental"
-    } else if (moodNames.includes("higher-acousticness") && moodNames.includes("lower-danceability")) {
-        return "sentimental"
-    } else if (moodNames.includes("higher-acousticness") && moodNames.includes("lower-energy")) {
-        return "sentimental"
+        return "a bit tense"
 
         // Matching: Higher + Higher (All)
-    } else if (moodNames.includes("higher-acousticness") && moodNames.includes("more-happiness")) {
-        return "sentimental"
-    } else if (moodNames.includes("higher-acousticness") && moodNames.includes("higher-danceability")) {
-        return "sentimental"
-    } else if (moodNames.includes("higher-acousticness") && moodNames.includes("higher-energy")) {
-        return "sentimental"
     } else if (moodNames.includes("more-happiness") && moodNames.includes("higher-danceability")) {
-        return "sentimental"
+        return "expressive"
     } else if (moodNames.includes("more-happiness") && moodNames.includes("higher-energy")) {
-        return "sentimental"
+        return "radiant"
     } else if (moodNames.includes("higher-danceability") && moodNames.includes("higher-energy")) {
-        return "sentimental"
+        return "lighthearted"
 
         // Matching: Lower + Lower (All)
-    } else if (moodNames.includes("lower-acousticness") && moodNames.includes("less-happiness")) {
-        return "sentimental"
-    } else if (moodNames.includes("lower-acousticness") && moodNames.includes("lower-danceability")) {
-        return "sentimental"
-    } else if (moodNames.includes("lower-acousticness") && moodNames.includes("lower-energy")) {
-        return "sentimental"
     } else if (moodNames.includes("less-happiness") && moodNames.includes("lower-danceability")) {
-        return "sentimental"
+        return "a little blue"
     } else if (moodNames.includes("less-happiness") && moodNames.includes("lower-energy")) {
-        return "sentimental"
+        return "melancholic"
     } else if (moodNames.includes("lower-danceability") && moodNames.includes("lower-energy")) {
-        return "sentimental"
+        return "sleepy"
     }
 }
 
