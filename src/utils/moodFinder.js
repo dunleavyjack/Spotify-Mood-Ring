@@ -85,8 +85,6 @@ export const calculateMood = songs => {
 
 
 const evaluateMood = moodNames => {
-    console.log("function is getting")
-    console.log(moodNames)
     // Matching: Higher + Lower (Valence)
     if (moodNames.includes("more-happiness") && moodNames.includes("lower-danceability")) {
         return "peaceful"
@@ -111,7 +109,7 @@ const evaluateMood = moodNames => {
     } else if (moodNames.includes("more-happiness") && moodNames.includes("higher-energy")) {
         return "expressive"
     } else if (moodNames.includes("higher-danceability") && moodNames.includes("higher-energy")) {
-        return "lighthearted"
+        return "expressive"
 
         // Matching: Lower + Lower (All)
     } else if (moodNames.includes("less-happiness") && moodNames.includes("lower-danceability")) {

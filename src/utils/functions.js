@@ -33,7 +33,6 @@ export const spotifyGetRequest = async (url, params) => {
 // Returns the song analysis
 export const getSongAnalysis = async (id) => {
     const songAnalysis = await spotifyGetRequest(`https://api.spotify.com/v1/audio-features/?ids=${id}`)
-    // const songAnalysis = await spotifyGetRequest(`https://api.spotify.com/v1/audio-features/${id}`)
     return songAnalysis
 }
 
