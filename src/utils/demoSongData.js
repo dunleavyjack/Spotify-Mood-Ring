@@ -1,5 +1,6 @@
 import demoProfilePic from '../assets/demoProfilePic.jpg'
 
+// Demo of user profile
 export const demoUserProfile = {
   "images": [
     {
@@ -8,8 +9,7 @@ export const demoUserProfile = {
   ],
 }
 
-// profile.images[0].url
-
+// Demo of song data
 export const demoSongData = [
     {
       "danceability": 0.349,
@@ -21,7 +21,7 @@ export const demoSongData = [
       "acousticness": 0.017,
       "instrumentalness": 0.57,
       "liveness": 0.409,
-      "valence": 0.649,
+      "valence": 0.9,
       "tempo": 178.697,
       "type": "audio_features",
       "id": "6Zm3EfcBvw5U6DMAyWzfOD",
@@ -47,7 +47,7 @@ export const demoSongData = [
       "acousticness": 0.538,
       "instrumentalness": 0.031,
       "liveness": 0.143,
-      "valence": 0.681,
+      "valence": 0.9,
       "tempo": 83.383,
       "type": "audio_features",
       "id": "4bN43jYf41eIjJZ3UXQpuA",
@@ -99,7 +99,7 @@ export const demoSongData = [
       "acousticness": 0.892,
       "instrumentalness": 0.116,
       "liveness": 0.15,
-      "valence": 0.512,
+      "valence": 0.9,
       "tempo": 75.818,
       "type": "audio_features",
       "id": "2Tx3dH4h94805B0GWftf41",
