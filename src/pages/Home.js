@@ -15,6 +15,10 @@ const Home = () => {
         window.location = `${REACT_APP_SPOTIFY_AUTHORIZE_URL}?client_id=${REACT_APP_SPOTIFY_CLIENT_ID}&scope=${encodedScopes}&redirect_uri=${REACT_APP_SPOTIFY_REDIRECT_URL}&response_type=token&show_dialog=true`;
     };
 
+    const handleDemoLogin = () => {
+        window.location = 'demo'
+    }
+
     return (
         <div>
             <Navbar />
@@ -28,7 +32,7 @@ const Home = () => {
                     </div>
                     <p className="mt-3">— Don't have a Spotify account? —</p>
                     <div className="text-center">
-                        <button className="btn-grey"> View A Demo </button>
+                        <button className="btn-grey" onClick={handleDemoLogin}> View A Demo </button>
                     </div>
                 </div>
             </div>

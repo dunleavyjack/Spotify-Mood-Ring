@@ -3,7 +3,7 @@ import AddDisplayWhite from './AddDisplayWhite'
 import AddDisplayPink from './AddDisplayPink'
 import {fixCapitalization} from '../utils/functions'
 
-const AdditionalDisplay = ({mood}) => {
+const FullBreakdown = ({mood}) => {
     return (
         <div className="whiteish d-flex justify-content-center align-items-center text-center black-body">
             <div className="black-body">
@@ -21,4 +21,4 @@ const AdditionalDisplay = ({mood}) => {
     )
 }
 
-export default AdditionalDisplay
+export default FullBreakdown

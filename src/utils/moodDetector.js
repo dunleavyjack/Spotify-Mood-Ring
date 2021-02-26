@@ -100,25 +100,25 @@ const getNotatedKey = num => {
         case 0:
             return 'C'
         case 1:
-            return 'C#/Db'
+            return 'C#/D' + String.fromCharCode('0x266D')
         case 2:
             return 'D'
         case 3:
-            return 'D#/Eb'
+            return 'D#/E&#9837;'
         case 4:
             return 'E'
         case 5:
             return 'F'
         case 6:
-            return 'F#/Gb'
+            return 'F#/G' + String.fromCharCode('0x266D')
         case 7:
             return 'G'
         case 8:
-            return 'G#/Ab'
+            return 'G#/A' + String.fromCharCode('0x266D')
         case 9:
             return 'A'
         case 10: 
-            return 'A#/Bb'
+            return 'A#/B' + String.fromCharCode('0x266D')
         case 11:
             return 'B'
     }

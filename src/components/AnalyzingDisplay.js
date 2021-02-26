@@ -1,7 +1,7 @@
 import React from 'react'
 import { fixDate, formatStr } from '../utils/functions'
 
-const AnalysisDisplay = ({ song: {
+const AnalyzingDisplay = ({ song: {
     name,
     album,
     artist,
@@ -26,4 +26,4 @@ const AnalysisDisplay = ({ song: {
         </div>
     )
 }
-export default AnalysisDisplay
+export default AnalyzingDisplay

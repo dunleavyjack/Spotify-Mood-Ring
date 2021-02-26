@@ -1,13 +1,15 @@
 import { React, useState, useEffect } from 'react'
-import AnalysisDisplay from './AnalysisDisplay'
+import AnalyzingDisplay from './AnalyzingDisplay'
 import Loading from './Loading'
 import MoodDisplay from './MoodDisplay'
 
-const AnalysisPage = ({ songs, profile }) => {
+const AnalyzingContainer = ({ songs, profile }) => {
     const [analyizedSong, setAnalyizedSong] = useState("")
     const [finishedShuffeling, setFinishedShuffeling] = useState(false)
 
     useEffect(() => {
+        console.log('songs object below')
+        console.log(songs)
         songs.forEach((song, i) => {
             setTimeout(() => {
                 setAnalyizedSong(song);
@@ -29,7 +31,7 @@ const AnalysisPage = ({ songs, profile }) => {
 
     // Return YourMood page when shuffeling is complete
     if(finishedShuffeling === false && songs.length > 0){
-        return <AnalysisDisplay song={analyizedSong} />
+        return <AnalyzingDisplay song={analyizedSong} />
     }
 
     // Shuffle through songs being 'analyized'
@@ -40,4 +42,4 @@ const AnalysisPage = ({ songs, profile }) => {
     )
 };
 
-export default AnalysisPage;
+export default AnalyzingContainer;

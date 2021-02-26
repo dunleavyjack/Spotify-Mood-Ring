@@ -1,16 +1,17 @@
 import React from 'react'
-import MoodResultDisplay from './MoodResultDisplay'
 import Loading from './Loading'
 import { useState, useEffect } from 'react';
 import { calculateMood } from '../utils/moodDetector'
-import AdditionalDisplay from './AdditionalDisplay';
-import Footer from './Footer'
+import FullBreakdown from './FullBreakdown';
+import Footer from './Footer';
+import MoodResultHeader from './MoodResultHeader';
 
-const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
+const MoodDisplay = ({ songs, profile }) => {
     const [finishedShuffeling, setFinishedShuffeling] = useState(false)
     const [mood, setMood] = useState(() => {
         const yourMood = calculateMood(songs)
-        console.log(yourMood)
+        console.log('USER PROFILE BELOW')
+        console.log(profile)
         return yourMood
     });
 
@@ -33,16 +34,8 @@ const MoodDisplay = ({ songs, profile: { display_name, images } }) => {
     // After loading page 'delay', display result page
     return (
         <React.Fragment>
-            <div className="tan d-flex justify-content-center align-items-center text-center">
-                <div className="mt-3">
-                    <div className="circular--portrait mx-auto mt-5 p-0 container">
-                        <img src={images[0].url} />
-                        {/* <div className="bottom-right">&#128522;</div> */}
-                    </div>
-                    <MoodResultDisplay mood={mood} />
-                </div>
-            </div>
-            <AdditionalDisplay mood={mood}/>
+            <MoodResultHeader mood={mood} imageURL={profile.images[0].url}/>
+            <FullBreakdown mood={mood}/>
             <Footer />
         </React.Fragment>
     );

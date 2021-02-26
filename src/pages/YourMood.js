@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import { getRecentlyPlayedTracks, getSongAnalysisArray, getUserProfile } from '../utils/functions';
 import Navbar from '../components/Navbar'
-import AnalysisPage from '../components/AnalysisPage'
+import AnalyzingContainer from '../components/AnalyzingContainer'
 import Loading from '../components/Loading'
 
 const YourMood = () => {
@@ -34,7 +34,7 @@ const YourMood = () => {
     return (
         <div>
             <Navbar />
-            <AnalysisPage songs={playedSongsData} profile={userProfile} />
+            <AnalyzingContainer songs={playedSongsData} profile={userProfile} />
         </div>
     )
 };
