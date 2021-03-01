@@ -3,6 +3,8 @@ import { getRecentlyPlayedTracks, getSongAnalysisArray, getUserProfile } from '.
 import Navbar from '../components/Navbar'
 import AnalyzingContainer from '../components/AnalyzingContainer'
 import Loading from '../components/Loading'
+import { connect } from 'react-redux'
+import { setTokens } from '../actions'
 
 const YourMood = () => {
     const [playedSongsData, setPlayedSongsData] = useState([])
@@ -39,4 +41,13 @@ const YourMood = () => {
     )
 };
 
-export default YourMood;
+const mapStateToProps = state => {
+    console.log('state below')
+    console.log(state)
+    return state
+}
+
+
+export default connect(mapStateToProps, {
+    setTokens
+})(YourMood);

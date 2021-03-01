@@ -29,6 +29,7 @@ export const setAuthHeader = () => {
 export const spotifyGetRequest = async (url, params) => {
     setAuthHeader();
     const result = await axios.get(url, params);
+    console.log(params)
     return result.data;
 };
 
