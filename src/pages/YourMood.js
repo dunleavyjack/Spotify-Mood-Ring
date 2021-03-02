@@ -9,29 +9,36 @@ import { setTokens } from '../actions'
 const YourMood = ({ history, tokens }) => {
     const [playedSongsData, setPlayedSongsData] = useState([])
     const [userProfile, setUserProfile] = useState({})
+    
     // Get users recently played songs
     useEffect(() => {
         const searchRecentlyPlayedSongs = async () => {
-            // Check for access tokens, if none send home
+            // Check for access tokens. If none, send home.
             if (!tokens) {
                 history.push('/')
             } else {
-                const usersRecentlyPlayed = await getRecentlyPlayedTracks(tokens.access_token)
-                const theSongData = await getSongAnalysisArray(usersRecentlyPlayed, tokens.access_token)
-                setPlayedSongsData(theSongData)
-                const currentUserProfile = await getUserProfile(tokens.access_token)
-                setUserProfile(currentUserProfile)
+                try {
+                    const usersRecentlyPlayed = await getRecentlyPlayedTracks(tokens.access_token)
+                    const theSongData = await getSongAnalysisArray(usersRecentlyPlayed, tokens.access_token)
+                    setPlayedSongsData(theSongData)
+                    const currentUserProfile = await getUserProfile(tokens.access_token)
+                    setUserProfile(currentUserProfile)
+                } catch (err) {
+                    history.push('/notfound')
+                }
             }
         }
         searchRecentlyPlayedSongs();
     }, [])
 
     // Display loading screen while waiting for songs
+
+
     if (playedSongsData.length === 0) {
         return (
             <div>
                 <Navbar />
-                <Loading text={"Connecting with Spotify"} />
+                <Loading text={"Connecting to Spotify"} />
             </div>
         )
     }

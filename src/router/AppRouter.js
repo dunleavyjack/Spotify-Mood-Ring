@@ -6,6 +6,7 @@ import YourMoodDemo from '../pages/YourMoodDemo'
 import About from '../pages/About'
 import NotFound from '../pages/NotFound'
 import SpotifyRedirect from '../pages/SpotifyRedirect'
+import SongError from '../pages/SongError'
 
 class AppRouter extends React.Component {
     render() {
@@ -18,6 +19,7 @@ class AppRouter extends React.Component {
                         <Route path="/yourmood" component={YourMood}/>
                         <Route path="/about" component={About} />
                         <Route path="/demo" component={YourMoodDemo} />
+                        <Route path="/songerror" component={SongError} />
                         <Route component={NotFound} />
                     </Switch>
                 </div>
