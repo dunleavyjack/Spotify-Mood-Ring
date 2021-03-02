@@ -6,18 +6,22 @@ import Loading from '../components/Loading'
 import { connect } from 'react-redux'
 import { setTokens } from '../actions'
 
-const YourMood = ({tokens: {access_token}}) => {
+const YourMood = ({ history, tokens }) => {
     const [playedSongsData, setPlayedSongsData] = useState([])
     const [userProfile, setUserProfile] = useState({})
-
     // Get users recently played songs
     useEffect(() => {
         const searchRecentlyPlayedSongs = async () => {
-            const usersRecentlyPlayed = await getRecentlyPlayedTracks(access_token)
-            const theSongData = await getSongAnalysisArray(usersRecentlyPlayed, access_token)
-            setPlayedSongsData(theSongData)
-            const currentUserProfile = await getUserProfile(access_token)
-            setUserProfile(currentUserProfile)
+            // Check for access tokens, if none send home
+            if (!tokens) {
+                history.push('/')
+            } else {
+                const usersRecentlyPlayed = await getRecentlyPlayedTracks(tokens.access_token)
+                const theSongData = await getSongAnalysisArray(usersRecentlyPlayed, tokens.access_token)
+                setPlayedSongsData(theSongData)
+                const currentUserProfile = await getUserProfile(tokens.access_token)
+                setUserProfile(currentUserProfile)
+            }
         }
         searchRecentlyPlayedSongs();
     }, [])

@@ -18,7 +18,7 @@ const MoodDisplay = ({ songs, profile }) => {
         setTimeout(() => {
             setFinishedShuffeling(true)
         }, 2400)
-    })
+    });
 
     // Direct user to loading page
     if(finishedShuffeling === false){
@@ -27,7 +27,7 @@ const MoodDisplay = ({ songs, profile }) => {
                 <Loading text={"Detecting your mood"}/>
             </div>
         )
-    }
+    };
 
     // After loading page 'delay', display result page
     return (
@@ -36,7 +36,7 @@ const MoodDisplay = ({ songs, profile }) => {
             <FullBreakdown mood={mood}/>
             <Footer />
         </React.Fragment>
-    );
+    )
 };
 
 export default MoodDisplay;

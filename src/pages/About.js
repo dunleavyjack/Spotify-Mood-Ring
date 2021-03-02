@@ -12,11 +12,11 @@ const About = () => {
                     <h5 className="black-body whiteish">
                         This project was built with
                         <a className="custom-link" href="https://reactjs.org/"> React</a>,
+                        <a className="custom-link" href="https://redux.js.org/"> Redux</a>,
                         <a className="custom-link" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"> Bootstrap 5</a>, 
                         <a className="custom-link" href="https://developer.spotify.com/documentation/web-api/"> the Spotify Web API </a>,
                         <a className="custom-link" href="https://developer.spotify.com/documentation/general/guides/authorization-guide/"> Spotify OAuth2 </a>, and designed in
-                        <a className="custom-link" href="https://www.figma.com/design/"> Figma</a>.
-                        It's also hosted with
+                        <a className="custom-link" href="https://www.figma.com/design/"> Figma</a>. It's also hosted with
                         <a className="custom-link" href="https://vercel.com/"> Vercel </a> and the full code is available on GitHub
                         <a className="custom-link" href="https://github.com/dunleavyjack/Spotify-Mood-Ring"> here</a>.
                     </h5>

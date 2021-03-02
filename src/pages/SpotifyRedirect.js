@@ -21,12 +21,12 @@ class RedirectPage extends React.Component {
     render() {
         return null;
     }
-}
+};
 
 const mapStateToProps = state => {
-    return state
-}
+    return state;
+};
 
 export default connect(mapStateToProps, {
     setTokens
-})(RedirectPage)
+})(RedirectPage);
