@@ -6,17 +6,17 @@ import Loading from '../components/Loading'
 import { connect } from 'react-redux'
 import { setTokens } from '../actions'
 
-const YourMood = () => {
+const YourMood = ({tokens: {access_token}}) => {
     const [playedSongsData, setPlayedSongsData] = useState([])
     const [userProfile, setUserProfile] = useState({})
 
     // Get users recently played songs
     useEffect(() => {
         const searchRecentlyPlayedSongs = async () => {
-            const usersRecentlyPlayed = await getRecentlyPlayedTracks()
-            const theSongData = await getSongAnalysisArray(usersRecentlyPlayed)
+            const usersRecentlyPlayed = await getRecentlyPlayedTracks(access_token)
+            const theSongData = await getSongAnalysisArray(usersRecentlyPlayed, access_token)
             setPlayedSongsData(theSongData)
-            const currentUserProfile = await getUserProfile()
+            const currentUserProfile = await getUserProfile(access_token)
             setUserProfile(currentUserProfile)
         }
         searchRecentlyPlayedSongs();
@@ -42,9 +42,7 @@ const YourMood = () => {
 };
 
 const mapStateToProps = state => {
-    console.log('state below')
-    console.log(state)
-    return state
+    return { tokens: state.tokens }
 }
 
 

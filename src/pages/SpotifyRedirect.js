@@ -13,8 +13,6 @@ class RedirectPage extends React.Component {
             }
             const access_token = getParamValues(location.hash);
             this.props.setTokens(access_token)
-
-            // localStorage.setItem('params', JSON.stringify(access_token));
             history.push('/yourmood');
         } catch (error) {
             history.push('/');

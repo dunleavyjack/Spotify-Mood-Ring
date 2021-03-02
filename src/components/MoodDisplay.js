@@ -10,8 +10,6 @@ const MoodDisplay = ({ songs, profile }) => {
     const [finishedShuffeling, setFinishedShuffeling] = useState(false)
     const [mood, setMood] = useState(() => {
         const yourMood = calculateMood(songs)
-        console.log('USER PROFILE BELOW')
-        console.log(profile)
         return yourMood
     });
 

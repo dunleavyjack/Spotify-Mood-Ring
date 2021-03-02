@@ -11,41 +11,37 @@ export const getParamValues = (url) => {
         }, {});
 };
 
-export const setAuthHeader = () => {
+export const setAuthHeader = accessToken => {
     try {
-        const params = JSON.parse(localStorage.getItem('params'));
-        console.log('params below')
-        console.log(params)
-        if (params) {
+        if (accessToken) {
             axios.defaults.headers.common[
                 'Authorization'
-            ] = `Bearer ${params.access_token}`;
+            ] = `Bearer ${accessToken}`;
         }
     } catch (error) {
         console.log('Error setting auth', error)
     }
 }
 
-export const spotifyGetRequest = async (url, params) => {
-    setAuthHeader();
-    const result = await axios.get(url, params);
-    console.log(params)
+export const spotifyGetRequest = async (url, token) => {
+    setAuthHeader(token);
+    const result = await axios.get(url);
     return result.data;
 };
 
 // Returns the song analysis
-export const getSongAnalysis = async (id) => {
-    const songAnalysis = await spotifyGetRequest(`https://api.spotify.com/v1/audio-features/?ids=${id}`)
+export const getSongAnalysis = async (id, token) => {
+    const songAnalysis = await spotifyGetRequest(`https://api.spotify.com/v1/audio-features/?ids=${id}`, token)
     return songAnalysis
 }
 
-export const getUserProfile = async () => {
-    const userProfile = await spotifyGetRequest("https://api.spotify.com/v1/me/")
+export const getUserProfile = async (token) => {
+    const userProfile = await spotifyGetRequest("https://api.spotify.com/v1/me/", token)
     return userProfile
 }
 
-export const getRecentlyPlayedTracks = async () => {
-    const recentlyPlayed = await spotifyGetRequest(`https://api.spotify.com/v1/me/player/recently-played`)
+export const getRecentlyPlayedTracks = async (token) => {
+    const recentlyPlayed = await spotifyGetRequest(`https://api.spotify.com/v1/me/player/recently-played`, token)
     return recentlyPlayed.items
 }
 

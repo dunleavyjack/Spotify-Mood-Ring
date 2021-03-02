@@ -52,8 +52,6 @@ export const calculateMood = songs => {
         key: notatedKey,
         tempo: tempo.toFixed(2),
     }
-    console.log("RESULT ARRAY BELOW")
-    console.log(resultArray)
     return resultArray
 }
 

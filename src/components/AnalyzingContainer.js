@@ -8,8 +8,6 @@ const AnalyzingContainer = ({ songs, profile }) => {
     const [finishedShuffeling, setFinishedShuffeling] = useState(false)
 
     useEffect(() => {
-        console.log('songs object below')
-        console.log(songs)
         songs.forEach((song, i) => {
             setTimeout(() => {
                 setAnalyizedSong(song);
