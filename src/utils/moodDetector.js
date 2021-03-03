@@ -79,15 +79,15 @@ const matchMood = moodNames => {
     } else if (moodNames.includes("more-happiness") && moodNames.includes("higher-danceability")) {
         return "expressive"
     } else if (moodNames.includes("more-happiness") && moodNames.includes("higher-energy")) {
-        return "expressive"
+        return "elated"
     } else if (moodNames.includes("higher-danceability") && moodNames.includes("higher-energy")) {
-        return "expressive"
+        return "electric"
 
         // Matching: Lower + Lower (All)
     } else if (moodNames.includes("less-happiness") && moodNames.includes("lower-danceability")) {
         return "a little blue"
     } else if (moodNames.includes("less-happiness") && moodNames.includes("lower-energy")) {
-        return "melancholic"
+        return "a bit gloomy"
     } else if (moodNames.includes("lower-danceability") && moodNames.includes("lower-energy")) {
         return "sleepy"
     }
