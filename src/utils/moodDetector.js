@@ -73,7 +73,7 @@ const matchMood = moodNames => {
     } else if (moodNames.includes("higher-energy") && moodNames.includes("less-happiness")) {
         return "a bit gloomy"
     } else if (moodNames.includes("higher-energy") && moodNames.includes("lower-danceability")) {
-        return "a bit tense"
+        return "nervous"
 
         // Matching: Higher + Higher (All)
     } else if (moodNames.includes("more-happiness") && moodNames.includes("higher-danceability")) {
