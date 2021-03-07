@@ -23,6 +23,8 @@ const MoodDisplay = ({ songs, profile }) => {
     
     const profileImage = profile.images.length > 0 ? profile.images[0].url : blank_avatar;
 
+    const profileImage = profile.images.length > 0 ? profile.images[0].url : blank_avatar;
+
     // Direct user to loading page
     if(finishedShuffeling === false){
         return (
