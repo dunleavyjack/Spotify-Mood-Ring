@@ -20,8 +20,6 @@ const MoodDisplay = ({ songs, profile }) => {
             setFinishedShuffeling(true)
         }, 2400)
     });
-    
-    const profileImage = profile.images.length > 0 ? profile.images[0].url : blank_avatar;
 
     const profileImage = profile.images.length > 0 ? profile.images[0].url : blank_avatar;
 
