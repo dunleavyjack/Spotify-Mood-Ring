@@ -20,9 +20,10 @@ const MoodDisplay = ({ songs, profile }) => {
             setFinishedShuffeling(true)
         }, 2400)
     });
+    
+    const profileImage = profile.images.length > 0 ? profile.images[0].url : blank_avatar;
 
     // Direct user to loading page
-    console.log(profile.images[0].url ? profile.images[0].url : 'no image')
     if(finishedShuffeling === false){
         return (
             <div>
@@ -34,7 +35,7 @@ const MoodDisplay = ({ songs, profile }) => {
     // After loading page 'delay', display result page
     return (
         <React.Fragment>
-            <MoodResultHeader mood={mood} imageURL={profile.images[0].url ? profile.images[0].url : blank_avatar}/>
+            <MoodResultHeader mood={mood} imageURL={profileImage}/>
             <FullBreakdown mood={mood}/>
             <Footer />
         </React.Fragment>
