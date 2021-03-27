@@ -6,7 +6,7 @@ const Navbar = () => {
         <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <div className="container">
                 <Link className="navbar-brand nav-title brand-text" to="/">
-                    <span className="pinkish">mood ring</span>
+                    mood ring
                 </Link>
                 <div className="navbar-nav ml-auto">
                     <Link
