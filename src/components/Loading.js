@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Loading = ({ text }) => {
     return (
@@ -7,12 +7,11 @@ const Loading = ({ text }) => {
                 <div className="spinner-border pinkish" role="status">
                     <span className="visually-hidden">Loading...</span>
                 </div>
-                {/* <h2 classname="bold">Hey, Spotify<span className="pinkish tan">...</span></h2> */}
                 <h3 className="mt-3 tan about-header">{text}</h3>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Loading;
 

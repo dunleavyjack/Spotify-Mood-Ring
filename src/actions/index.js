@@ -1,6 +1,6 @@
-export const setTokens = data => {
+export const setTokens = (data) => {
     return {
-        type: 'SET_TOKENS',
-        payload: data
-    }
-}
+        type: "SET_TOKENS",
+        payload: data,
+    };
+};
