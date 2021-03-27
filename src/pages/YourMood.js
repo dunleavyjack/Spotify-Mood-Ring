@@ -9,7 +9,7 @@ import { setTokens } from '../actions'
 const YourMood = ({ history, tokens }) => {
     const [playedSongsData, setPlayedSongsData] = useState([])
     const [userProfile, setUserProfile] = useState({})
-    
+
     // Get users recently played songs
     useEffect(() => {
         const searchRecentlyPlayedSongs = async () => {
@@ -32,8 +32,6 @@ const YourMood = ({ history, tokens }) => {
     }, [])
 
     // Display loading screen while waiting for songs
-
-
     if (playedSongsData.length === 0) {
         return (
             <div>
