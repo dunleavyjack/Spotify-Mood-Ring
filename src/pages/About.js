@@ -7,7 +7,7 @@ const About = () => {
             <Navbar />
             <div className="black-body d-flex justify-content-center align-items-center content-body text-center content-body">
                 <div className="container flex-fill mt-5 fixed-container">
-                    <h1 className="bold about-header mt-5 black-body whiteish">about</h1>
+                    <h1 className="bold about-header mt-5 black-body whiteish floating-about">about</h1>
 
                     <h5 className="black-body whiteish">
                         This project was built with
@@ -21,13 +21,13 @@ const About = () => {
                         <a className="custom-link" href="https://github.com/dunleavyjack/Spotify-Mood-Ring"> here</a>.
                     </h5>
 
-                    <h1 className="bold about-header mt-5 black-body whiteish">privacy</h1>
+                    <h1 className="bold about-header mt-5 black-body whiteish floating-about-two">privacy</h1>
                     <h5 className="mb-5 black-body whiteish">The complete Spotify privacy policy can be viewed <a className="custom-link" href="https://www.spotify.com/us/legal/privacy-policy/">here</a>, which also covers approved third-party projects like this one. </h5>
 
                     <h1 className="bold about-header mt-5 black-body whiteish">mood detecting</h1>
                     <h5 className="black-body whiteish mb-5">Your mood is determined based on different analytics (tempo, energy, acousticness, etc.) from each song. An average is found from your recent music which is compared with the levels of an 'average listener'. That data is matched with one of over thirty moods and that's what you see. <br /><br /> Moods are strange and ineffable. But hopefully it connected with you :)</h5>
 
-                    <h1 className="bold about-header mt-5 black-body whiteish">contact</h1>
+                    <h1 className="bold about-header mt-5 black-body whiteish floating-about">contact</h1>
                     <h5 className="black-body whiteish">Jack &#9729;&#65039;</h5>
                     <h5 className="black-body whiteish"><a className="custom-link" href="https://github.com/dunleavyjack">Github</a> | <a className="custom-link" href="https://medium.com/@jack___joseph">Medium</a> | <a className="custom-link" href="https://dev.to/jack____joseph"> dev.to </a></h5>
                     <h5 className="black-body whiteish">dunleavyjack@gmail.com</h5>
