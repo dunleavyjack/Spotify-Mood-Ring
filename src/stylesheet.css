@@ -1,10 +1,10 @@
 * {
-    background-color: #FCEA9A;
+    background-color: #F1E0A5;
     font-family: 'Poppins', sans-serif;
 }
 
 .navbar{
-    background-color: #FCEA9A !important; 
+    background-color: #F1E0A5 !important; 
     height: 7.5vh;
 }
 
@@ -151,7 +151,7 @@
 }
 
 .btn-grey {
-    background-color: #FCEA9A !important;
+    background-color: #F1E0A5 !important;
     font-size: 14px;
     /* color: white; */
     line-height: 1;
@@ -218,15 +218,15 @@
 
 
 .tan {
-    background-color: #FCEA9A !important;
+    background-color: #F1E0A5 !important;
 }
 
 .tan > * {
-    background-color: #FCEA9A !important;
+    background-color: #F1E0A5 !important;
 }
 
 .tan > * > * {
-    background-color: #FCEA9A !important;
+    background-color: #F1E0A5 !important;
 }
 
 .center-container{
@@ -331,7 +331,7 @@
 }
 
 .tan-font{
-    color: #FCEA9A;
+    color: #F1E0A5;
 }
   
 .row{
