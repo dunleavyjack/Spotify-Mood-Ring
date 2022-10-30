@@ -1,0 +1,55 @@
+.synth-container {
+    text-align: left;
+    /* text-align: center; */
+    height: 240px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+.synth-container > h3 {
+    font-family: Unna;
+    font-weight: 700px;
+    font-size: 22px;
+    color: #40c6a6;
+    margin: 0;
+}
+
+.synth-container > h3 > span {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 50px;
+}
+
+.synth {
+    max-width: 320px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.synth-button {
+    font-family: Unna;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #40c6a6;
+    border-radius: 24px;
+    color: white;
+    border: none;
+    padding: 5px;
+    width: 250px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 660px) {
+    .synth-container {
+        text-align: center;
+    }
+    .synth {
+        max-width: 100%;
+    }
+    .synth-button-container{
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,52 @@
+body {
+    background-color: #B0BFF7;
+    color: white;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.page-container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('../assets/pageAssets/mr-desktop-background.svg');
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-container-mobile{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('../assets/pageAssets/mr-mobile-background.svg');
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* @media screen and (max-width: 700px) {
+    .page-container {
+        background-size: 90vw, 120vw;
+    }
+} */
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.scrollable {
+    justify-content: flex-start;
+    overflow-x: scroll;
+}

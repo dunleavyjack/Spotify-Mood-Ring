@@ -1,0 +1,77 @@
+.profile-display-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    position: relative;
+}
+
+.profile-decoration {
+    width: 100vw;
+    position: absolute;
+    object-position: center;
+}
+
+.left{
+    min-width: 235px;
+}
+
+.your-mood {
+    margin: 0;
+    padding: 0;
+    width: 80vw;
+    max-width: 560px;
+    display: block;
+}
+
+.mood-description {
+    font-family: Unna;
+    font-size: 30px;
+    color: black;
+    max-width: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.breakdown-container {
+    background-color: rgba(252, 246, 246, 0.6);
+    width: 90vw;
+    max-width: 1000px;
+    border-radius: 200px 0px 200px 0px;
+    padding: 25px;
+}
+
+.full-breakdown {
+    width: 175px;
+    margin-top: 20px;
+}
+
+.mood-display-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.try-again-button{
+    font-family: "Unna";
+    background-color: black;
+    color: white;
+    line-height: 30px;
+    font-size: 18px;
+    width: 250px;
+    border-radius: 50px;
+    border: none;
+    margin: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 660px) {
+    .mood-description {
+        font-size: 20px;
+    }
+    .breakdown-container {
+        border-radius: 200px 200px 0px 0px;
+    }
+    .mood-display-grid {
+        grid-template-columns: 1fr;
+    }
+}
