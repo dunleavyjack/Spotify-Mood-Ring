@@ -1,0 +1,99 @@
+.mood-feature-container {
+    font-family: Unna;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    height: 100px;
+}
+
+.mood-feature-container-right {
+    font-family: Unna;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    height: 100px;
+    text-align: left;
+    width: 100%;
+}
+
+.mood-feature-emoji {
+    font-size: 50px;
+    padding-right: 10px;
+    margin: 0;
+    width: 60px;
+}
+
+.mood-feature-percent {
+    font-family: 'Abril Fatface', cursive;
+    text-align: right;
+    font-size: 50px;
+    margin: 0;
+    color: #40c6a6;
+    width: 180px;
+    margin-right: 20px;
+}
+
+.mood-feature-percent-right {
+    font-family: 'Abril Fatface', cursive;
+    text-align: right;
+    font-size: 50px;
+    margin: 0;
+    color: #40c6a6;
+    margin-right: 20px;
+}
+
+.mood-feature-name {
+    font-weight: 700px;
+    margin: 0;
+    font-size: 22px;
+    color: #40c6a6;
+    align-self: flex-end;
+    margin-bottom: 40px;
+    width: 200px;
+    text-align: left;
+}
+
+.mood-feature-name-right {
+    font-weight: 700px;
+    margin: 0;
+    font-size: 22px;
+    color: #40c6a6;
+    align-self: flex-end;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+@media screen and (max-width: 975px) {
+    .mood-feature-container {
+        align-items: flex-end;
+    }
+    .mood-feature-container-right {
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+    .mood-feature-name {
+        width: 100%;
+        align-self: center;
+        margin-bottom: 0px;
+        text-align: center;
+        line-height: 22px;
+    }
+    .mood-feature-name-right {
+        width: 100%;
+        align-self: center;
+        margin-bottom: 0px;
+        text-align: center;
+        line-height: 22px;
+    }
+    .mood-feature-percent{
+        text-align: center;
+    }
+    .mood-feature-percent-right{
+        text-align: center;
+        width: 100%;
+    }
+}

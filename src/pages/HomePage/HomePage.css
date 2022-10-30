@@ -1,0 +1,56 @@
+.home-image {
+    max-width: 100vw;
+}
+
+.home-content {
+    font-family: 'Unna';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-content > h1 {
+    max-width: 365px;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 114.7%;
+}
+
+.home-content > h2 {
+    margin-top: 40px;
+    max-width: 365px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.home-content > button {
+    font-family: 'Unna';
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 40px;
+    width: 270px;
+    height: 40px;
+}
+
+.spotify-login-button {
+    background-color: white;
+    border: 1px solid white;
+    color: #a0afe1;
+    cursor: pointer;
+    /* background: linear-gradient(to right, #1fd760 50%, white 50%); */
+}
+
+.demo-login-button {
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.demo-login-button:hover,
+.demo-login-button:active {
+    background-color: white;
+    color: #a0afe1;
+}

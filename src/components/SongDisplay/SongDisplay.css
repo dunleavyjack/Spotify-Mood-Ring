@@ -1,0 +1,45 @@
+.analyzing-music {
+    width: 80vw;
+    max-width: 420px;
+    position: relative;
+    top: 2vh;
+}
+
+.album-cover-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.album-cover {
+    width: 45vw;
+    max-width: 250px;
+    z-index: 2;
+    border: 1.5px solid #ffffff;
+    border-radius: 36px;
+}
+
+.album-cover-decoration {
+    width: 90vw;
+    max-width: 515px;
+    position: absolute;
+    z-index: 1;
+}
+
+.song-info {
+    font-family: 'Unna';
+    margin: 0;
+}
+
+.song-info > h1 {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 0.15;
+}
+
+.song-info > h2,
+.song-info > h3 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 0.3;
+}
