@@ -1,8 +1,15 @@
-import { createStore, applyMiddleware } from 'redux';
-import reducers from './reducers';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { configureStore } from '@reduxjs/toolkit';
+import sessionReducer from './features/session/sessionSlice';
+import userReducer from './features/user/userSlice';
+import songsReducer from './features/songs/songsSlice';
 
-export const store = createStore(
-    reducers,
-    composeWithDevTools(applyMiddleware())
-);
+export const store = configureStore({
+    reducer: {
+        session: sessionReducer,
+        user: userReducer,
+        songs: songsReducer,
+    },
+});
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
