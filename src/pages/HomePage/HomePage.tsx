@@ -1,6 +1,5 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { setDemoStatus } from '../../actions';
 import { useNavigate } from 'react-router-dom';
 import { useViewportWidth } from '../../hooks/useViewportWidth';
 import howAreYouFeelingDesktop from '../../assets/pageAssets/home/howAreYouFeelingDesktop.png';
@@ -12,6 +11,7 @@ import {
     DONT_HAVE_A_SPOTIFY_ACCOUNT,
 } from '../../text';
 import './HomePage.css';
+import { sessionActions } from '../../features/session/sessionSlice';
 
 const HomePage: React.FC = () => {
     const dispatch = useDispatch();
@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
     };
 
     const handleDemoLogin = (): void => {
-        dispatch(setDemoStatus(true));
+        dispatch(sessionActions.setIsDemo(true));
         navigate('/analyzing');
     };
 

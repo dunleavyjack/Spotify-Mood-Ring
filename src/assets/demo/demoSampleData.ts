@@ -1,9 +1,10 @@
 import demoProfilePic from '../../assets/demo/demoProfilePic.jpg';
-import { User, Songs, AudioFeatures } from '../../types';
+import { UserState } from '../../features/user/user.types';
+import { Songs, AudioFeatures } from '../../types';
 
-export const demoUser: User = {
-    userName: 'Jack Joseph',
-    imageURL: demoProfilePic,
+export const demoUser: UserState = {
+    username: 'Jack Joseph',
+    profileURL: demoProfilePic,
 };
 
 export const demoRecentSongs: Songs[] = [

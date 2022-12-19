@@ -1,9 +1,6 @@
-export type UserState = {
-    username: string;
-    profileURL: string;
-};
+export type UserState = User;
 
-export type UserPayload = {
+export type User = {
     username: string;
     profileURL: string;
 };

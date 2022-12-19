@@ -19,15 +19,13 @@ import {
 } from '../../types';
 import { EmptyMood } from '../../constants';
 import { TRY_AGAIN } from '../../text';
-
-interface ReduxState {
-    user: User;
-    recentSongs: Songs[];
-    audioFeatures: AudioFeatures[];
-}
+import { useSelector } from 'react-redux';
+import { userState } from '../../features/user/userSlice';
+import { songsState } from '../../features/songs/songsSlice';
 
 const MoodPage: React.FC = () => {
-    const { user, audioFeatures }: ReduxState = store.getState();
+    const user = useSelector(userState);
+    const { audioFeatures } = useSelector(songsState);
     const [mood, setMood] = useState<Mood>(EmptyMood);
     const navigate = useNavigate();
 
@@ -77,7 +75,7 @@ const MoodPage: React.FC = () => {
                 <main className="page-content scrollable">
                     <Navbar isFullscreen={true} />
                     <section className="profile-display-container">
-                        <CircularProfilePic imageURL={user.imageURL} />
+                        <CircularProfilePic imageURL={user.profileURL} />
                         <img
                             alt="Profile Decoration"
                             src={profileImageLine}

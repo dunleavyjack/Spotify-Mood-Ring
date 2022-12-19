@@ -5,33 +5,38 @@ import {
     getUserProfile,
     getRecentSongsAndAudioFeatures,
 } from '../api/spotifyAPI';
-import { setRecentSongs, setUser, setAudioFeatures } from '../actions';
-import { User, SongsAndAudioFeatures } from '../types';
+import { SongsAndAudioFeatures } from '../types';
+import { User } from '../features/user/user.types';
 import { store } from '../store';
 import {
     demoUser,
     demoRecentSongs,
     demoAudioFeatures,
 } from '../assets/demo/demoSampleData';
+import { useAppSelector } from './reduxHooks';
+import { sessionState } from '../features/session/sessionSlice';
+import { songsActions } from '../features/songs/songsSlice';
+import { userActions } from '../features/user/userSlice';
 
 export const useFetchSpotify = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { isDemo } = store.getState().session;
+    const { token, isDemo } = useAppSelector(sessionState);
+
     const [spotifyRequestsComplete, setSpotifyRequestsComplete] =
         useState<boolean>(false);
 
     useEffect(() => {
         const fetchUserAndSongs = async () => {
             try {
-                const userProfile: User = await getUserProfile();
-                dispatch(setUser(userProfile));
+                const userProfile: User = await getUserProfile(token);
+                dispatch(userActions.setUser(userProfile));
 
                 const { songs, audioFeatures }: SongsAndAudioFeatures =
                     await getRecentSongsAndAudioFeatures();
                 if (songs.length && audioFeatures.length) {
-                    dispatch(setRecentSongs(songs));
-                    dispatch(setAudioFeatures(audioFeatures));
+                    dispatch(songsActions.setRecentSongs(songs));
+                    dispatch(songsActions.setAudioFeatures(audioFeatures));
                     setSpotifyRequestsComplete(true);
                 } else {
                     console.error(
@@ -46,9 +51,9 @@ export const useFetchSpotify = () => {
         };
 
         const setSampleSongsAndUser = () => {
-            dispatch(setUser(demoUser));
-            dispatch(setRecentSongs(demoRecentSongs));
-            dispatch(setAudioFeatures(demoAudioFeatures));
+            dispatch(userActions.setUser(demoUser));
+            dispatch(songsActions.setRecentSongs(demoRecentSongs));
+            dispatch(songsActions.setAudioFeatures(demoAudioFeatures));
             setSpotifyRequestsComplete(true);
         };
 

@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import { useAnalyzingSongs } from '../../hooks/useAnalyzingSongs';
-import { store } from '../../store';
 import SongDisplay from '../SongDisplay/SongDisplay';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { songsState } from '../../features/songs/songsSlice';
 
 const AnalyzingSongsAnimation: React.FC = () => {
     const navigate = useNavigate();
-    const { recentSongs } = store.getState();
+    const { recentSongs } = useSelector(songsState);
     const { currentSong, finishedAnalyzingSongs } =
         useAnalyzingSongs(recentSongs);
 

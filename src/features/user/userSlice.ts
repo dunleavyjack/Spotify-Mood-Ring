@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import type { RootState } from '../../store';
-import { UserState } from './user.types';
+import { User, UserState } from './user.types';
 
 const initialState: UserState = {
     username: '',
@@ -11,7 +11,7 @@ export const userSlice = createSlice({
     name: 'user',
     initialState,
     reducers: {
-        setUser: (state, action: PayloadAction<UserState>) => {
+        setUser: (state, action: PayloadAction<User>) => {
             const { username, profileURL } = action.payload;
             state.username = username;
             state.profileURL = profileURL;

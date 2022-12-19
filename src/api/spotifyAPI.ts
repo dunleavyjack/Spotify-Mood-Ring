@@ -1,13 +1,16 @@
 import axios from 'axios';
-import { User, SongsAndAudioFeatures } from '../types';
+import { SongsAndAudioFeatures } from '../types';
+import { User } from '../features/user/user.types';
 import { store } from '../store';
+
 const { REACT_APP_NEST_BASE_URL: baseURL } = process.env;
 
-export const getUserProfile = async (): Promise<User> => {
-    const spotifyToken: string = store.getState().session.token;
+export const getUserProfile = async (spotifyToken: string): Promise<User> => {
     try {
-        const { data } = await axios.get(`${baseURL}/users/${spotifyToken}`);
-        return data;
+        const {
+            data: { userName, imageURL },
+        } = await axios.get(`${baseURL}/users/${spotifyToken}`);
+        return { username: userName, profileURL: imageURL }; // TODO: Update backend to match updated user object
     } catch (error) {
         console.error('Nest Server Error', error);
         return {} as User;
