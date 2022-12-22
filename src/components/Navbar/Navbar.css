@@ -20,8 +20,9 @@
 
 .home {
     font-family: 'Abril Fatface', cursive;
+    font-weight: 400;
     color: white;
-    font-size: 32px;
+    font-size: 27px;
     position: relative;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -33,6 +34,7 @@
 
 .about {
     font-family: 'Unna', serif;
+    font-weight: 400;
     color: white;
     font-size: 20px;
     position: relative;
@@ -42,7 +44,7 @@
     white-space: nowrap;
     width: auto;
     margin-right: 20px;
-    padding-bottom: 7px;
+    padding-bottom: 4px;
 }
 
 .pointer {

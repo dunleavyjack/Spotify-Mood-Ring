@@ -1,9 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { useViewportWidth } from '../../hooks/useViewportWidth';
-import howAreYouFeelingDesktop from '../../assets/pageAssets/home/howAreYouFeelingDesktop.png';
-import howAreYouFeelingMobile from '../../assets/pageAssets/home/howAreYouFeelingMobile.png';
 import {
     TAG_LINE,
     VIEW_DEMO,
@@ -12,11 +9,12 @@ import {
 } from '../../text';
 import './HomePage.css';
 import { sessionActions } from '../../features/session/sessionSlice';
+import Lottie from 'react-lottie';
+import * as animationData from '../../assets/animations/tree.json';
 
-const HomePage: React.FC = () => {
+export const HomePage: React.FC = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const { isMobile } = useViewportWidth();
     const {
         REACT_APP_SPOTIFY_AUTHORIZE_URL: spotifyURL,
         REACT_APP_SPOTIFY_CLIENT_ID: cliendID,
@@ -35,23 +33,20 @@ const HomePage: React.FC = () => {
         navigate('/analyzing');
     };
 
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice',
+        },
+    };
+
     return (
         <main className="page-content">
-            {isMobile ? (
-                <img
-                    className="home-image"
-                    src={howAreYouFeelingMobile}
-                    alt="How are you feeling?"
-                />
-            ) : (
-                <img
-                    className="home-image"
-                    src={howAreYouFeelingDesktop}
-                    alt="How are you feeling?"
-                />
-            )}
             <section className="home-content">
-                <h1>{TAG_LINE}</h1>
+                <Lottie options={defaultOptions} height={200} width={200} />
+                <h1 className="home-tagline">{TAG_LINE}</h1>
                 <button
                     className="spotify-login-button"
                     onClick={handleSpotifyLogin}
@@ -66,5 +61,3 @@ const HomePage: React.FC = () => {
         </main>
     );
 };
-
-export default HomePage;

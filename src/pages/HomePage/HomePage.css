@@ -37,9 +37,8 @@
 .spotify-login-button {
     background-color: white;
     border: 1px solid white;
-    color: #a0afe1;
+    color: #000000;
     cursor: pointer;
-    /* background: linear-gradient(to right, #1fd760 50%, white 50%); */
 }
 
 .demo-login-button {

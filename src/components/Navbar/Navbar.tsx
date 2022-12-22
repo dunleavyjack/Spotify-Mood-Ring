@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { MOOD_RING, ABOUT_US } from '../../constants/text';
 import './Navbar.css';
 
 interface Props {
@@ -24,14 +25,14 @@ const Navbar: React.FC<Props> = ({ isFullscreen = false }) => {
 
     return (
         <nav className={isFullPage ? 'fullscreen-header' : 'header'}>
-            <h1 className={'home'}>
+            <h1 className="home">
                 <span className="pointer" onClick={handleHomeClick}>
-                    Mood Ring
+                    {MOOD_RING}
                 </span>
             </h1>
-            <h2 className={'about'}>
+            <h2 className="about">
                 <span className="pointer" onClick={handleAboutClick}>
-                    About
+                    {ABOUT_US}
                 </span>
             </h2>
         </nav>
