@@ -18,7 +18,7 @@ import { Links } from '../../types';
 import {
     MOOD_RING_PRIMARY_DESCRIPTION,
     MOOD_RING_SECONDARY_DESCRIPTION,
-} from '../../text';
+} from '../../constants/text';
 
 const jackLinks: Links[] = [
     {

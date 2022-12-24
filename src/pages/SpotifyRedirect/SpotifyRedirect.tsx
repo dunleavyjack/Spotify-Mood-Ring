@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { getSpotifyAccessToken } from '../../utils/spotifyUtil';
+import { getSpotifyAccessToken } from '../../api/spotifyAPIUtil';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import LoadingAnimation from '../../components/LoadingAnimation/LoadingAnimation';

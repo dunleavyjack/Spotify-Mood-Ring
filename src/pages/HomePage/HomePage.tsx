@@ -6,7 +6,7 @@ import {
     VIEW_DEMO,
     CONNECT_WITH_SPOTIFY,
     DONT_HAVE_A_SPOTIFY_ACCOUNT,
-} from '../../text';
+} from '../../constants/text';
 import './HomePage.css';
 import { sessionActions } from '../../features/session/sessionSlice';
 import Lottie from 'react-lottie';

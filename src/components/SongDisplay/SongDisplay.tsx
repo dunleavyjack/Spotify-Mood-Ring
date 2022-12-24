@@ -1,5 +1,5 @@
 import React from 'react';
-import { limitStringLength } from '../../utils/functions';
+import { limitStringLength } from '../../utils/helpers';
 import { Songs } from '../../types';
 import analyzingMusicText from '../../assets/pageAssets/dashboard/analyzingMusicText.png';
 import backgroundRing from '../../assets/pageAssets/dashboard/albumCoverBackgroundRing.png';

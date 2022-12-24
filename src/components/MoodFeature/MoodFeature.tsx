@@ -1,6 +1,6 @@
 import React from 'react';
 import './MoodFeature.css';
-import { emojis, EmojisInterface } from '../../utils/emojis';
+import { emojis, EmojisInterface } from '../../constants/emojis';
 
 interface Props {
     feature: string;

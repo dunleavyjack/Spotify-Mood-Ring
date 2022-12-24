@@ -11,6 +11,14 @@ import reflectiveMoodImage from '../assets/moods/moodReflective.svg';
 import sleepyMoodImage from '../assets/moods/moodSleepy.svg';
 import tenseMoodImage from '../assets/moods/moodTense.svg';
 
+export const limitStringLength = (str: string) => {
+    if (str?.length > 18) {
+        return str.substring(0, 18) + '...';
+    } else {
+        return str;
+    }
+};
+
 export const emotionalFeatureNames: string[] = [
     'danceability',
     'energy',

@@ -1,4 +1,8 @@
-// Neccesary to import png and jpgs with TS for some reason
+/**
+ *
+ *  Necessary to import image files when using typescript/react with webpack
+ *
+ */
 declare module '*.png';
 declare module '*.jpg';
 declare module '*.svg';

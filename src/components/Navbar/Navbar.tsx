@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { MOOD_RING, ABOUT_US } from '../../constants/text';
 import './Navbar.css';
 
@@ -7,21 +7,22 @@ interface Props {
     isFullscreen?: boolean;
 }
 
-const handleHomeClick = () => {
-    window.location.href = './';
-};
-
-const handleAboutClick = () => {
-    window.location.href = './about';
-};
-
 const Navbar: React.FC<Props> = ({ isFullscreen = false }) => {
     const { pathname } = useLocation();
+    const navigate = useNavigate();
     const isFullPage = pathname === '/mood' || pathname === '/about';
 
     if (isFullPage && !isFullscreen) {
         return <></>;
     }
+
+    const handleHomeClick = () => {
+        window.location.href = './home';
+    };
+
+    const handleAboutClick = () => {
+        window.location.href = './about';
+    };
 
     return (
         <nav className={isFullPage ? 'fullscreen-header' : 'header'}>

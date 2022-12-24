@@ -6,14 +6,6 @@ body {
     overflow: hidden;
 }
 
-.page-container {
-    width: 100vw;
-    height: 100vh;
-    background: url('../assets/pageAssets/purpleTexture.svg');
-    background-position: 50% -50%;
-    background-repeat: no-repeat;
-}
-
 .page-content {
     display: flex;
     flex-direction: column;

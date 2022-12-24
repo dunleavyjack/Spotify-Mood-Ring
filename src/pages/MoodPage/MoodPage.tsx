@@ -17,8 +17,7 @@ import {
     EmotionalFeatures,
     StandardFeatures,
 } from '../../types';
-import { EmptyMood } from '../../constants';
-import { TRY_AGAIN } from '../../text';
+import { TRY_AGAIN } from '../../constants/text';
 import { useSelector } from 'react-redux';
 import { userState } from '../../features/user/userSlice';
 import { songsState } from '../../features/songs/songsSlice';
@@ -26,7 +25,12 @@ import { songsState } from '../../features/songs/songsSlice';
 const MoodPage: React.FC = () => {
     const user = useSelector(userState);
     const { audioFeatures } = useSelector(songsState);
-    const [mood, setMood] = useState<Mood>(EmptyMood);
+    const [mood, setMood] = useState<Mood>({
+        mood: '',
+        moodImageURL: '',
+        emotionalFeatures: [],
+        standardFeatures: [],
+    });
     const navigate = useNavigate();
 
     const handleTryAgain = (): void => {
