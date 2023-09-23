@@ -1,11 +1,17 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
+import { Provider } from 'react-redux';
+import { useAppSelector, testState, store } from '@moodring/store';
 
 export function App() {
+  const { hello } = useAppSelector(testState);
+
   return (
-    <div>
-      <h1>Hello from moodring</h1>
-    </div>
+    <Provider store={store}>
+      <div>
+        <h1>test</h1>
+        <h2>{hello}</h2>
+      </div>
+    </Provider>
   );
 }
 

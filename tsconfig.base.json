@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@moodring/services": ["libs/services/src/index.ts"],
+      "@moodring/store": ["libs/store/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
