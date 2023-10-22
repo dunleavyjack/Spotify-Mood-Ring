@@ -13,4 +13,5 @@ export const openAI = new OpenAI({
 
 export const createMoodPrompt = () => {
   console.log('test prompt');
+  return '';
 };
