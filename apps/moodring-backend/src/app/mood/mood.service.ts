@@ -1,4 +1,4 @@
-import { createMoodPrompt, openAI } from '@moodring/llm';
+import { createMoodPrompt, openAI } from '@moodring/shared/llm';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()

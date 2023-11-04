@@ -15,10 +15,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@moodring/llm": ["libs/llm/src/index.ts"],
-      "@moodring/models": ["libs/models/src/index.ts"],
-      "@moodring/services": ["libs/services/src/index.ts"],
-      "@moodring/store": ["libs/store/src/index.ts"]
+      "@moodring/shared/constants": ["libs/shared/constants/src/index.ts"],
+      "@moodring/shared/data-access": ["libs/shared/data-access/src/index.ts"],
+      "@moodring/shared/hooks": ["libs/shared/hooks/src/index.ts"],
+      "@moodring/shared/llm": ["libs/shared/llm/src/index.ts"],
+      "@moodring/shared/store": ["libs/shared/store/src/index.ts"],
+      "@moodring/shared/types": ["libs/shared/types/src/index.ts"],
+      "@moodring/shared/utils": ["libs/shared/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Provider } from 'react-redux';
-import { useAppSelector, testState, store } from '@moodring/store';
+import { useAppSelector, testState, store } from '@moodring/shared/store';
 
 export function App() {
   const { hello } = useAppSelector(testState);
@@ -8,7 +8,6 @@ export function App() {
   return (
     <Provider store={store}>
       <div>
-        <h1>test</h1>
         <h2>{hello}</h2>
       </div>
     </Provider>

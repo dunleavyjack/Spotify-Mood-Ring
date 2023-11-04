@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom/client';
 
 import App from './app/app';
 import { Provider as StoreProvider } from 'react-redux';
-import { store } from '@moodring/store';
+import { store } from '@moodring/shared/store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
