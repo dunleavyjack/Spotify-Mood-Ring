@@ -2,7 +2,9 @@
   "name": "@moodring/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "nx run-many --target=serve --projects=moodring-web,moodring-backend --parallel"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^10.0.2",
