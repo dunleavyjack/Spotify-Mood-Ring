@@ -1,0 +1,27 @@
+.nav {
+    position: absolute;
+    height: 70px;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__centered {
+    flex: 1;
+    text-align: center;
+    color: black;
+    font-family: 'Abril Fatface';
+    font-size: 27px;
+}
+
+.nav__right {
+    text-decoration: none;
+    margin-right: 0; 
+    margin-left: auto;
+    background-color: green;
+}
+
+

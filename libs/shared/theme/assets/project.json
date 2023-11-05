@@ -1,0 +1,16 @@
+{
+  "name": "shared-theme-assets",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/theme/assets/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/theme/assets/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}
