@@ -1,0 +1,67 @@
+[1m[33m[36m>[39m[33m [7m[1m[36m NX [39m[33m[22m[1m[27m Unable to load tsconfig-paths, workspace libraries may be inaccessible.[39m[22m
+[1m[33m  - To fix this, install tsconfig-paths with npm/yarn/pnpm[39m[22m
+[1m[33m[36m>[39m[33m [7m[1m[36m NX [39m[33m[22m[1m[27m Falling back to ts-node for local typescript execution. This may be a little slower.[39m[22m
+[1m[33m  - To fix this, ensure @swc-node/register and @swc/core have been installed[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 11.6 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (319d11af1d0c1642)
+[1m[31mDebugger listening on ws://localhost:9229/9aa14d74-1107-4636-b59d-645c4a68c02b[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/9aa14d74-1107-4636-b59d-645c4a68c02b[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 11.6 KiB [1m[33m[entry][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (319d11af1d0c1642)
+[1m[31mDebugger listening on ws://localhost:9229/bb201975-c941-41d5-863e-27b11934657a[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/bb201975-c941-41d5-863e-27b11934657a[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 8.61 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/mood/mood.module.ts[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ../../node_modules/ts-loader/index.js):
+[1m[31mError[39m[22m[1m: ENOENT: no such file or directory, open '/Users/jack/Desktop/lab/moodring/apps/moodring-backend/src/app/mood/mood.module.ts'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./apps/moodring-backend/src/app/app.module.ts:[32m[1m2:28[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module './mood/mood.module' or its corresponding type declarations.
+  [0m [90m 1 |[39m [36mimport[39m { [33mModule[39m } [36mfrom[39m [32m'@nestjs/common'[39m[33m;[39m[0m
+  [0m[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { [33mMoodModule[39m } [36mfrom[39m [32m'./mood/mood.module'[39m[33m;[39m[0m
+  [0m [90m   |[39m                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m { [33mConfigModule[39m } [36mfrom[39m [32m'@nestjs/config'[39m[33m;[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m { [33mAuthenticationModule[39m } [36mfrom[39m [32m'@moodring/authentication'[39m[33m;[39m[0m
+  [0m [90m 5 |[39m[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (0fb7f73d71c0a739)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 8.59 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.module.ts[39m[22m [1m[32m8:25-60[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve '@moodring/mood-detection' in '/Users/jack/Desktop/lab/moodring/apps/moodring-backend/src/app'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./apps/moodring-backend/src/app/app.module.ts:[32m[1m4:37[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module '@moodring/mood-detection' or its corresponding type declarations.
+  [0m [90m 2 |[39m [36mimport[39m { [33mConfigModule[39m } [36mfrom[39m [32m'@nestjs/config'[39m[33m;[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m { [33mAuthenticationModule[39m } [36mfrom[39m [32m'@moodring/authentication'[39m[33m;[39m[0m
+  [0m[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMoodDetectionModule[39m } [36mfrom[39m [32m'@moodring/mood-detection'[39m[33m;[39m[0m
+  [0m [90m   |[39m                                     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 5 |[39m[0m
+  [0m [90m 6 |[39m [33m@[39m[33mModule[39m({[0m
+  [0m [90m 7 |[39m   imports[33m:[39m [[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (82de4749d2a063b2)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 8.59 KiB [1m[33m[entry][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.module.ts[39m[22m [1m[32m8:25-60[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve '@moodring/mood-detection' in '/Users/jack/Desktop/lab/moodring/apps/moodring-backend/src/app'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./apps/moodring-backend/src/app/app.module.ts:[32m[1m4:37[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module '@moodring/mood-detection' or its corresponding type declarations.
+  [0m [90m 2 |[39m [36mimport[39m { [33mConfigModule[39m } [36mfrom[39m [32m'@nestjs/config'[39m[33m;[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m { [33mAuthenticationModule[39m } [36mfrom[39m [32m'@moodring/authentication'[39m[33m;[39m[0m
+  [0m[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mMoodDetectionModule[39m } [36mfrom[39m [32m'@moodring/mood-detection'[39m[33m;[39m[0m
+  [0m [90m   |[39m                                     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 5 |[39m[0m
+  [0m [90m 6 |[39m [33m@[39m[33mModule[39m({[0m
+  [0m [90m 7 |[39m   imports[33m:[39m [[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (82de4749d2a063b2)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m

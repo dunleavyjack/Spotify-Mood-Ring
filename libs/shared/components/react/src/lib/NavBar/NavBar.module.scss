@@ -1,27 +1,36 @@
 .nav {
-    position: absolute;
     height: 70px;
+    position: absolute;
     top: 0px;
     left: 0px;
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
 
-.nav__centered {
-    flex: 1;
-    text-align: center;
-    color: black;
-    font-family: 'Abril Fatface';
-    font-size: 27px;
-}
+    > h1 {
+        font-family: 'Abril Fatface';
+        font-size: 27px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 25px;
+        z-index: 999;
+        width: 100%;
+        text-align: center;
+    }
 
-.nav__right {
-    text-decoration: none;
-    margin-right: 0; 
-    margin-left: auto;
-    background-color: green;
+    > div {
+        font-family: 'Unna', serif;
+        color: white;
+        font-size: 20px;
+        position: relative;
+        text-align: right;
+        word-wrap: normal;
+        z-index: 999;
+        white-space: nowrap;
+        width: auto;
+        margin-right: 20px;
+        top: 10px;
+    }
 }
-
 

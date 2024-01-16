@@ -1,0 +1,40 @@
+[1m[33m[36m>[39m[33m [7m[1m[36m NX [39m[33m[22m[1m[27m Unable to load tsconfig-paths, workspace libraries may be inaccessible.[39m[22m
+[1m[33m  - To fix this, install tsconfig-paths with npm/yarn/pnpm[39m[22m
+[1m[33m[36m>[39m[33m [7m[1m[36m NX [39m[33m[22m[1m[27m Falling back to ts-node for local typescript execution. This may be a little slower.[39m[22m
+[1m[33m  - To fix this, ensure @swc-node/register and @swc/core have been installed[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 8.96 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (1c6f5d3015337ee9)
+[1m[31mDebugger listening on ws://localhost:9229/d77ae5ce-38ae-4361-957f-64f2e0ed784d[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/d77ae5ce-38ae-4361-957f-64f2e0ed784d[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (64b4792d7adb8f99)
+[1m[31mDebugger listening on ws://localhost:9229/39e7607e-fcfa-45ac-9362-d0cf7165d676[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/39e7607e-fcfa-45ac-9362-d0cf7165d676[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9 KiB [1m[33m[entry][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (64b4792d7adb8f99)
+[1m[31mDebugger listening on ws://localhost:9229/c6cb875e-c9da-4b22-918c-7e8a1c08cad8[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/c6cb875e-c9da-4b22-918c-7e8a1c08cad8[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.01 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (3613334ff53f1b70)
+[1m[31mDebugger listening on ws://localhost:9229/c6032095-0117-470e-a7c1-6dbd169c6862[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/c6032095-0117-470e-a7c1-6dbd169c6862[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.01 KiB [1m[33m[entry][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (3613334ff53f1b70)
+[1m[31mDebugger listening on ws://localhost:9229/0cd05c60-950d-40ed-baf1-d5f98782b73a[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/0cd05c60-950d-40ed-baf1-d5f98782b73a[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.01 KiB [1m[33m[entry][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (3613334ff53f1b70)
+[1m[31mDebugger listening on ws://localhost:9229/80264b28-30f7-4a02-90a5-092a579db668[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/80264b28-30f7-4a02-90a5-092a579db668[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m

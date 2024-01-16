@@ -15,6 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@moodring/authentication": [
+        "libs/moodring-backend/authentication/src/index.ts"
+      ],
+      "@moodring/mood-detection": [
+        "libs/moodring-backend/mood-detection/src/index.ts"
+      ],
       "@moodring/moodring-web/pages": ["libs/moodring-web/pages/src/index.ts"],
       "@moodring/moodring-web/router": [
         "libs/moodring-web/router/src/index.ts"

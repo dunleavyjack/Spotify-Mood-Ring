@@ -1,0 +1,25 @@
+[1m[33m[36m>[39m[33m [7m[1m[36m NX [39m[33m[22m[1m[27m Unable to load tsconfig-paths, workspace libraries may be inaccessible.[39m[22m
+[1m[33m  - To fix this, install tsconfig-paths with npm/yarn/pnpm[39m[22m
+[1m[33m[36m>[39m[33m [7m[1m[36m NX [39m[33m[22m[1m[27m Falling back to ts-node for local typescript execution. This may be a little slower.[39m[22m
+[1m[33m  - To fix this, ensure @swc-node/register and @swc/core have been installed[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 12.5 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (7366ebab67e983b8)
+[1m[31mDebugger listening on ws://localhost:9229/9d386d60-093c-4641-907b-4007468e1550[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/9d386d60-093c-4641-907b-4007468e1550[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[1m[31m[31m[Nest] 38715  - [39m[31m01/15/2024, 6:26:21 PM [31m  ERROR[39m[31m [38;5;3m[ExceptionsHandler] [39m[31m[31mThe model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations[39m[31m[39m[22m
+[1m[31mError: The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations[39m[22m
+[1m[31m    at Function.generate (/Users/jack/Desktop/lab/moodring/node_modules/openai/src/error.ts:87:2)[39m[22m
+[1m[31m    at OpenAI.makeStatusError (/Users/jack/Desktop/lab/moodring/node_modules/openai/src/core.ts:444:21)[39m[22m
+[1m[31m    at OpenAI.makeRequest (/Users/jack/Desktop/lab/moodring/node_modules/openai/src/core.ts:494:17)[39m[22m
+[1m[31m    at processTicksAndRejections (node:internal/process/task_queues:95:5)[39m[22m
+[1m[31m    at async /Users/jack/Desktop/lab/moodring/node_modules/langchain/dist/llms/openai.cjs:461:29[39m[22m
+[1m[31m    at async RetryOperation._fn (/Users/jack/Desktop/lab/moodring/node_modules/p-retry/index.js:50:12)[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 12.5 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (ec96f516fcfc798f)
+[1m[31mDebugger listening on ws://localhost:9229/1ee9c5f2-2490-4132-a179-c6b605c8aec5[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/1ee9c5f2-2490-4132-a179-c6b605c8aec5[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m

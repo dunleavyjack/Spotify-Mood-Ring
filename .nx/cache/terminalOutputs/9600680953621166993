@@ -1,0 +1,16 @@
+[1m[33m[36m>[39m[33m [7m[1m[36m NX [39m[33m[22m[1m[27m Unable to load tsconfig-paths, workspace libraries may be inaccessible.[39m[22m
+[1m[33m  - To fix this, install tsconfig-paths with npm/yarn/pnpm[39m[22m
+[1m[33m[36m>[39m[33m [7m[1m[36m NX [39m[33m[22m[1m[27m Falling back to ts-node for local typescript execution. This may be a little slower.[39m[22m
+[1m[33m  - To fix this, ensure @swc-node/register and @swc/core have been installed[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.08 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (1a0f4b38c726a9b1)
+[1m[31mDebugger listening on ws://localhost:9229/076cdbb1-58c9-4d9a-a6c6-ec8793a38c39[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/076cdbb1-58c9-4d9a-a6c6-ec8793a38c39[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.11 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (8005d274f678a6a7)
+[1m[31mDebugger listening on ws://localhost:9229/84e05a80-1875-4475-94a4-2165269a9c75[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/84e05a80-1875-4475-94a4-2165269a9c75[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m

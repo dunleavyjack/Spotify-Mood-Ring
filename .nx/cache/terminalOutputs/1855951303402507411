@@ -1,0 +1,89 @@
+[1m[33m[36m>[39m[33m [7m[1m[36m NX [39m[33m[22m[1m[27m Unable to load tsconfig-paths, workspace libraries may be inaccessible.[39m[22m
+[1m[33m  - To fix this, install tsconfig-paths with npm/yarn/pnpm[39m[22m
+[1m[33m[36m>[39m[33m [7m[1m[36m NX [39m[33m[22m[1m[27m Falling back to ts-node for local typescript execution. This may be a little slower.[39m[22m
+[1m[33m  - To fix this, ensure @swc-node/register and @swc/core have been installed[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 12 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (1ec997f0ea36f19f)
+[1m[31mDebugger listening on ws://localhost:9229/e690912b-daac-4d07-82c6-88ccaf1a12f7[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/e690912b-daac-4d07-82c6-88ccaf1a12f7[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[1m[31m[31m[Nest] 29831  - [39m[31m01/15/2024, 5:59:40 PM [31m  ERROR[39m[31m [38;5;3m[ExceptionHandler] [39m[31m[31mNest cannot export a provider/module that is not a part of the currently processed module (MoodDetectionModule). Please verify whether the exported MoodService is available in this particular context.[39m[22m
+[1m[31m[39m[22m
+[1m[31mPossible Solutions:[39m[22m
+[1m[31m- Is MoodService part of the relevant providers/imports within MoodDetectionModule?[39m[22m
+[1m[31m[39m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31mError: Nest cannot export a provider/module that is not a part of the currently processed module (MoodDetectionModule). Please verify whether the exported MoodService is available in this particular context.[39m[22m
+[1m[31m[39m[22m
+[1m[31mPossible Solutions:[39m[22m
+[1m[31m- Is MoodService part of the relevant providers/imports within MoodDetectionModule?[39m[22m
+[1m[31m[39m[22m
+[1m[31m    at Module.validateExportedProvider (/Users/jack/Desktop/lab/moodring/node_modules/@nestjs/core/injector/module.js:308:19)[39m[22m
+[1m[31m    at addExportedUnit (/Users/jack/Desktop/lab/moodring/node_modules/@nestjs/core/injector/module.js:276:67)[39m[22m
+[1m[31m    at Module.addExportedProvider (/Users/jack/Desktop/lab/moodring/node_modules/@nestjs/core/injector/module.js:287:9)[39m[22m
+[1m[31m    at NestContainer.addExportedProvider (/Users/jack/Desktop/lab/moodring/node_modules/@nestjs/core/injector/container.js:168:19)[39m[22m
+[1m[31m    at DependenciesScanner.insertExportedProvider (/Users/jack/Desktop/lab/moodring/node_modules/@nestjs/core/scanner.js:291:24)[39m[22m
+[1m[31m    at /Users/jack/Desktop/lab/moodring/node_modules/@nestjs/core/scanner.js:148:50[39m[22m
+[1m[31m    at Array.forEach (<anonymous>)[39m[22m
+[1m[31m    at DependenciesScanner.reflectExports (/Users/jack/Desktop/lab/moodring/node_modules/@nestjs/core/scanner.js:148:17)[39m[22m
+[1m[31m    at DependenciesScanner.scanModulesForDependencies (/Users/jack/Desktop/lab/moodring/node_modules/@nestjs/core/scanner.js:101:18)[39m[22m
+[1m[31m    at async DependenciesScanner.scan (/Users/jack/Desktop/lab/moodring/node_modules/@nestjs/core/scanner.js:31:9)[39m[22m
+[1m[31m[39m[22m
+
+[36m>[39m [7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 1, waiting for changes to restart...[22m
+
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 12 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (7dcb794ce9f637e1)
+[1m[31mDebugger listening on ws://localhost:9229/2515a61d-7018-4c60-bdaa-93bff5e18cf1[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/2515a61d-7018-4c60-bdaa-93bff5e18cf1[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 12 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (f7b90f106d6ce5f2)
+[1m[31mDebugger listening on ws://localhost:9229/dac02188-1feb-41cb-aef1-23b7b78d7f34[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/dac02188-1feb-41cb-aef1-23b7b78d7f34[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 12 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (bafe80ed7b8311f5)
+[1m[31mDebugger listening on ws://localhost:9229/3e64d715-9bd9-48dc-921a-1f166bddb39c[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/3e64d715-9bd9-48dc-921a-1f166bddb39c[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 12.4 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (1c6e71949932d349)
+[1m[31mDebugger listening on ws://localhost:9229/a3810369-0f1a-473a-a269-e66673223a83[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/a3810369-0f1a-473a-a269-e66673223a83[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 12.4 KiB [1m[33m[entry][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (1c6e71949932d349)
+[1m[31mDebugger listening on ws://localhost:9229/d3eab210-fce2-407f-918d-ddefb4dd5662[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/d3eab210-fce2-407f-918d-ddefb4dd5662[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 12.3 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (773503125df6e28a)
+[1m[31mDebugger listening on ws://localhost:9229/289f566a-77f3-4178-acc4-ee2f4cb0baa7[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/289f566a-77f3-4178-acc4-ee2f4cb0baa7[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 12.3 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (0ed83539eafd9e2c)
+[1m[31mDebugger listening on ws://localhost:9229/993bc0a7-8ac0-4477-988b-816010799f10[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/993bc0a7-8ac0-4477-988b-816010799f10[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 12.3 KiB [1m[33m[entry][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (0ed83539eafd9e2c)
+[1m[31mDebugger listening on ws://localhost:9229/e977e62c-5b09-46d7-8dc9-a49a0e49b876[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/e977e62c-5b09-46d7-8dc9-a49a0e49b876[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 12.3 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (ab72a0ade3195a20)
+[1m[31mDebugger listening on ws://localhost:9229/42ee23fc-9209-4d93-8a79-ebfb2e9e56ae[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/42ee23fc-9209-4d93-8a79-ebfb2e9e56ae[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m

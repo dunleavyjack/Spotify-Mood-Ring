@@ -1,8 +1,14 @@
 import { Module } from '@nestjs/common';
-import { MoodModule } from './mood/mood.module';
+import { ConfigModule } from '@nestjs/config';
+import { AuthenticationModule } from '@moodring/authentication';
+// import { MoodDetectionModule } from '@moodring/mood-detection';
 
 @Module({
-  imports: [MoodModule],
+  imports: [
+    // MoodDetectionModule,
+    AuthenticationModule,
+    ConfigModule.forRoot({ isGlobal: true }),
+  ],
   controllers: [],
   providers: [],
 })

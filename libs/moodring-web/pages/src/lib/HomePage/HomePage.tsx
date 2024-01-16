@@ -2,7 +2,7 @@ import { NavBar } from '@moodring/shared/components/react';
 
 export const HomePage = (): JSX.Element => {
   return (
-    <main>
+    <main style={{ backgroundColor: 'black' }}>
       <NavBar />
     </main>
   );
