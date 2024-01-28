@@ -1,3 +1,3 @@
-export const ErrorPage = (): JSX.Element => {
+export function ErrorPage() {
   return <main>Error Page</main>;
-};
+}

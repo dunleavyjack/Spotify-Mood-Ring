@@ -10,8 +10,9 @@ export class AuthenticationController {
 
   //   @UseGuards(SpotifyOauthGuard)
   @Get('test')
-  test(): void {
+  test(): string {
     this.authenticationService.test();
+    return 'test';
   }
 
   @UseGuards(SpotifyOauthGuard)
@@ -39,6 +40,8 @@ export class AuthenticationController {
         expires_in: number;
       };
     } = req;
+
+    console.log('user found');
 
     if (!user) {
       res.redirect('/');

@@ -6,13 +6,10 @@ type CustomLinkProps = {
   displayText: string;
 };
 
-export const CustomLink = ({
-  to,
-  displayText,
-}: CustomLinkProps): JSX.Element => {
+export function CustomLink({ to, displayText }: CustomLinkProps) {
   return (
     <Link to={to} className={styles.link}>
       {displayText}
     </Link>
   );
-};
+}

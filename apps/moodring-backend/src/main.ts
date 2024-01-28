@@ -4,12 +4,24 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-
-  app.enableCors({
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    origin: '*',
+  const app = await NestFactory.create(AppModule, {
+    cors: {
+      origin: ['http://localhost:4200/'],
+      credentials: true,
+    },
   });
+
+  // app.enableCors({
+  //   methods: ['GET'],
+  //   // allowedHeaders: ['Authorization', 'Content-type'],
+  //   origin: ['http://localhost:4200'],
+  //   credentials: true,
+  // });
+
+  // app.enableCors({
+  //   origin: 'http://localhost:4200',
+  //   credentials: true,
+  // });
 
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);

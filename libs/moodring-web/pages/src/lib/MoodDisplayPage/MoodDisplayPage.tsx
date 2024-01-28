@@ -1,3 +1,3 @@
-export const MoodDisplayPage = (): JSX.Element => {
+export function MoodDisplayPage() {
   return <main>Mood Display Page</main>;
-};
+}

@@ -27,7 +27,8 @@
     "react-router-dom": "^6.18.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "xstate": "^5.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",

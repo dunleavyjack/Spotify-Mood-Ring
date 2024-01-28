@@ -23,6 +23,7 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0",
     "tslib": "^2.3.0",
+    "xstate": "^5.5.1",
     "@babel/core": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
     "@commitlint/cli": "^17.7.1",
@@ -140,6 +141,9 @@
     ],
     "@moodring/shared/utils": [
       "libs/shared/utils/src/index.ts"
+    ],
+    "@moodring/state-machine": [
+      "libs/shared/state-machine/src/index.ts"
     ]
   },
   "nxJsonPlugins": [],
@@ -167,27 +171,35 @@
       },
       {
         "file": ".nx/cache/d/daemon.log",
-        "hash": "14119042258507834419"
+        "hash": "18096969598589232996"
       },
       {
         "file": ".nx/cache/d/server-process.json",
-        "hash": "12006192194204024323"
+        "hash": "6068587812392617561"
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "10522257403783169672"
+        "hash": "2105169401985614409"
       },
       {
         "file": ".nx/cache/lockfile.hash",
-        "hash": "17400931325425005803"
+        "hash": "12759514360963900530"
       },
       {
         "file": ".nx/cache/parsed-lock-file.json",
-        "hash": "7370807396364383821"
+        "hash": "11162365668863213082"
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "15315130477655433608"
+        "hash": "3095987801242100639"
+      },
+      {
+        "file": ".nx/cache/run.json",
+        "hash": "7010073850948865363"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/10202410869735283645",
+        "hash": "10290279168582428719"
       },
       {
         "file": ".nx/cache/terminalOutputs/1049530113020974097",
@@ -196,6 +208,62 @@
       {
         "file": ".nx/cache/terminalOutputs/12840243254539241701",
         "hash": "17861311930343161449"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/14275218532689143198",
+        "hash": "6899412857975376677"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/14694755095786880461",
+        "hash": "15174251940113322313"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/14984320344378249110",
+        "hash": "11141490535547947694"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/15310837826483488940",
+        "hash": "10927242134701024604"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/17655580800263782469",
+        "hash": "6739232793539765354"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/18084067057755402515",
+        "hash": "10776129611800515814"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/1855951303402507411",
+        "hash": "17451058647931143627"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/3745822639549425147",
+        "hash": "1134606116129795741"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/4396433553156086842",
+        "hash": "12750639999844215993"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/4930433870692308632",
+        "hash": "2278217390411135403"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/6581869836044880656",
+        "hash": "6808091394258265946"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/8755277399478145627",
+        "hash": "14642817572269504479"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/8942704994256883860",
+        "hash": "2172461299244764641"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/9600680953621166993",
+        "hash": "12296494720592406732"
       },
       {
         "file": ".prettierignore",
@@ -235,362 +303,30 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "11295226746036873369"
+        "hash": "2379312103059869546"
       },
       {
         "file": "package.json",
-        "hash": "9139671970353269380"
+        "hash": "16397541653917400224"
+      },
+      {
+        "file": "sampleGenerators.sh",
+        "hash": "5542606201812902360"
       },
       {
         "file": "tsconfig.base.json",
-        "hash": "4997822571661552208"
+        "hash": "17746785591391909206"
       },
       {
-        "file": ".nx/cache/terminalOutputs/1855951303402507411",
-        "hash": "17451058647931143627"
-      },
-      {
-        "file": ".nx/cache/terminalOutputs/14275218532689143198",
-        "hash": "6899412857975376677"
-      },
-      {
-        "file": ".nx/cache/terminalOutputs/4930433870692308632",
-        "hash": "2278217390411135403"
-      },
-      {
-        "file": ".nx/cache/terminalOutputs/18084067057755402515",
-        "hash": "10776129611800515814"
-      },
-      {
-        "file": ".nx/cache/terminalOutputs/8942704994256883860",
-        "hash": "2172461299244764641"
-      },
-      {
-        "file": ".nx/cache/terminalOutputs/17655580800263782469",
-        "hash": "6739232793539765354"
-      },
-      {
-        "file": ".nx/cache/terminalOutputs/15310837826483488940",
-        "hash": "10927242134701024604"
-      },
-      {
-        "file": ".nx/cache/terminalOutputs/9600680953621166993",
-        "hash": "12296494720592406732"
-      },
-      {
-        "file": ".nx/cache/terminalOutputs/8755277399478145627",
+        "file": ".nx/cache/terminalOutputs/5317173580689390921",
         "hash": "3244421341483603138"
       },
       {
-        "file": ".nx/cache/terminalOutputs/6581869836044880656",
+        "file": ".nx/cache/terminalOutputs/11549242573165154794",
         "hash": "3244421341483603138"
       }
     ],
     "projectFileMap": {
-      "shared-store": [
-        {
-          "file": "libs/shared/store/.babelrc",
-          "hash": "2946678488919325452"
-        },
-        {
-          "file": "libs/shared/store/.eslintrc.json",
-          "hash": "15946965712701950674"
-        },
-        {
-          "file": "libs/shared/store/README.md",
-          "hash": "11827481659567923352"
-        },
-        {
-          "file": "libs/shared/store/jest.config.ts",
-          "hash": "17711920676946214725"
-        },
-        {
-          "file": "libs/shared/store/project.json",
-          "hash": "8722218359669297453"
-        },
-        {
-          "file": "libs/shared/store/src/index.ts",
-          "hash": "7578156699180424113"
-        },
-        {
-          "file": "libs/shared/store/src/lib/features/test/testSlice.ts",
-          "hash": "2333077325836813350",
-          "deps": [
-            "npm:@reduxjs/toolkit"
-          ]
-        },
-        {
-          "file": "libs/shared/store/src/lib/features/test/testSlice.types.ts",
-          "hash": "14832345568854022429"
-        },
-        {
-          "file": "libs/shared/store/src/lib/hooks.ts",
-          "hash": "1982158269997733544",
-          "deps": [
-            "npm:react-redux"
-          ]
-        },
-        {
-          "file": "libs/shared/store/src/lib/store.ts",
-          "hash": "3761852650497540546",
-          "deps": [
-            "npm:@reduxjs/toolkit"
-          ]
-        },
-        {
-          "file": "libs/shared/store/tsconfig.json",
-          "hash": "5803453740373313970"
-        },
-        {
-          "file": "libs/shared/store/tsconfig.lib.json",
-          "hash": "12782505187182166395"
-        },
-        {
-          "file": "libs/shared/store/tsconfig.spec.json",
-          "hash": "622485232520597903"
-        }
-      ],
-      "shared-components-react-native": [
-        {
-          "file": "libs/shared/components/react-native/.eslintrc.json",
-          "hash": "4119755724108771476"
-        },
-        {
-          "file": "libs/shared/components/react-native/README.md",
-          "hash": "7564857450293203280"
-        },
-        {
-          "file": "libs/shared/components/react-native/babel.config.json",
-          "hash": "11329980929822866607"
-        },
-        {
-          "file": "libs/shared/components/react-native/jest.config.ts",
-          "hash": "11886143905635869987"
-        },
-        {
-          "file": "libs/shared/components/react-native/project.json",
-          "hash": "2679621952159601336"
-        },
-        {
-          "file": "libs/shared/components/react-native/src/index.ts",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "libs/shared/components/react-native/test-setup.ts",
-          "hash": "9919311210714806624",
-          "deps": [
-            "npm:@testing-library/jest-native/extend-expect"
-          ]
-        },
-        {
-          "file": "libs/shared/components/react-native/tsconfig.json",
-          "hash": "8863411867549220542"
-        },
-        {
-          "file": "libs/shared/components/react-native/tsconfig.lib.json",
-          "hash": "14783226131085711379"
-        },
-        {
-          "file": "libs/shared/components/react-native/tsconfig.spec.json",
-          "hash": "873295446410179192"
-        }
-      ],
-      "shared-theme-text": [
-        {
-          "file": "libs/shared/theme/text/.eslintrc.json",
-          "hash": "15754961097349354736"
-        },
-        {
-          "file": "libs/shared/theme/text/README.md",
-          "hash": "4131375845338192883"
-        },
-        {
-          "file": "libs/shared/theme/text/project.json",
-          "hash": "1200421552333429556"
-        },
-        {
-          "file": "libs/shared/theme/text/src/index.ts",
-          "hash": "13738519707268865770"
-        },
-        {
-          "file": "libs/shared/theme/text/src/lib/textConstants.ts",
-          "hash": "8460375386613993104"
-        },
-        {
-          "file": "libs/shared/theme/text/tsconfig.json",
-          "hash": "9792494229513935008"
-        },
-        {
-          "file": "libs/shared/theme/text/tsconfig.lib.json",
-          "hash": "5419457303262888731"
-        }
-      ],
-      "moodring-web-router": [
-        {
-          "file": "libs/moodring-web/router/.babelrc",
-          "hash": "2946678488919325452"
-        },
-        {
-          "file": "libs/moodring-web/router/.eslintrc.json",
-          "hash": "15946965712701950674"
-        },
-        {
-          "file": "libs/moodring-web/router/README.md",
-          "hash": "2833518851882178834"
-        },
-        {
-          "file": "libs/moodring-web/router/jest.config.ts",
-          "hash": "6901740341509699954"
-        },
-        {
-          "file": "libs/moodring-web/router/project.json",
-          "hash": "204938031167983761"
-        },
-        {
-          "file": "libs/moodring-web/router/src/index.ts",
-          "hash": "1892387368652576359"
-        },
-        {
-          "file": "libs/moodring-web/router/src/lib/Router.tsx",
-          "hash": "16798536226139303746",
-          "deps": [
-            "npm:react-router-dom",
-            "moodring-web-pages"
-          ]
-        },
-        {
-          "file": "libs/moodring-web/router/tsconfig.json",
-          "hash": "5803453740373313970"
-        },
-        {
-          "file": "libs/moodring-web/router/tsconfig.lib.json",
-          "hash": "12782505187182166395"
-        },
-        {
-          "file": "libs/moodring-web/router/tsconfig.spec.json",
-          "hash": "622485232520597903"
-        }
-      ],
-      "shared-theme-assets": [
-        {
-          "file": "libs/shared/theme/assets/.eslintrc.json",
-          "hash": "15754961097349354736"
-        },
-        {
-          "file": "libs/shared/theme/assets/README.md",
-          "hash": "9038929209088835781"
-        },
-        {
-          "file": "libs/shared/theme/assets/project.json",
-          "hash": "5302577020311554407"
-        },
-        {
-          "file": "libs/shared/theme/assets/src/index.ts",
-          "hash": "12113206845238906566"
-        },
-        {
-          "file": "libs/shared/theme/assets/src/lib/shared-theme-assets.ts",
-          "hash": "321763339159511953"
-        },
-        {
-          "file": "libs/shared/theme/assets/tsconfig.json",
-          "hash": "9792494229513935008"
-        },
-        {
-          "file": "libs/shared/theme/assets/tsconfig.lib.json",
-          "hash": "5419457303262888731"
-        }
-      ],
-      "shared-components-react": [
-        {
-          "file": "libs/shared/components/react/.babelrc",
-          "hash": "2946678488919325452"
-        },
-        {
-          "file": "libs/shared/components/react/.eslintrc.json",
-          "hash": "12678463301772327123"
-        },
-        {
-          "file": "libs/shared/components/react/README.md",
-          "hash": "11785248077963204554"
-        },
-        {
-          "file": "libs/shared/components/react/jest.config.ts",
-          "hash": "9007759143238075503"
-        },
-        {
-          "file": "libs/shared/components/react/project.json",
-          "hash": "12948631665009046336"
-        },
-        {
-          "file": "libs/shared/components/react/src/index.ts",
-          "hash": "6905024592931158143"
-        },
-        {
-          "file": "libs/shared/components/react/src/lib/CustomLink/CustomLink.module.scss",
-          "hash": "12506351130216951279"
-        },
-        {
-          "file": "libs/shared/components/react/src/lib/CustomLink/CustomLink.tsx",
-          "hash": "6900379255938532618",
-          "deps": [
-            "npm:react-router-dom"
-          ]
-        },
-        {
-          "file": "libs/shared/components/react/src/lib/NavBar/NavBar.module.scss",
-          "hash": "2856415810408584011"
-        },
-        {
-          "file": "libs/shared/components/react/src/lib/NavBar/NavBar.tsx",
-          "hash": "16174084406502447002",
-          "deps": [
-            "shared-theme-text"
-          ]
-        },
-        {
-          "file": "libs/shared/components/react/tsconfig.json",
-          "hash": "11799624189472982038"
-        },
-        {
-          "file": "libs/shared/components/react/tsconfig.lib.json",
-          "hash": "3190359746942612580"
-        },
-        {
-          "file": "libs/shared/components/react/tsconfig.spec.json",
-          "hash": "873295446410179192"
-        }
-      ],
-      "shared-data-access": [
-        {
-          "file": "libs/shared/data-access/.eslintrc.json",
-          "hash": "9703569748258640057"
-        },
-        {
-          "file": "libs/shared/data-access/README.md",
-          "hash": "15210543083666498925"
-        },
-        {
-          "file": "libs/shared/data-access/project.json",
-          "hash": "7403423281013601898"
-        },
-        {
-          "file": "libs/shared/data-access/src/index.ts",
-          "hash": "8081415747858568482"
-        },
-        {
-          "file": "libs/shared/data-access/src/lib/shared-data-access.ts",
-          "hash": "17357207471145653110"
-        },
-        {
-          "file": "libs/shared/data-access/tsconfig.json",
-          "hash": "11362601880824838265"
-        },
-        {
-          "file": "libs/shared/data-access/tsconfig.lib.json",
-          "hash": "5554291030212586824"
-        }
-      ],
       "moodring-web": [
         {
           "file": "apps/moodring-web/.babelrc",
@@ -684,6 +420,161 @@
           ]
         }
       ],
+      "shared-components-react": [
+        {
+          "file": "libs/shared/components/react/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/components/react/.eslintrc.json",
+          "hash": "12678463301772327123"
+        },
+        {
+          "file": "libs/shared/components/react/README.md",
+          "hash": "11785248077963204554"
+        },
+        {
+          "file": "libs/shared/components/react/jest.config.ts",
+          "hash": "9007759143238075503"
+        },
+        {
+          "file": "libs/shared/components/react/project.json",
+          "hash": "12948631665009046336"
+        },
+        {
+          "file": "libs/shared/components/react/src/index.ts",
+          "hash": "6905024592931158143"
+        },
+        {
+          "file": "libs/shared/components/react/src/lib/CustomLink/CustomLink.module.scss",
+          "hash": "12506351130216951279"
+        },
+        {
+          "file": "libs/shared/components/react/src/lib/CustomLink/CustomLink.tsx",
+          "hash": "6900379255938532618",
+          "deps": [
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "libs/shared/components/react/src/lib/NavBar/NavBar.module.scss",
+          "hash": "2856415810408584011"
+        },
+        {
+          "file": "libs/shared/components/react/src/lib/NavBar/NavBar.tsx",
+          "hash": "16174084406502447002",
+          "deps": [
+            "shared-theme-text"
+          ]
+        },
+        {
+          "file": "libs/shared/components/react/tsconfig.json",
+          "hash": "11799624189472982038"
+        },
+        {
+          "file": "libs/shared/components/react/tsconfig.lib.json",
+          "hash": "3190359746942612580"
+        },
+        {
+          "file": "libs/shared/components/react/tsconfig.spec.json",
+          "hash": "873295446410179192"
+        }
+      ],
+      "moodring-web-router": [
+        {
+          "file": "libs/moodring-web/router/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/moodring-web/router/.eslintrc.json",
+          "hash": "15946965712701950674"
+        },
+        {
+          "file": "libs/moodring-web/router/README.md",
+          "hash": "2833518851882178834"
+        },
+        {
+          "file": "libs/moodring-web/router/jest.config.ts",
+          "hash": "6901740341509699954"
+        },
+        {
+          "file": "libs/moodring-web/router/project.json",
+          "hash": "204938031167983761"
+        },
+        {
+          "file": "libs/moodring-web/router/src/index.ts",
+          "hash": "1892387368652576359"
+        },
+        {
+          "file": "libs/moodring-web/router/src/lib/Router.tsx",
+          "hash": "16798536226139303746",
+          "deps": [
+            "npm:react-router-dom",
+            "moodring-web-pages"
+          ]
+        },
+        {
+          "file": "libs/moodring-web/router/tsconfig.json",
+          "hash": "5803453740373313970"
+        },
+        {
+          "file": "libs/moodring-web/router/tsconfig.lib.json",
+          "hash": "12782505187182166395"
+        },
+        {
+          "file": "libs/moodring-web/router/tsconfig.spec.json",
+          "hash": "622485232520597903"
+        }
+      ],
+      "shared-theme-styles-react": [
+        {
+          "file": "libs/shared/theme/styles/react/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/theme/styles/react/.eslintrc.json",
+          "hash": "3394834597148527568"
+        },
+        {
+          "file": "libs/shared/theme/styles/react/README.md",
+          "hash": "4377834807028370097"
+        },
+        {
+          "file": "libs/shared/theme/styles/react/jest.config.ts",
+          "hash": "10454337610501407206"
+        },
+        {
+          "file": "libs/shared/theme/styles/react/project.json",
+          "hash": "3514431039649066394"
+        },
+        {
+          "file": "libs/shared/theme/styles/react/src/lib/shared-theme-styles-react.module.scss",
+          "hash": "125145030238681982"
+        },
+        {
+          "file": "libs/shared/theme/styles/react/src/lib/shared-theme-styles-react.spec.tsx",
+          "hash": "16842901663646384873",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "libs/shared/theme/styles/react/src/lib/shared-theme-styles-react.tsx",
+          "hash": "15903851313876976520"
+        },
+        {
+          "file": "libs/shared/theme/styles/react/tsconfig.json",
+          "hash": "13387852091238656065"
+        },
+        {
+          "file": "libs/shared/theme/styles/react/tsconfig.lib.json",
+          "hash": "5518252458741619423"
+        },
+        {
+          "file": "libs/shared/theme/styles/react/tsconfig.spec.json",
+          "hash": "649782867561305389"
+        }
+      ],
       "mood-detection": [
         {
           "file": "libs/moodring-backend/mood-detection/.eslintrc.json",
@@ -740,6 +631,324 @@
           "hash": "9110660443763673899"
         }
       ],
+      "moodring-web-pages": [
+        {
+          "file": "libs/moodring-web/pages/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/moodring-web/pages/.eslintrc.json",
+          "hash": "15946965712701950674"
+        },
+        {
+          "file": "libs/moodring-web/pages/README.md",
+          "hash": "2666687801578490414"
+        },
+        {
+          "file": "libs/moodring-web/pages/jest.config.ts",
+          "hash": "6780402979515699637"
+        },
+        {
+          "file": "libs/moodring-web/pages/project.json",
+          "hash": "13051151033982054984"
+        },
+        {
+          "file": "libs/moodring-web/pages/src/index.ts",
+          "hash": "15729001542450897282"
+        },
+        {
+          "file": "libs/moodring-web/pages/src/lib/AboutPage/AboutPage.tsx",
+          "hash": "6994891848381541969"
+        },
+        {
+          "file": "libs/moodring-web/pages/src/lib/AnalyzingMusicPage/AnalyzingMusicPage.tsx",
+          "hash": "11075388376744181847"
+        },
+        {
+          "file": "libs/moodring-web/pages/src/lib/ErrorPage/ErrorPage.tsx",
+          "hash": "732917345372848572"
+        },
+        {
+          "file": "libs/moodring-web/pages/src/lib/HomePage/HomePage.tsx",
+          "hash": "13463230497057851876",
+          "deps": [
+            "shared-components-react"
+          ]
+        },
+        {
+          "file": "libs/moodring-web/pages/src/lib/MoodDisplayPage/MoodDisplayPage.tsx",
+          "hash": "6862348611212499930"
+        },
+        {
+          "file": "libs/moodring-web/pages/src/lib/RedirectPage/RedirectPage.tsx",
+          "hash": "220372697515241877"
+        },
+        {
+          "file": "libs/moodring-web/pages/src/lib/SpotifyRedirectPage/SpotifyRedirectPage.tsx",
+          "hash": "14852551173164547461"
+        },
+        {
+          "file": "libs/moodring-web/pages/tsconfig.json",
+          "hash": "5803453740373313970"
+        },
+        {
+          "file": "libs/moodring-web/pages/tsconfig.lib.json",
+          "hash": "12782505187182166395"
+        },
+        {
+          "file": "libs/moodring-web/pages/tsconfig.spec.json",
+          "hash": "622485232520597903"
+        }
+      ],
+      "shared-hooks": [
+        {
+          "file": "libs/shared/hooks/.eslintrc.json",
+          "hash": "9703569748258640057"
+        },
+        {
+          "file": "libs/shared/hooks/README.md",
+          "hash": "3602807955749952219"
+        },
+        {
+          "file": "libs/shared/hooks/project.json",
+          "hash": "16087155322936643667"
+        },
+        {
+          "file": "libs/shared/hooks/src/index.ts",
+          "hash": "11510562962386712727"
+        },
+        {
+          "file": "libs/shared/hooks/src/lib/shared-hooks.ts",
+          "hash": "16494581434256691342"
+        },
+        {
+          "file": "libs/shared/hooks/tsconfig.json",
+          "hash": "11362601880824838265"
+        },
+        {
+          "file": "libs/shared/hooks/tsconfig.lib.json",
+          "hash": "5554291030212586824"
+        }
+      ],
+      "shared-theme-text": [
+        {
+          "file": "libs/shared/theme/text/.eslintrc.json",
+          "hash": "15754961097349354736"
+        },
+        {
+          "file": "libs/shared/theme/text/README.md",
+          "hash": "4131375845338192883"
+        },
+        {
+          "file": "libs/shared/theme/text/project.json",
+          "hash": "1200421552333429556"
+        },
+        {
+          "file": "libs/shared/theme/text/src/index.ts",
+          "hash": "13738519707268865770"
+        },
+        {
+          "file": "libs/shared/theme/text/src/lib/textConstants.ts",
+          "hash": "8460375386613993104"
+        },
+        {
+          "file": "libs/shared/theme/text/tsconfig.json",
+          "hash": "9792494229513935008"
+        },
+        {
+          "file": "libs/shared/theme/text/tsconfig.lib.json",
+          "hash": "5419457303262888731"
+        }
+      ],
+      "moodring-backend": [
+        {
+          "file": "apps/moodring-backend/.eslintrc.json",
+          "hash": "13800677001662881425"
+        },
+        {
+          "file": "apps/moodring-backend/jest.config.ts",
+          "hash": "11923674664096595086"
+        },
+        {
+          "file": "apps/moodring-backend/project.json",
+          "hash": "13756550998774953345"
+        },
+        {
+          "file": "apps/moodring-backend/src/app/app.module.ts",
+          "hash": "4092824784492414494",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/config",
+            "authentication"
+          ]
+        },
+        {
+          "file": "apps/moodring-backend/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/moodring-backend/src/main.ts",
+          "hash": "761433687151361667",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core"
+          ]
+        },
+        {
+          "file": "apps/moodring-backend/tsconfig.app.json",
+          "hash": "3171572500325445971"
+        },
+        {
+          "file": "apps/moodring-backend/tsconfig.json",
+          "hash": "3490524966360018312"
+        },
+        {
+          "file": "apps/moodring-backend/tsconfig.spec.json",
+          "hash": "11550347367511341917"
+        },
+        {
+          "file": "apps/moodring-backend/webpack.config.js",
+          "hash": "10619490397189790225",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
+        }
+      ],
+      "shared-types": [
+        {
+          "file": "libs/shared/types/.eslintrc.json",
+          "hash": "9703569748258640057"
+        },
+        {
+          "file": "libs/shared/types/README.md",
+          "hash": "5891734351485625143"
+        },
+        {
+          "file": "libs/shared/types/project.json",
+          "hash": "9819230102132815897"
+        },
+        {
+          "file": "libs/shared/types/src/index.ts",
+          "hash": "2883005894791099888"
+        },
+        {
+          "file": "libs/shared/types/src/lib/AudioFeatures.types.ts",
+          "hash": "18087679996129699716"
+        },
+        {
+          "file": "libs/shared/types/src/lib/Mood.type.ts",
+          "hash": "17413356738905782616"
+        },
+        {
+          "file": "libs/shared/types/src/lib/Song.type.ts",
+          "hash": "1798031375200133471"
+        },
+        {
+          "file": "libs/shared/types/src/lib/User.type.ts",
+          "hash": "4634147894777544522"
+        },
+        {
+          "file": "libs/shared/types/tsconfig.json",
+          "hash": "11362601880824838265"
+        },
+        {
+          "file": "libs/shared/types/tsconfig.lib.json",
+          "hash": "5554291030212586824"
+        }
+      ],
+      "shared-store": [
+        {
+          "file": "libs/shared/store/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/store/.eslintrc.json",
+          "hash": "15946965712701950674"
+        },
+        {
+          "file": "libs/shared/store/README.md",
+          "hash": "11827481659567923352"
+        },
+        {
+          "file": "libs/shared/store/jest.config.ts",
+          "hash": "17711920676946214725"
+        },
+        {
+          "file": "libs/shared/store/project.json",
+          "hash": "8722218359669297453"
+        },
+        {
+          "file": "libs/shared/store/src/index.ts",
+          "hash": "7578156699180424113"
+        },
+        {
+          "file": "libs/shared/store/src/lib/features/test/testSlice.ts",
+          "hash": "2333077325836813350",
+          "deps": [
+            "npm:@reduxjs/toolkit"
+          ]
+        },
+        {
+          "file": "libs/shared/store/src/lib/features/test/testSlice.types.ts",
+          "hash": "14832345568854022429"
+        },
+        {
+          "file": "libs/shared/store/src/lib/hooks.ts",
+          "hash": "1982158269997733544",
+          "deps": [
+            "npm:react-redux"
+          ]
+        },
+        {
+          "file": "libs/shared/store/src/lib/store.ts",
+          "hash": "3761852650497540546",
+          "deps": [
+            "npm:@reduxjs/toolkit"
+          ]
+        },
+        {
+          "file": "libs/shared/store/tsconfig.json",
+          "hash": "5803453740373313970"
+        },
+        {
+          "file": "libs/shared/store/tsconfig.lib.json",
+          "hash": "12782505187182166395"
+        },
+        {
+          "file": "libs/shared/store/tsconfig.spec.json",
+          "hash": "622485232520597903"
+        }
+      ],
+      "shared-utils": [
+        {
+          "file": "libs/shared/utils/.eslintrc.json",
+          "hash": "9703569748258640057"
+        },
+        {
+          "file": "libs/shared/utils/README.md",
+          "hash": "16763671309847105818"
+        },
+        {
+          "file": "libs/shared/utils/project.json",
+          "hash": "454637944202276475"
+        },
+        {
+          "file": "libs/shared/utils/src/index.ts",
+          "hash": "2115022695656941492"
+        },
+        {
+          "file": "libs/shared/utils/src/lib/shared-utils.ts",
+          "hash": "393383238747502460"
+        },
+        {
+          "file": "libs/shared/utils/tsconfig.json",
+          "hash": "11362601880824838265"
+        },
+        {
+          "file": "libs/shared/utils/tsconfig.lib.json",
+          "hash": "5554291030212586824"
+        }
+      ],
       "shared-theme-styles-react-native": [
         {
           "file": "libs/shared/theme/styles/react-native/.eslintrc.json",
@@ -785,6 +994,51 @@
           "hash": "649782867561305389"
         }
       ],
+      "shared-llm": [
+        {
+          "file": "libs/shared/llm/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/llm/.eslintrc.json",
+          "hash": "15946965712701950674"
+        },
+        {
+          "file": "libs/shared/llm/README.md",
+          "hash": "10359892244906047568"
+        },
+        {
+          "file": "libs/shared/llm/jest.config.ts",
+          "hash": "6692959105107978596"
+        },
+        {
+          "file": "libs/shared/llm/project.json",
+          "hash": "14293352992066680092"
+        },
+        {
+          "file": "libs/shared/llm/src/index.ts",
+          "hash": "13896743622566956439"
+        },
+        {
+          "file": "libs/shared/llm/src/lib/llmUtils.ts",
+          "hash": "5603706196120950591",
+          "deps": [
+            "npm:langchain/llms/openai"
+          ]
+        },
+        {
+          "file": "libs/shared/llm/tsconfig.json",
+          "hash": "5803453740373313970"
+        },
+        {
+          "file": "libs/shared/llm/tsconfig.lib.json",
+          "hash": "12782505187182166395"
+        },
+        {
+          "file": "libs/shared/llm/tsconfig.spec.json",
+          "hash": "622485232520597903"
+        }
+      ],
       "authentication": [
         {
           "file": "libs/moodring-backend/authentication/.eslintrc.json",
@@ -808,7 +1062,7 @@
         },
         {
           "file": "libs/moodring-backend/authentication/src/lib/authentication.controller.ts",
-          "hash": "4517008732037404782",
+          "hash": "17608428144774243585",
           "deps": [
             "npm:@nestjs/common",
             "npm:express",
@@ -877,109 +1131,6 @@
         {
           "file": "libs/moodring-backend/authentication/tsconfig.spec.json",
           "hash": "9110660443763673899"
-        }
-      ],
-      "shared-theme-styles-react": [
-        {
-          "file": "libs/shared/theme/styles/react/.babelrc",
-          "hash": "2946678488919325452"
-        },
-        {
-          "file": "libs/shared/theme/styles/react/.eslintrc.json",
-          "hash": "3394834597148527568"
-        },
-        {
-          "file": "libs/shared/theme/styles/react/README.md",
-          "hash": "4377834807028370097"
-        },
-        {
-          "file": "libs/shared/theme/styles/react/jest.config.ts",
-          "hash": "10454337610501407206"
-        },
-        {
-          "file": "libs/shared/theme/styles/react/project.json",
-          "hash": "3514431039649066394"
-        },
-        {
-          "file": "libs/shared/theme/styles/react/src/lib/shared-theme-styles-react.module.scss",
-          "hash": "125145030238681982"
-        },
-        {
-          "file": "libs/shared/theme/styles/react/src/lib/shared-theme-styles-react.spec.tsx",
-          "hash": "16842901663646384873",
-          "deps": [
-            "npm:@testing-library/react"
-          ]
-        },
-        {
-          "file": "libs/shared/theme/styles/react/src/lib/shared-theme-styles-react.tsx",
-          "hash": "15903851313876976520"
-        },
-        {
-          "file": "libs/shared/theme/styles/react/tsconfig.json",
-          "hash": "13387852091238656065"
-        },
-        {
-          "file": "libs/shared/theme/styles/react/tsconfig.lib.json",
-          "hash": "5518252458741619423"
-        },
-        {
-          "file": "libs/shared/theme/styles/react/tsconfig.spec.json",
-          "hash": "649782867561305389"
-        }
-      ],
-      "moodring-backend": [
-        {
-          "file": "apps/moodring-backend/.eslintrc.json",
-          "hash": "13800677001662881425"
-        },
-        {
-          "file": "apps/moodring-backend/jest.config.ts",
-          "hash": "11923674664096595086"
-        },
-        {
-          "file": "apps/moodring-backend/project.json",
-          "hash": "13756550998774953345"
-        },
-        {
-          "file": "apps/moodring-backend/src/app/app.module.ts",
-          "hash": "4092824784492414494",
-          "deps": [
-            "npm:@nestjs/common",
-            "npm:@nestjs/config",
-            "authentication"
-          ]
-        },
-        {
-          "file": "apps/moodring-backend/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/moodring-backend/src/main.ts",
-          "hash": "11032976796984592645",
-          "deps": [
-            "npm:@nestjs/common",
-            "npm:@nestjs/core"
-          ]
-        },
-        {
-          "file": "apps/moodring-backend/tsconfig.app.json",
-          "hash": "3171572500325445971"
-        },
-        {
-          "file": "apps/moodring-backend/tsconfig.json",
-          "hash": "3490524966360018312"
-        },
-        {
-          "file": "apps/moodring-backend/tsconfig.spec.json",
-          "hash": "11550347367511341917"
-        },
-        {
-          "file": "apps/moodring-backend/webpack.config.js",
-          "hash": "10619490397189790225",
-          "deps": [
-            "npm:@nx/webpack"
-          ]
         }
       ],
       "moodring-mobile": [
@@ -1245,216 +1396,153 @@
           "hash": "6514620907549802163"
         }
       ],
-      "shared-utils": [
+      "shared-data-access": [
         {
-          "file": "libs/shared/utils/.eslintrc.json",
+          "file": "libs/shared/data-access/.eslintrc.json",
           "hash": "9703569748258640057"
         },
         {
-          "file": "libs/shared/utils/README.md",
-          "hash": "16763671309847105818"
+          "file": "libs/shared/data-access/README.md",
+          "hash": "15210543083666498925"
         },
         {
-          "file": "libs/shared/utils/project.json",
-          "hash": "454637944202276475"
+          "file": "libs/shared/data-access/project.json",
+          "hash": "7403423281013601898"
         },
         {
-          "file": "libs/shared/utils/src/index.ts",
-          "hash": "2115022695656941492"
+          "file": "libs/shared/data-access/src/index.ts",
+          "hash": "8081415747858568482"
         },
         {
-          "file": "libs/shared/utils/src/lib/shared-utils.ts",
-          "hash": "393383238747502460"
+          "file": "libs/shared/data-access/src/lib/shared-data-access.ts",
+          "hash": "17357207471145653110"
         },
         {
-          "file": "libs/shared/utils/tsconfig.json",
+          "file": "libs/shared/data-access/tsconfig.json",
           "hash": "11362601880824838265"
         },
         {
-          "file": "libs/shared/utils/tsconfig.lib.json",
+          "file": "libs/shared/data-access/tsconfig.lib.json",
           "hash": "5554291030212586824"
         }
       ],
-      "moodring-web-pages": [
+      "shared-theme-assets": [
         {
-          "file": "libs/moodring-web/pages/.babelrc",
-          "hash": "2946678488919325452"
+          "file": "libs/shared/theme/assets/.eslintrc.json",
+          "hash": "15754961097349354736"
         },
         {
-          "file": "libs/moodring-web/pages/.eslintrc.json",
-          "hash": "15946965712701950674"
+          "file": "libs/shared/theme/assets/README.md",
+          "hash": "9038929209088835781"
         },
         {
-          "file": "libs/moodring-web/pages/README.md",
-          "hash": "2666687801578490414"
+          "file": "libs/shared/theme/assets/project.json",
+          "hash": "5302577020311554407"
         },
         {
-          "file": "libs/moodring-web/pages/jest.config.ts",
-          "hash": "6780402979515699637"
+          "file": "libs/shared/theme/assets/src/index.ts",
+          "hash": "12113206845238906566"
         },
         {
-          "file": "libs/moodring-web/pages/project.json",
-          "hash": "13051151033982054984"
+          "file": "libs/shared/theme/assets/src/lib/shared-theme-assets.ts",
+          "hash": "321763339159511953"
         },
         {
-          "file": "libs/moodring-web/pages/src/index.ts",
-          "hash": "15729001542450897282"
+          "file": "libs/shared/theme/assets/tsconfig.json",
+          "hash": "9792494229513935008"
         },
         {
-          "file": "libs/moodring-web/pages/src/lib/AboutPage/AboutPage.tsx",
-          "hash": "6994891848381541969"
+          "file": "libs/shared/theme/assets/tsconfig.lib.json",
+          "hash": "5419457303262888731"
+        }
+      ],
+      "state-machine": [
+        {
+          "file": "libs/shared/state-machine/.eslintrc.json",
+          "hash": "12398963952796570856"
         },
         {
-          "file": "libs/moodring-web/pages/src/lib/AnalyzingMusicPage/AnalyzingMusicPage.tsx",
-          "hash": "11075388376744181847"
+          "file": "libs/shared/state-machine/README.md",
+          "hash": "3330803386780378577"
         },
         {
-          "file": "libs/moodring-web/pages/src/lib/ErrorPage/ErrorPage.tsx",
-          "hash": "732917345372848572"
-        },
-        {
-          "file": "libs/moodring-web/pages/src/lib/HomePage/HomePage.tsx",
-          "hash": "5765937629877700992",
+          "file": "libs/shared/state-machine/package.json",
+          "hash": "9767646120111511861",
           "deps": [
-            "shared-components-react"
+            "npm:tslib"
           ]
         },
         {
-          "file": "libs/moodring-web/pages/src/lib/MoodDisplayPage/MoodDisplayPage.tsx",
-          "hash": "6862348611212499930"
+          "file": "libs/shared/state-machine/project.json",
+          "hash": "8610906556829541674"
         },
         {
-          "file": "libs/moodring-web/pages/src/lib/SpotifyRedirectPage/SpotifyRedirectPage.tsx",
-          "hash": "14852551173164547461"
+          "file": "libs/shared/state-machine/src/index.ts",
+          "hash": "14077795433090111966"
         },
         {
-          "file": "libs/moodring-web/pages/tsconfig.json",
-          "hash": "5803453740373313970"
-        },
-        {
-          "file": "libs/moodring-web/pages/tsconfig.lib.json",
-          "hash": "12782505187182166395"
-        },
-        {
-          "file": "libs/moodring-web/pages/tsconfig.spec.json",
-          "hash": "622485232520597903"
-        }
-      ],
-      "shared-hooks": [
-        {
-          "file": "libs/shared/hooks/.eslintrc.json",
-          "hash": "9703569748258640057"
-        },
-        {
-          "file": "libs/shared/hooks/README.md",
-          "hash": "3602807955749952219"
-        },
-        {
-          "file": "libs/shared/hooks/project.json",
-          "hash": "16087155322936643667"
-        },
-        {
-          "file": "libs/shared/hooks/src/index.ts",
-          "hash": "11510562962386712727"
-        },
-        {
-          "file": "libs/shared/hooks/src/lib/shared-hooks.ts",
-          "hash": "16494581434256691342"
-        },
-        {
-          "file": "libs/shared/hooks/tsconfig.json",
-          "hash": "11362601880824838265"
-        },
-        {
-          "file": "libs/shared/hooks/tsconfig.lib.json",
-          "hash": "5554291030212586824"
-        }
-      ],
-      "shared-types": [
-        {
-          "file": "libs/shared/types/.eslintrc.json",
-          "hash": "9703569748258640057"
-        },
-        {
-          "file": "libs/shared/types/README.md",
-          "hash": "5891734351485625143"
-        },
-        {
-          "file": "libs/shared/types/project.json",
-          "hash": "9819230102132815897"
-        },
-        {
-          "file": "libs/shared/types/src/index.ts",
-          "hash": "2883005894791099888"
-        },
-        {
-          "file": "libs/shared/types/src/lib/AudioFeatures.types.ts",
-          "hash": "18087679996129699716"
-        },
-        {
-          "file": "libs/shared/types/src/lib/Mood.type.ts",
-          "hash": "17413356738905782616"
-        },
-        {
-          "file": "libs/shared/types/src/lib/Song.type.ts",
-          "hash": "1798031375200133471"
-        },
-        {
-          "file": "libs/shared/types/src/lib/User.type.ts",
-          "hash": "4634147894777544522"
-        },
-        {
-          "file": "libs/shared/types/tsconfig.json",
-          "hash": "11362601880824838265"
-        },
-        {
-          "file": "libs/shared/types/tsconfig.lib.json",
-          "hash": "5554291030212586824"
-        }
-      ],
-      "shared-llm": [
-        {
-          "file": "libs/shared/llm/.babelrc",
-          "hash": "2946678488919325452"
-        },
-        {
-          "file": "libs/shared/llm/.eslintrc.json",
-          "hash": "15946965712701950674"
-        },
-        {
-          "file": "libs/shared/llm/README.md",
-          "hash": "10359892244906047568"
-        },
-        {
-          "file": "libs/shared/llm/jest.config.ts",
-          "hash": "6692959105107978596"
-        },
-        {
-          "file": "libs/shared/llm/project.json",
-          "hash": "14293352992066680092"
-        },
-        {
-          "file": "libs/shared/llm/src/index.ts",
-          "hash": "13896743622566956439"
-        },
-        {
-          "file": "libs/shared/llm/src/lib/llmUtils.ts",
-          "hash": "5603706196120950591",
+          "file": "libs/shared/state-machine/src/lib/state-machine.ts",
+          "hash": "14373786390881346896",
           "deps": [
-            "npm:langchain/llms/openai"
+            "npm:xstate"
           ]
         },
         {
-          "file": "libs/shared/llm/tsconfig.json",
-          "hash": "5803453740373313970"
+          "file": "libs/shared/state-machine/src/lib/state-machine.types.ts",
+          "hash": "17083301946127376983"
         },
         {
-          "file": "libs/shared/llm/tsconfig.lib.json",
-          "hash": "12782505187182166395"
+          "file": "libs/shared/state-machine/tsconfig.json",
+          "hash": "11362601880824838265"
         },
         {
-          "file": "libs/shared/llm/tsconfig.spec.json",
-          "hash": "622485232520597903"
+          "file": "libs/shared/state-machine/tsconfig.lib.json",
+          "hash": "5554291030212586824"
+        }
+      ],
+      "shared-components-react-native": [
+        {
+          "file": "libs/shared/components/react-native/.eslintrc.json",
+          "hash": "4119755724108771476"
+        },
+        {
+          "file": "libs/shared/components/react-native/README.md",
+          "hash": "7564857450293203280"
+        },
+        {
+          "file": "libs/shared/components/react-native/babel.config.json",
+          "hash": "11329980929822866607"
+        },
+        {
+          "file": "libs/shared/components/react-native/jest.config.ts",
+          "hash": "11886143905635869987"
+        },
+        {
+          "file": "libs/shared/components/react-native/project.json",
+          "hash": "2679621952159601336"
+        },
+        {
+          "file": "libs/shared/components/react-native/src/index.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/shared/components/react-native/test-setup.ts",
+          "hash": "9919311210714806624",
+          "deps": [
+            "npm:@testing-library/jest-native/extend-expect"
+          ]
+        },
+        {
+          "file": "libs/shared/components/react-native/tsconfig.json",
+          "hash": "8863411867549220542"
+        },
+        {
+          "file": "libs/shared/components/react-native/tsconfig.lib.json",
+          "hash": "14783226131085711379"
+        },
+        {
+          "file": "libs/shared/components/react-native/tsconfig.spec.json",
+          "hash": "873295446410179192"
         }
       ]
     }

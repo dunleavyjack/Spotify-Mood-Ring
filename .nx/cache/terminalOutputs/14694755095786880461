@@ -1,0 +1,36 @@
+[1m[33m[36m>[39m[33m [7m[1m[36m NX [39m[33m[22m[1m[27m Unable to load tsconfig-paths, workspace libraries may be inaccessible.[39m[22m
+[1m[33m  - To fix this, install tsconfig-paths with npm/yarn/pnpm[39m[22m
+[1m[33m[36m>[39m[33m [7m[1m[36m NX [39m[33m[22m[1m[27m Falling back to ts-node for local typescript execution. This may be a little slower.[39m[22m
+[1m[33m  - To fix this, ensure @swc-node/register and @swc/core have been installed[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.08 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (39d045e0af306d72)
+[1m[31mDebugger listening on ws://localhost:9229/4b2b3e95-1791-48a0-a697-32824e39e12e[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/4b2b3e95-1791-48a0-a697-32824e39e12e[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.14 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./libs/moodring-backend/authentication/src/lib/authentication.controller.ts:[32m[1m19:4[22m[39m[1m[39m[22m
+[90mTS2554: [39mExpected 2 arguments, but got 1.
+  [0m [90m 17 |[39m   [33m@[39m[33mUseGuards[39m([33mSpotifyOauthGuard[39m)[0m
+  [0m [90m 18 |[39m   [33m@[39m[33mGet[39m([32m'login'[39m)[0m
+  [0m[31m[1m>[22m[39m[90m 19 |[39m   [33m@[39m[33mHeader[39m([32m'Access-Control-Allow-Origin'[39m)[0m
+  [0m [90m    |[39m    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 20 |[39m   login()[33m:[39m [36mvoid[39m {[0m
+  [0m [90m 21 |[39m     [36mreturn[39m[33m;[39m[0m
+  [0m [90m 22 |[39m   }[0m
+
+webpack compiled with [1m[31m1 error[39m[22m (46184922f51c1d7a)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.16 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (362cc498e6af63fc)
+[1m[31mDebugger listening on ws://localhost:9229/425af3da-bdda-42bd-a8e4-c7d5acc1e906[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/425af3da-bdda-42bd-a8e4-c7d5acc1e906[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.16 KiB [1m[33m[entry][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (362cc498e6af63fc)
+[1m[31mDebugger listening on ws://localhost:9229/f0a051b8-cf1f-4bfb-a978-e98c394a54b2[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/f0a051b8-cf1f-4bfb-a978-e98c394a54b2[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m

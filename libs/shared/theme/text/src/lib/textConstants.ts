@@ -10,7 +10,7 @@ export const VIEW_A_DEMO = 'View a Demo';
 
 export const LOADING = 'Loading';
 
-export const NAVBAR = {
+export const NAVBAR_TEXT = {
   /**
    * 'MoodRing', the name of the app.
    */

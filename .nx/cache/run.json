@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx serve moodring-backend",
+    "startTime": "2024-01-16T02:02:52.069Z",
+    "endTime": "2024-01-20T01:24:41.720Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "moodring-backend:serve:development",
+      "target": "serve",
+      "projectName": "moodring-backend",
+      "hash": "3745822639549425147",
+      "startTime": "2024-01-16T02:02:52.071Z",
+      "endTime": "2024-01-20T01:24:41.696Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

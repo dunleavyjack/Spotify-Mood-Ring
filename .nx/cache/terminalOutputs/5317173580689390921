@@ -1,0 +1,234 @@
+[1m[33m[36m>[39m[33m [7m[1m[36m NX [39m[33m[22m[1m[27m Unable to load tsconfig-paths, workspace libraries may be inaccessible.[39m[22m
+[1m[33m  - To fix this, install tsconfig-paths with npm/yarn/pnpm[39m[22m
+[1m[33m[36m>[39m[33m [7m[1m[36m NX [39m[33m[22m[1m[27m Falling back to ts-node for local typescript execution. This may be a little slower.[39m[22m
+[1m[33m  - To fix this, ensure @swc-node/register and @swc/core have been installed[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.45 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (ef1d3dacbf0a98c9)
+[1m[31mDebugger listening on ws://localhost:9229/baa66586-7e5b-48ce-91f9-c2951afbe845[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/baa66586-7e5b-48ce-91f9-c2951afbe845[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.45 KiB [1m[33m[entry][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (ef1d3dacbf0a98c9)
+[1m[31mDebugger listening on ws://localhost:9229/78305507-7d50-4e6e-bf65-2e0de9eb9a5f[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/78305507-7d50-4e6e-bf65-2e0de9eb9a5f[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.45 KiB [1m[33m[entry][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (ef1d3dacbf0a98c9)
+[1m[31mDebugger listening on ws://localhost:9229/f0ffcdc2-186b-49b7-90a0-dfd15f027f27[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/f0ffcdc2-186b-49b7-90a0-dfd15f027f27[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 1.09 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.module.ts[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ../../node_modules/ts-loader/index.js):
+[1m[31mError[39m[22m[1m: ENOENT: no such file or directory, open '/Users/jack/Desktop/lab/moodring/apps/moodring-backend/src/app/app.module.ts'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./apps/moodring-backend/src/main.ts:[32m[1m4:27[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module './app/app.module' or its corresponding type declarations.
+  [0m [90m 2 |[39m [36mimport[39m { [33mNestFactory[39m } [36mfrom[39m [32m'@nestjs/core'[39m[33m;[39m[0m
+  [0m [90m 3 |[39m[0m
+  [0m[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mAppModule[39m } [36mfrom[39m [32m'./app/app.module'[39m[33m;[39m[0m
+  [0m [90m   |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 5 |[39m[0m
+  [0m [90m 6 |[39m [36masync[39m [36mfunction[39m bootstrap() {[0m
+  [0m [90m 7 |[39m   [36mconst[39m app [33m=[39m [36mawait[39m [33mNestFactory[39m[33m.[39mcreate([33mAppModule[39m[33m,[39m {[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (4369480a27dc633b)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 1.09 KiB [1m[33m[entry][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.module.ts[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ../../node_modules/ts-loader/index.js):
+[1m[31mError[39m[22m[1m: ENOENT: no such file or directory, open '/Users/jack/Desktop/lab/moodring/apps/moodring-backend/src/app/app.module.ts'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./apps/moodring-backend/src/main.ts:[32m[1m4:27[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module './app/app.module' or its corresponding type declarations.
+  [0m [90m 2 |[39m [36mimport[39m { [33mNestFactory[39m } [36mfrom[39m [32m'@nestjs/core'[39m[33m;[39m[0m
+  [0m [90m 3 |[39m[0m
+  [0m[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mAppModule[39m } [36mfrom[39m [32m'./app/app.module'[39m[33m;[39m[0m
+  [0m [90m   |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 5 |[39m[0m
+  [0m [90m 6 |[39m [36masync[39m [36mfunction[39m bootstrap() {[0m
+  [0m [90m 7 |[39m   [36mconst[39m app [33m=[39m [36mawait[39m [33mNestFactory[39m[33m.[39mcreate([33mAppModule[39m[33m,[39m {[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (4369480a27dc633b)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 1.09 KiB [1m[33m[entry][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.module.ts[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ../../node_modules/ts-loader/index.js):
+[1m[31mError[39m[22m[1m: ENOENT: no such file or directory, open '/Users/jack/Desktop/lab/moodring/apps/moodring-backend/src/app/app.module.ts'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./apps/moodring-backend/src/main.ts:[32m[1m4:27[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module './app/app.module' or its corresponding type declarations.
+  [0m [90m 2 |[39m [36mimport[39m { [33mNestFactory[39m } [36mfrom[39m [32m'@nestjs/core'[39m[33m;[39m[0m
+  [0m [90m 3 |[39m[0m
+  [0m[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mAppModule[39m } [36mfrom[39m [32m'./app/app.module'[39m[33m;[39m[0m
+  [0m [90m   |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 5 |[39m[0m
+  [0m [90m 6 |[39m [36masync[39m [36mfunction[39m bootstrap() {[0m
+  [0m [90m 7 |[39m   [36mconst[39m app [33m=[39m [36mawait[39m [33mNestFactory[39m[33m.[39mcreate([33mAppModule[39m[33m,[39m {[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (4369480a27dc633b)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 1.09 KiB [1m[33m[entry][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.module.ts[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ../../node_modules/ts-loader/index.js):
+[1m[31mError[39m[22m[1m: ENOENT: no such file or directory, open '/Users/jack/Desktop/lab/moodring/apps/moodring-backend/src/app/app.module.ts'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./apps/moodring-backend/src/main.ts:[32m[1m4:27[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module './app/app.module' or its corresponding type declarations.
+  [0m [90m 2 |[39m [36mimport[39m { [33mNestFactory[39m } [36mfrom[39m [32m'@nestjs/core'[39m[33m;[39m[0m
+  [0m [90m 3 |[39m[0m
+  [0m[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mAppModule[39m } [36mfrom[39m [32m'./app/app.module'[39m[33m;[39m[0m
+  [0m [90m   |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 5 |[39m[0m
+  [0m [90m 6 |[39m [36masync[39m [36mfunction[39m bootstrap() {[0m
+  [0m [90m 7 |[39m   [36mconst[39m app [33m=[39m [36mawait[39m [33mNestFactory[39m[33m.[39mcreate([33mAppModule[39m[33m,[39m {[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (4369480a27dc633b)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 1.09 KiB [1m[33m[entry][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.module.ts[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ../../node_modules/ts-loader/index.js):
+[1m[31mError[39m[22m[1m: ENOENT: no such file or directory, open '/Users/jack/Desktop/lab/moodring/apps/moodring-backend/src/app/app.module.ts'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./apps/moodring-backend/src/main.ts:[32m[1m4:27[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module './app/app.module' or its corresponding type declarations.
+  [0m [90m 2 |[39m [36mimport[39m { [33mNestFactory[39m } [36mfrom[39m [32m'@nestjs/core'[39m[33m;[39m[0m
+  [0m [90m 3 |[39m[0m
+  [0m[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mAppModule[39m } [36mfrom[39m [32m'./app/app.module'[39m[33m;[39m[0m
+  [0m [90m   |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 5 |[39m[0m
+  [0m [90m 6 |[39m [36masync[39m [36mfunction[39m bootstrap() {[0m
+  [0m [90m 7 |[39m   [36mconst[39m app [33m=[39m [36mawait[39m [33mNestFactory[39m[33m.[39mcreate([33mAppModule[39m[33m,[39m {[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (4369480a27dc633b)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 1.09 KiB [1m[33m[entry][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.module.ts[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ../../node_modules/ts-loader/index.js):
+[1m[31mError[39m[22m[1m: ENOENT: no such file or directory, open '/Users/jack/Desktop/lab/moodring/apps/moodring-backend/src/app/app.module.ts'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./apps/moodring-backend/src/main.ts:[32m[1m4:27[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module './app/app.module' or its corresponding type declarations.
+  [0m [90m 2 |[39m [36mimport[39m { [33mNestFactory[39m } [36mfrom[39m [32m'@nestjs/core'[39m[33m;[39m[0m
+  [0m [90m 3 |[39m[0m
+  [0m[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mAppModule[39m } [36mfrom[39m [32m'./app/app.module'[39m[33m;[39m[0m
+  [0m [90m   |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 5 |[39m[0m
+  [0m [90m 6 |[39m [36masync[39m [36mfunction[39m bootstrap() {[0m
+  [0m [90m 7 |[39m   [36mconst[39m app [33m=[39m [36mawait[39m [33mNestFactory[39m[33m.[39mcreate([33mAppModule[39m[33m,[39m {[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (4369480a27dc633b)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.43 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (8018abb5da11afff)
+[1m[31mDebugger listening on ws://localhost:9229/b63330a7-44bd-48d0-86dd-149953464cb5[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/b63330a7-44bd-48d0-86dd-149953464cb5[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 1.07 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.ts[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ../../node_modules/ts-loader/index.js):
+[1m[31mError[39m[22m[1m: ENOENT: no such file or directory, open '/Users/jack/Desktop/lab/moodring/apps/moodring-backend/src/app/app.ts'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./apps/moodring-backend/src/main.ts:[32m[1m4:27[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module './app/app' or its corresponding type declarations.
+  [0m [90m 2 |[39m [36mimport[39m { [33mNestFactory[39m } [36mfrom[39m [32m'@nestjs/core'[39m[33m;[39m[0m
+  [0m [90m 3 |[39m[0m
+  [0m[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mAppModule[39m } [36mfrom[39m [32m'./app/app'[39m[33m;[39m[0m
+  [0m [90m   |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 5 |[39m[0m
+  [0m [90m 6 |[39m [36masync[39m [36mfunction[39m bootstrap() {[0m
+  [0m [90m 7 |[39m   [36mconst[39m app [33m=[39m [36mawait[39m [33mNestFactory[39m[33m.[39mcreate([33mAppModule[39m[33m,[39m {[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (2bd51b70e3895158)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 1.07 KiB [1m[33m[entry][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.ts[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ../../node_modules/ts-loader/index.js):
+[1m[31mError[39m[22m[1m: ENOENT: no such file or directory, open '/Users/jack/Desktop/lab/moodring/apps/moodring-backend/src/app/app.ts'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./apps/moodring-backend/src/main.ts:[32m[1m4:27[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module './app/app' or its corresponding type declarations.
+  [0m [90m 2 |[39m [36mimport[39m { [33mNestFactory[39m } [36mfrom[39m [32m'@nestjs/core'[39m[33m;[39m[0m
+  [0m [90m 3 |[39m[0m
+  [0m[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mAppModule[39m } [36mfrom[39m [32m'./app/app'[39m[33m;[39m[0m
+  [0m [90m   |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 5 |[39m[0m
+  [0m [90m 6 |[39m [36masync[39m [36mfunction[39m bootstrap() {[0m
+  [0m [90m 7 |[39m   [36mconst[39m app [33m=[39m [36mawait[39m [33mNestFactory[39m[33m.[39mcreate([33mAppModule[39m[33m,[39m {[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (2bd51b70e3895158)
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 1.07 KiB [1m[33m[entry][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.ts[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ../../node_modules/ts-loader/index.js):
+[1m[31mError[39m[22m[1m: ENOENT: no such file or directory, open '/Users/jack/Desktop/lab/moodring/apps/moodring-backend/src/app/app.ts'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./apps/moodring-backend/src/main.ts:[32m[1m4:27[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module './app/app' or its corresponding type declarations.
+  [0m [90m 2 |[39m [36mimport[39m { [33mNestFactory[39m } [36mfrom[39m [32m'@nestjs/core'[39m[33m;[39m[0m
+  [0m [90m 3 |[39m[0m
+  [0m[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mAppModule[39m } [36mfrom[39m [32m'./app/app'[39m[33m;[39m[0m
+  [0m [90m   |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 5 |[39m[0m
+  [0m [90m 6 |[39m [36masync[39m [36mfunction[39m bootstrap() {[0m
+  [0m [90m 7 |[39m   [36mconst[39m app [33m=[39m [36mawait[39m [33mNestFactory[39m[33m.[39mcreate([33mAppModule[39m[33m,[39m {[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (2bd51b70e3895158)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 1.07 KiB [1m[33m[entry][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.ts[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ../../node_modules/ts-loader/index.js):
+[1m[31mError[39m[22m[1m: ENOENT: no such file or directory, open '/Users/jack/Desktop/lab/moodring/apps/moodring-backend/src/app/app.ts'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./apps/moodring-backend/src/main.ts:[32m[1m4:27[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module './app/app' or its corresponding type declarations.
+  [0m [90m 2 |[39m [36mimport[39m { [33mNestFactory[39m } [36mfrom[39m [32m'@nestjs/core'[39m[33m;[39m[0m
+  [0m [90m 3 |[39m[0m
+  [0m[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mAppModule[39m } [36mfrom[39m [32m'./app/app'[39m[33m;[39m[0m
+  [0m [90m   |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 5 |[39m[0m
+  [0m [90m 6 |[39m [36masync[39m [36mfunction[39m bootstrap() {[0m
+  [0m [90m 7 |[39m   [36mconst[39m app [33m=[39m [36mawait[39m [33mNestFactory[39m[33m.[39mcreate([33mAppModule[39m[33m,[39m {[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (2bd51b70e3895158)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 1.07 KiB [1m[33m[entry][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/app/app.ts[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ../../node_modules/ts-loader/index.js):
+[1m[31mError[39m[22m[1m: ENOENT: no such file or directory, open '/Users/jack/Desktop/lab/moodring/apps/moodring-backend/src/app/app.ts'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./apps/moodring-backend/src/main.ts:[32m[1m4:27[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module './app/app' or its corresponding type declarations.
+  [0m [90m 2 |[39m [36mimport[39m { [33mNestFactory[39m } [36mfrom[39m [32m'@nestjs/core'[39m[33m;[39m[0m
+  [0m [90m 3 |[39m[0m
+  [0m[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mAppModule[39m } [36mfrom[39m [32m'./app/app'[39m[33m;[39m[0m
+  [0m [90m   |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 5 |[39m[0m
+  [0m [90m 6 |[39m [36masync[39m [36mfunction[39m bootstrap() {[0m
+  [0m [90m 7 |[39m   [36mconst[39m app [33m=[39m [36mawait[39m [33mNestFactory[39m[33m.[39mcreate([33mAppModule[39m[33m,[39m {[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (2bd51b70e3895158)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.45 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (66ba88bb8175be34)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.45 KiB [1m[33m[entry][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (66ba88bb8175be34)
+[1m[31mDebugger listening on ws://localhost:9229/8d57333b-95ad-48c8-9814-c2ec2135dbe2[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/8d57333b-95ad-48c8-9814-c2ec2135dbe2[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m

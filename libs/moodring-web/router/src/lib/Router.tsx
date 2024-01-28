@@ -5,7 +5,6 @@ import {
   MoodDisplayPage,
   AboutPage,
   ErrorPage,
-  SpotifyRedirectPage,
 } from '@moodring/moodring-web/pages';
 
 export const router = createBrowserRouter([
@@ -28,9 +27,5 @@ export const router = createBrowserRouter([
   {
     path: '/error',
     element: <ErrorPage />,
-  },
-  {
-    path: '/redirect',
-    element: <SpotifyRedirectPage />,
   },
 ]);
